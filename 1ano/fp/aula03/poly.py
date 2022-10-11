@@ -1,10 +1,3 @@
-""" Exercicio 04.
-Execute e analise o programa poly.py. Acrescente-lhe uma funçao para calcular o polinomio
-p(x) = x**2 + 2x + 3 e modifique a funçao main para mostrar os valores de p(1), p(2),
-p(10) e g(1 + p(3)). Confira os resultados.
-"""
-
-
 # Esta função implementa g(x) = 8 - x**3
 def g(x):
     return 8 - x**3
