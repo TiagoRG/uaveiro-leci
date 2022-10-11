@@ -1,10 +1,3 @@
-""" Exercicio 08.
-Escreva uma funçao intersects(a1, b1, a2, b2) que devolva True se os intervalos
-[a1, b1[ e [a2, b2[ se intersectarem e devolva False, caso contrario. Pode admitir que
-a1 < b1 e a2 < b2.
-"""
-
-
 def intersects(a1, b1, a2, b2):
     assert a1 < b1
     assert a2 < b2

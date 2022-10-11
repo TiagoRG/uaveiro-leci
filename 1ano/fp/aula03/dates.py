@@ -1,18 +1,3 @@
-""" Exercicio 09.
-Analise e execute o programa dates.py. Faça as correçoes indicadas abaixo.
-
-a.  A funçao isLeapYear deveria indicar quando um ano é bissexto, mas esta errada.
-    Corrija-a. Um ano e bissexto se for multiplo de 4, com exceçao dos fins de seculo
-    (multiplos de 100), que so sao bissextos se forem multiplos de 400. Por exemplo:
-    1980, 1984, 2004 foram bissextos; 1800 e 1900 foram anos comuns, mas 2000 foi bissexto.
-
-b.  A funçao monthDays, para determinar o numero de dias de um mes, tambem esta errada.
-    Quando o mes e fevereiro, invoque a funçao anterior para determinar se o ano e
-    bissexto e devolva 29 dias nesse caso.
-
-c.  Corrija a funçao nextDay para devolver o dia seguinte corretamente.
-"""
-
 # This function checks if year is a leap year.
 # It is wrong: 1900 was a common year!
 from operator import contains

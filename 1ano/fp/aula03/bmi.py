@@ -1,16 +1,3 @@
-""" Exercicio 03.
-O programa bmi.py serve para calcular o índice de massa corporal, mas está incompleto. O
-programa inclui três funçoes. Analise o seu funcionamento.
-
-a.  Complete a definiçao da funçao bodyMassIndex para calcular o indice pela razao
-    bmi = weight / height**2. Complete os argumentos na invocacao da funçao, dentro da
-    funçao principal. Teste o programa.
-
-b.  Complete a funçao bmiCategory para devolver uma string com a categoria correspondente
-    ao indice de massa corporal dado. Acrescente uma chamada a esta funçao na funçao
-    principal, para obter o nome da categoria. Volte a testar
-"""
-
 # This function computes the body mass index (BMI),
 # given the height (in meter) and weight (in kg) of a person.
 def bodyMassIndex(height, weight):
