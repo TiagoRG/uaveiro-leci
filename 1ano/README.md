@@ -1,5 +1,5 @@
 # 1º Ano
-## Exercícios e projetos das cadeiras do 1º ano:
+## Todo o material das cadeiras do 1º ano:
 ### 1º Semestre
 * [Fundamentos de Programação](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/fp)
 * Introdução à Engenharia Informática
