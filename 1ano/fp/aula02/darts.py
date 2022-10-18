@@ -1,5 +1,39 @@
 import math
 
+def main():
+    print("""Introduza as coordenadas (x, y) do dardo.
+Representa as posicoes horizontal e vertical respetivamente.
+Ambas em milimetros.
+    """)
+
+    x = int(input('X: '))
+    y = int(input('Y: '))
+
+    mod = math.sqrt(x ** 2 + y ** 2)
+
+    if mod > 170:
+        print('Fora do alvo.')
+        exit(1)
+
+    if mod < 12.7:
+        print('Pontuacao: 50 pontos.')
+        exit(1)
+    elif mod < 32:
+        print('Pontuacao: 25 pontos.')
+        exit(1)
+
+    base_point = BasePoint(x, y)
+
+    if mod > 99 and mod < 107:
+        print('Pontuacao: {}pontos.'.format(base_point * 3))
+        exit(1)
+    if mod > 162:
+        print('Pontuacao: {}pontos.'.format(base_point * 2))
+        exit(1)
+
+    print('Pontuacao: {}pontos.'.format(base_point))
+    exit(1)
+
 def BasePoint(x, y):
     if x > 0:
         if abs(y) < x * math.tan(math.pi / 20):
@@ -54,35 +88,5 @@ def BasePoint(x, y):
                 else:
                     return 3
 
-print("""Introduza as coordenadas (x, y) do dardo.
-Representa as posicoes horizontal e vertical respetivamente.
-Ambas em milimetros.
-""")
-
-x = int(input('X: '))
-y = int(input('Y: '))
-
-mod = math.sqrt(x ** 2 + y ** 2)
-
-if mod > 170:
-    print('Fora do alvo.')
-    exit(1)
-
-if mod < 12.7:
-    print('Pontuacao: 50 pontos.')
-    exit(1)
-elif mod < 32:
-    print('Pontuacao: 25 pontos.')
-    exit(1)
-
-base_point = BasePoint(x, y)
-
-if mod > 99 and mod < 107:
-    print('Pontuacao: {}pontos.'.format(base_point * 3))
-    exit(1)
-if mod > 162:
-    print('Pontuacao: {}pontos.'.format(base_point * 2))
-    exit(1)
-
-print('Pontuacao: {}pontos.'.format(base_point))
-exit(1)
+if __name__ == '__main__':
+    main()

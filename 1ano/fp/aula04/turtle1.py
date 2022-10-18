@@ -61,4 +61,5 @@ def main():
     print("The window was closed. Bye!")
 
 
-main()
+if __name__ == "__main__":
+    main()

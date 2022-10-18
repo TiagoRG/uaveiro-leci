@@ -7,4 +7,4 @@ kmAno = mAno
 secsAno = mAno
 hAno = secsAno / 3600
 
-print('O elevador anda {} kilometros por ano, durante {} horas.'.format(kmAno, hAno))
+print(f'O elevador anda {kmAno} kilometros por ano, durante {hAno} horas.')

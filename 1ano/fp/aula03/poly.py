@@ -12,10 +12,12 @@ def main():
 
     # Acrescente instruções para mostrar os valores de
     # p(1), p(2), p(10) e g(1 + p(3)).
-    print("""p(1) = {}
-p(2) = {}
-p(10) = {}
-g(1 + p(3)) = {}""".format(p(1), p(2), p(10), g(1 + p(3))))
+    print(f"""
+p(1) = {p(1)}
+p(2) = {p(2)}
+p(10) = {p(10)}
+g(1 + p(3)) = {g(1 + p(3))}
+""")
 
 if __name__ == '__main__':
     main()

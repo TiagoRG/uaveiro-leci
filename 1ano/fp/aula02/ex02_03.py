@@ -11,4 +11,4 @@ if x2 > mx:
 if x3 > mx:
     mx = x3
 
-print("Maximum:", mx)
+print("Maximum: ", mx)

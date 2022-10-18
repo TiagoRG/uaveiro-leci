@@ -1,6 +1,5 @@
 import math
 
-
 def leibnizPi4(n):
     total = 0
     for x in range(1, n+1):
@@ -12,9 +11,10 @@ def leibnizPi4(n):
 
 def main():
     num = int(input('Introduza o número de termos: '))
-    print("""
-Resultado da série de Leibniz: {}
-Valor do PI/4: {}
-""".format(leibnizPi4(num), math.pi/4))
+    print(f"""
+Resultado da série de Leibniz: {leibnizPi4(num)}
+Valor do PI/4: {math.pi/4}
+""")
 
-main()
+if __name__ == "__main__":
+    main()
