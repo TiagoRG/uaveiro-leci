@@ -71,4 +71,5 @@ def main():
     print(y, m, d)    # 2018 1 1 ?
 
 # call the main function
-main()
+if __name__ == "__main__":
+    main()

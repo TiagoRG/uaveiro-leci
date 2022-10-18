@@ -5,6 +5,7 @@ def fibonacci(n):
 
 def main():
     n = int(input('Introduza um número: '))
-    print('O {}º número de Fibonacci é: {}'.format(n, fibonacci(n)))
+    print(f'O {n}º número de Fibonacci é: {fibonacci(n)}')
 
-main()
+if __name__ == "__main__":
+    main()

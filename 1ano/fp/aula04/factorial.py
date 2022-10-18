@@ -8,4 +8,5 @@ def main():
     n = int(input('Introduza um número: '))
     print('O fatorial de {} é: {}'.format(n, factorial(n)))
 
-main()
+if __name__ == "__main__":
+    main()

@@ -8,6 +8,7 @@ def main():
     print("Can you guess my secret?")
     # put your code here
     c = 0
+    trieslist = []
     num = -1
     while secret != num:
         num = int(input('>>> '))
@@ -16,6 +17,9 @@ def main():
         if num < secret:
             print('Low')
         c += 1
-    print('Well done! The secret number was {}. It took you {} tries to get it right.'.format(secret, c))
+        trieslist.append(str(num))
+    triesstr = ', '.join(trieslist)
+    print(f'Well done! The secret number was {secret}. It took you {c} tries to get it right.\nList of tries: {triesstr}')
 
-main()
+if __name__ == "__main__":
+    main()

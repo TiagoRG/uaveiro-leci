@@ -1,11 +1,12 @@
 def main():
     num = int(input('De onde vai começar o contador? '))
-    countdown(num)
+    for n in countdown(num):
+        print(n)
 
 def countdown(n):
-    assert n > 0
-    print(n)
-    if n > 0:
-        countdown(n - 1)
+    while n > 0:
+        yield n
+        n -= 1
 
-main()
+if __name__ == "__main__":
+    main()

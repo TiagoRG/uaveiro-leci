@@ -45,5 +45,5 @@ def main():
 
 
 # Program starts executing here
-main()
-
+if __name__ == "__main__":
+    main()
