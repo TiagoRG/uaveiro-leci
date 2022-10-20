@@ -1,5 +1,8 @@
 // .NET core 6.0
 
+// This is just a C# version of the python solution:
+// https://github.com/TiagoRG/uaveiro-leci/blob/master/1ano/fp/aula02/darts.py
+
 namespace Darts
 {
     internal class Program
