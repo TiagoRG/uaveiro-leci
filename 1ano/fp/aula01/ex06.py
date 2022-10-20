@@ -1,10 +1,14 @@
-viagensDia = 2 * (1 + 2 + 3)
-viagensAno = viagensDia * 365
+from math import sqrt
 
-mAno = viagensAno * 3
-kmAno = mAno
 
-secsAno = mAno
-hAno = secsAno / 3600
+x1, y1 = input("Introduza x1 e y1, separados por uma virgula ',': ").split(',')
+x2, y2 = input("Introduza x2 e y2, separados por uma virgula ',': ").split(',')
 
-print(f'O elevador anda {kmAno} kilometros por ano, durante {hAno} horas.')
+x1 = float(x1)
+y1 = float(y1)
+x2 = float(x2)
+y2 = float(y2)
+
+distancia = sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
+print('A distancia entre os dois pontos é: ', distancia)

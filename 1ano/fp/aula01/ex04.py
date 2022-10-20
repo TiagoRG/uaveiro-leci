@@ -1,5 +1,8 @@
-nome = input('Como te chamas? ')
-anoNascenca = int(input('Em que ano nasceste? '))
-ano = int(input('Ano para verificar: '))
+secs = int(input('Segundos a converter para horas, minutos e segundos? '))
+s = secs % 60
+mins = secs // 60
+m = mins % 60
+h = mins // 60
 
-print(f'{nome}, em {ano} farás {ano - anoNascenca} anos.')
+
+print("{:02d}:{:02d}:{:02d}".format(h, m, s))
