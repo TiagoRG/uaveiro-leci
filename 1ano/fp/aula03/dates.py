@@ -1,45 +1,54 @@
-# This function checks if year is a leap year.
-# It is wrong: 1900 was a common year!
-from operator import contains
-
-
 def isLeapYear(year):
+    # Garante que apenas os anos de mudança de século múltiplos de 400
+    # devolvem True
     if year % 100 == 0:
         return year % 400 == 0
+    # Devolve True para o resto dos anos múltiplos de 4
     return year%4 == 0
 
-# This function has a semantic error: February in a leap year should return 29!
-# Correct it.
+
 def monthDays(year, month):
+    assert month > 0
+    
     MONTHDAYS = (0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
-        # This tuple contains the days in each month (on a common year).
-        # For example: MONTHDAYS[3] is the number of days in March.
     days = MONTHDAYS[month]
+    # Só adicionado mais 1 dia se o mẽs for fevereiro (2) e o
+    # ano for bissexto
     if isLeapYear(year) and month == 2:
         days += 1
     return days
 
-# This is wrong, too.
+
 def nextDay(year, month, day):
-    months31 = (1, 3, 5, 7, 8, 10)
-    months30 = (4, 6, 9, 11)
+    assert 13 > month > 0
+    assert day > 0
+    
+    MONTHS31DAYS = (1, 3, 5, 7, 8, 10)
+    MONTHS30DAYS = (4, 6, 9, 11)
+
+    # Último dia do ano
     if (month, day) == (12, 31):
         year += 1
         month = 1
         day = 1
-    elif contains(months31, month) and day == 31:
+    
+    # Último dia de um mês segundo os casos:
+    # > Mês de 31 dias e é o dia 31 do mês
+    # > Mês de 30 dias e é o dia 30 do mês
+    # > Fevereiro e (
+    #    o ano é bissexto e é o dia 29 do mês
+    # ou o ano não é bissexto e é o dia 28 do mês
+    # )
+    elif ( (month in MONTHS31DAYS and day == 31)
+        or (month in MONTHS30DAYS and day == 30)
+        or (month == 2 and (
+            (isLeapYear(year) and day == 29)
+        or  (not isLeapYear(year) and day == 28)
+        ))):
         month += 1
         day = 1
-    elif contains(months30, month) and day == 30:
-        month += 1
-        day = 1
-    elif month == 2 and day >= 28:
-        if isLeapYear(year) and day == 29:
-            day = 1
-            month += 1
-        if not isLeapYear(year) and day == 28:
-            day = 1
-            month += 1
+    
+    # Dia comum
     else:
         day += 1
 
