@@ -1,50 +1,23 @@
 def isLeapYear(year):
-    # Garante que apenas os anos de mudança de século múltiplos de 400
-    # devolvem True
-    if year % 100 == 0:
-        return year % 400 == 0
-    # Devolve True para o resto dos anos múltiplos de 4
-    return year%4 == 0
-
+    return year % 400 == 0 if year % 100 == 0 else year % 4 == 0
 
 def monthDays(year, month):
     assert month > 0
     
     MONTHDAYS = (0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
     days = MONTHDAYS[month]
-    # Só adicionado mais 1 dia se o mẽs for fevereiro (2) e o
-    # ano for bissexto
-    if isLeapYear(year) and month == 2:
-        days += 1
-    return days
-
-
-def nextDay(year, month, day):
-    assert 13 > month > 0
-    assert day > 0
     
-    MONTHS31DAYS = (1, 3, 5, 7, 8, 10)
-    MONTHS30DAYS = (4, 6, 9, 11)
+    return days + 1 if (isLeapYear(year) and month == 2) else days
 
-    # Último dia do ano
+def nextDay(year, month, day):    
+    # Verifica se é o último dia do ano
     if (month, day) == (12, 31):
         year += 1
         month = 1
         day = 1
     
-    # Último dia de um mês segundo os casos:
-    # > Mês de 31 dias e é o dia 31 do mês
-    # > Mês de 30 dias e é o dia 30 do mês
-    # > Fevereiro e (
-    #    o ano é bissexto e é o dia 29 do mês
-    # ou o ano não é bissexto e é o dia 28 do mês
-    # )
-    elif ( (month in MONTHS31DAYS and day == 31)
-        or (month in MONTHS30DAYS and day == 30)
-        or (month == 2 and (
-            (isLeapYear(year) and day == 29)
-        or  (not isLeapYear(year) and day == 28)
-        ))):
+    # Verifica se é o último dia do mês
+    elif (monthDays(year, month) == day):
         month += 1
         day = 1
     
