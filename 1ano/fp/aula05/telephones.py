@@ -1,5 +1,3 @@
-from operator import contains
-
 # Convert a telephone number into corresponding name, if on list.
 # (If not on list, just return the number itself.)
 
@@ -7,14 +5,11 @@ from operator import contains
 def telToName(tel, telList, nameList):
     # your code here
     index = 0
-    try:
-        for t in telList:
-            if t == tel: break
-            index += 1
-        name = nameList[index]
-    except:
-        name = tel
-    return name
+    for t in telList:
+        if t == tel:
+            break
+        index += 1
+    return tel if index == len(telList) else nameList[index]
 
 
 # Return list of telephone numbers corresponding to names containing partName.
@@ -23,7 +18,7 @@ def nameToTels(partName, telList, nameList):
     tels = []
     index = 0
     for name in nameList:
-        if contains(name, partName):
+        if partName in name:
             tels.append(telList[index])
         index += 1
     return tels
