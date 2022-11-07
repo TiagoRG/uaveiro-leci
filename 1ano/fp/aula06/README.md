@@ -1,5 +1,5 @@
 # Fundamentos de Programação
-## Aula 06
+## Aula 06 - [Slides](https://github.com/TiagoRG/uaveiro-leci/blob/master/1ano/fp/slides/tp06-files+args+exceptions.pdf)
 ### Tópico principal da aula: Files, Exceptions
 #### Em falta: exercício 06
 
