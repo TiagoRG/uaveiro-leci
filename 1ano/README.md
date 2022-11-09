@@ -1,6 +1,11 @@
 # 1º Ano
 ## Todo o material das cadeiras do 1º ano:
 ### 1º Semestre
+
 - [Fundamentos de Programação](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/fp)
+- [Introdução à Engenharia Informática](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/iei)
+- [Introdução aos Sistemas Digitais](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/isd)
+- [Algebra Linear e Geometria Analítica](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/alga)
+
 ---
 *Pode conter erros, caso encontre algum, crie um* [*ticket*](https://github.com/TiagoRG/uaveiro-leci/issues/new)
