@@ -1,0 +1,7 @@
+# Fundamentos de Programação
+## Aula 07 - [Slides](https://github.com/TiagoRG/uaveiro-leci/blob/master/1ano/fp/slides/tp07-dictionaries.pdf)
+### Tópico principal da aula: Dictionaries
+#### Exercícios terminados: ex01, ex02, ex03
+
+---
+*Pode conter erros, caso encontre algum, crie um* [*ticket*](https://github.com/TiagoRG/uaveiro-leci/issues/new)
