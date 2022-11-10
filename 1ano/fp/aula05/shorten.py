@@ -1,15 +1,12 @@
-import re
-
-
 def main():
     print(shorten("Universidade de Aveiro"))
     print(shorten("United Nations Organization"))
-    
+
+
 def shorten(string):
     abv = ''
-    upper = r"[A-Z]$"
     for char in string:
-        if re.match(upper, char):
+        if char.isupper():
             abv += char
     return abv
             
