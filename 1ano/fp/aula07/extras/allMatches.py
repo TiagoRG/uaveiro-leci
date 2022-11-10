@@ -1,9 +1,3 @@
-def main():
-    matches = allMatches(['SLB', 'FCP', 'SCP', 'SB'])
-    print(matches)
-    print(len(matches))
-
-
 def allMatches(teamList):
     matchList = []
 
@@ -13,7 +7,3 @@ def allMatches(teamList):
                 matchList.append((team1, team2))
 
     return matchList
-
-
-if __name__ == "__main__":
-    main()
