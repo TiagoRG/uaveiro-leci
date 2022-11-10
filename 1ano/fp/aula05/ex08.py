@@ -18,25 +18,23 @@ def evenThenOdd(string):
 
 
 def removeAdjacentDuplicates(s):
-    s = str(s)
-    newS = ''
-    lastChar = 'a' if s[0] != 'a' else 'b'
-    for char in s:
-        if char != lastChar:
-            newS += char
-        lastChar = char
-    return newS
+    new = ''
+    for i in range(len(s)):
+        if i == 0:
+            new += s[i]
+        elif s[i] != s[i-1]:
+            new += s[i]
+    return new
 
 
 def reapeatNumTimes(n):
     lst = []
-    for i in range(1,n+1):
+    for i in range(1, n+1):
         for j in range(i):
             lst.append(i)
     return lst
 
 
-# <!-- -->
 def positionOfFirstLargest(arr):
     mx = maxArray(arr)
     index = 0
@@ -51,7 +49,6 @@ def maxArray(arr):
         if a > mx:
             mx = a
     return mx
-# <!-- -->
 
 
 if __name__ == "__main__":
