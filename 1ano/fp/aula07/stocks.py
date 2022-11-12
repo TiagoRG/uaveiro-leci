@@ -84,11 +84,12 @@ def stocksByDateByName(lst):
     return dic
 
 
-# Função não completa
 def portfolioValue(stocks, portfolio, date):
     assert date in stocks
     val = 0.0
     # Complete ...
+    for comp in portfolio:
+        val += portfolio[comp] * stocks[date][comp][CLOSE]
 
     return val
 
