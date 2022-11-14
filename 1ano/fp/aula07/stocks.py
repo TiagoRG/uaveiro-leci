@@ -1,6 +1,5 @@
 import re
 
-
 # Constantes para indexar os tuplos:
 NAME, DATE, OPEN, MAX, MIN, CLOSE, VOLUME = 0, 1, 2, 3, 4, 5, 6
 
@@ -10,11 +9,11 @@ def main():
     # Show just first and last tuples:
     print("first:", lst[1])
     print("last:", lst[-1])
-    
+
     print("a) totVol=", totalVolume(lst))
 
     print("b) maxVal=", maxValorization(lst))
-    
+
     stocksDic = stocksByDateByName(lst)
     print("c) CSCO@11:", stocksDic['2020-10-12']['CSCO'])
     print("c) AMZN@22:", stocksDic['2020-10-22']['AMZN'])
@@ -33,7 +32,7 @@ def loadStockFile(filename):
             name = parts[NAME]
             date = parts[DATE]
             tup = (name, date, float(parts[OPEN]), float(parts[MAX]),
-                float(parts[MIN]), float(parts[CLOSE]), int(parts[VOLUME]))
+                   float(parts[MIN]), float(parts[CLOSE]), int(parts[VOLUME]))
             lst.append(tup)
     return lst
 
@@ -41,7 +40,7 @@ def loadStockFile(filename):
 def totalVolume(lst):
     totVol = {}
     # Complete ...
-    for tup in totVol:
+    for tup in lst:
         if tup[NAME] not in totVol:
             totVol[tup[NAME]] = tup[VOLUME]
         else:
@@ -62,7 +61,7 @@ def maxValorization(lst):
             if re.match(pat, dia):
                 dia = dia[1]
             if data == int(dia):
-                maxcomp = tup[OPEN]/tup[CLOSE] * 100
+                maxcomp = tup[OPEN] / tup[CLOSE] * 100
                 if maxcomp > maxDiario:
                     maxDiario = maxcomp
                     maxDiarioComp = tup[NAME]
