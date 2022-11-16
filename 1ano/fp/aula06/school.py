@@ -23,10 +23,9 @@ def printPauta(lst, filename=""):
     text = f'{"Numero":>6} {"Nome":^50} {"Nota":>4}\n'
     for aluno in lst:
         text += f'{aluno[0]:>6} {aluno[1]:^50} {notaFinal(aluno):>4.1f}\n'
-    if filename == "":
-        print(text)
-    else:
-        print(text, file=open(filename, 'w'))
+    print(text)
+    with open(filename, 'w') as f:
+        f.write(text)
 
 
 # d)
