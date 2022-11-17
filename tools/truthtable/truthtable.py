@@ -8,19 +8,19 @@ def main():
     if len(sys.argv) == 1 or sys.argv[1] == 'usage':
         print("""Usage:
 
-karnaugh '<function>':
-    Prints the karnaugh map of the function.
+truthtable '<function>':
+    Prints the truth table map of the function.
     Valid characters:
     > Variables: a-z
     > Operators: +, *, ~, (, ); You can't use ~ before ()
 
-karnaugh bash:
-    Adds the command karnaugh to bash, so you can use it from anywhere.
+truthtable bash:
+    Adds the command truthtable to bash, so you can use it from anywhere.
 
-karnaugh bash --reset:
-    Resets the command karnaugh in bash in case it's broken, so you can use it from anywhere.
+truthtable bash --reset:
+    Resets the command truthtable in bash in case it's broken, so you can use it from anywhere.
 
-karnaugh usage:
+truthtable usage:
     Prints this message.""")
         return
     if sys.argv[1] == "bash":
@@ -28,11 +28,11 @@ karnaugh usage:
         if len(sys.argv) == 2:
             with open(f'/home/{username}/.bashrc', 'r') as bashrc:
                 for line in bashrc:
-                    if line.startswith('alias karnaugh='):
-                        print('Command already exists, try using, after opening a new terminal, karnaugh <function>')
+                    if line.startswith('alias truthtable='):
+                        print('Command already exists, try using, after opening a new terminal, truthtable \'<function>\'')
                         return
-            os.system(f'echo "\n\nalias karnaugh=\'python3 {pathlib.Path(__file__).parent.absolute()}/karnaugh.py\'\n" >> \'/home/{username}/.bashrc\'')
-            print('Command added to bash, try using karnaugh <function>.\nIf it doesn\'t work, do karnaugh bash --reset.')
+            os.system(f'echo "\n\nalias truthtable=\'python3 {pathlib.Path(__file__).parent.absolute()}/truthtable.py\'\n" >> \'/home/{username}/.bashrc\'')
+            print('Command added to bash, try using truthtable <function>.\nIf it doesn\'t work, do truthtable bash --reset.')
         elif sys.argv[2] == '--reset':
             with open(f'/home/{username}/.bashrc', 'r') as bashrc:
                 lines = bashrc.readlines()
@@ -42,16 +42,16 @@ karnaugh usage:
                     linesDict[index] = line
                     index += 1
                 for key in linesDict:
-                    if linesDict[key].startswith('alias karnaugh='):
+                    if linesDict[key].startswith('alias truthtable='):
                         del linesDict[key]
                         break
                 string = ''
                 for key in linesDict:
                     string += linesDict[key]
-                string += f'\n\nalias karnaugh=\'python3 {pathlib.Path(__file__).parent.absolute()}/karnaugh.py\'\n'
+                string += f'\n\nalias truthtable=\'python3 {pathlib.Path(__file__).parent.absolute()}/truthtable.py\'\n'
             with open(f'/home/{username}/.bashrc', 'w') as bashrc:
                 bashrc.write(string)
-            print('Command readded to bash, try using, after opening a new terminal, karnaugh <function>.')
+            print('Command readded to bash, try using, after opening a new terminal, truthtable <function>.')
     else:
         function = sys.argv[1]
 
@@ -60,19 +60,19 @@ karnaugh usage:
 
         for char in function:
             if not (re.match(validVariables, char) or char in validOperators):
-                print("Invalid function, use 'karnaugh usage' to see the valid characters.")
+                print("Invalid function, use 'truthtable usage' to see the valid characters.")
                 return
 
         variables = re.findall(validVariables, function)
         variables = list(dict.fromkeys(variables))
         variables.sort()
 
-        karnaughMap = getMap(variables, function)
-        printMap(variables, karnaughMap)
+        truthTable = getTable(variables, function)
+        printTable(variables, truthTable)
 
 
-def getMap(variables, function):
-    karnaughMap = {}
+def getTable(variables, function):
+    truthTable = {}
     for n in range(2 ** len(variables)):
         tempFunction = function
         binary = bin(n)[2:]
@@ -87,17 +87,17 @@ def getMap(variables, function):
                 tempFunction = tempFunction.replace(tempFunction[index], binary[variables.index(var)]) if tempFunction[index - 1] != '~' else tempFunction.replace(f"~{tempFunction[index]}", str(int(not int(binary[variables.index(tempFunction[index])])))+" ")
             index += 1
         try:
-            karnaughMap[binary] = eval(tempFunction)
+            truthTable[binary] = eval(tempFunction)
         except:
-            print("Invalid function, use 'karnaugh usage' to see the valid characters.")
+            print("Invalid function, use 'truthtable usage' to see the valid characters.")
             return
-        if karnaughMap[binary] > 1:
-            karnaughMap[binary] = 1
+        if truthTable[binary] > 1:
+            truthTable[binary] = 1
 
-    return karnaughMap
+    return truthTable
 
 
-def printMap(variables, karnaughMap):
+def printTable(variables, truthTable):
     for var in variables:
         print("|---", end='')
     print('|-----|')
@@ -107,7 +107,7 @@ def printMap(variables, karnaughMap):
     for var in variables:
         print("|---", end='')
     print('|-----|')
-    for key, value in karnaughMap.items():
+    for key, value in truthTable.items():
         for char in key:
             print("| " + char, end=' ')
         print(f"|  {value}  |")
