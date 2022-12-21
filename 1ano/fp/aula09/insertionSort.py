@@ -3,21 +3,20 @@
 # using the insertion sort algorithm.
 # Modify it to accept a key= keyword argument that works like in list.sort.
 
-def insertionSort(lst):
+def insertionSort(lst, key=None):
     # Traverse elements starting at position 1
     for i in range(1, len(lst)):
         # We know that lst[:i] is sorted
         x = lst[i]    # x is the element to insert next
         # Elements in lst[:i] that are > x must move one position ahead
         j = i - 1
-        while j >= 0 and lst[j] > x:
+        while j >= 0 and (key(lst[j]) > key(x) if key else lst[j] > x):
             lst[j + 1] = lst[j]
             j -= 1
         # Then put x in the last emptied slot
         lst[j + 1] = x
         # Now we know that lst[:i+1] is sorted
     return
-
 
 
 def main():
@@ -45,6 +44,7 @@ def main():
     assert lst == sorted(lst0, key=myorder)
 
     print("All tests OK!")
+
 
 if __name__ == "__main__":
     main()
