@@ -1,0 +1,117 @@
+1,Academica,Sp Lisbon
+1,Arouca,Estoril
+1,Benfica,Pacos Ferreira
+1,Gil Vicente,Guimaraes
+1,Nacional,Moreirense
+1,Penafiel,Belenenses
+1,Porto,Maritimo
+1,Rio Ave,Setubal
+1,Sp Braga,Boavista
+2,Belenenses,Nacional
+2,Boavista,Benfica
+2,Estoril,Rio Ave
+2,Guimaraes,Penafiel
+2,Maritimo,Academica
+2,Moreirense,Sp Braga
+2,Pacos Ferreira,Porto
+2,Setubal,Gil Vicente
+2,Sp Lisbon,Arouca
+3,Academica,Setubal
+3,Belenenses,Guimaraes
+3,Benfica,Sp Lisbon
+3,Gil Vicente,Maritimo
+3,Nacional,Arouca
+3,Penafiel,Pacos Ferreira
+3,Porto,Moreirense
+3,Rio Ave,Boavista
+3,Sp Braga,Estoril
+4,Arouca,Sp Braga
+4,Boavista,Academica
+4,Estoril,Nacional
+4,Guimaraes,Porto
+4,Maritimo,Penafiel
+4,Moreirense,Rio Ave
+4,Pacos Ferreira,Gil Vicente
+4,Setubal,Benfica
+4,Sp Lisbon,Belenenses
+5,Academica,Estoril
+5,Belenenses,Maritimo
+5,Benfica,Moreirense
+5,Gil Vicente,Sp Lisbon
+5,Guimaraes,Pacos Ferreira
+5,Nacional,Sp Braga
+5,Penafiel,Setubal
+5,Porto,Boavista
+5,Rio Ave,Arouca
+6,Arouca,Academica
+6,Boavista,Gil Vicente
+6,Estoril,Benfica
+6,Maritimo,Guimaraes
+6,Moreirense,Penafiel
+6,Pacos Ferreira,Belenenses
+6,Setubal,Nacional
+6,Sp Braga,Rio Ave
+6,Sp Lisbon,Porto
+7,Academica,Moreirense
+7,Belenenses,Setubal
+7,Benfica,Arouca
+7,Gil Vicente,Estoril
+7,Guimaraes,Boavista
+7,Nacional,Rio Ave
+7,Pacos Ferreira,Maritimo
+7,Penafiel,Sp Lisbon
+7,Porto,Sp Braga
+8,Arouca,Porto
+8,Boavista,Pacos Ferreira
+8,Estoril,Belenenses
+8,Moreirense,Gil Vicente
+8,Nacional,Academica
+8,Rio Ave,Penafiel
+8,Setubal,Guimaraes
+8,Sp Braga,Benfica
+8,Sp Lisbon,Maritimo
+9,Academica,Sp Braga
+9,Belenenses,Boavista
+9,Benfica,Rio Ave
+9,Gil Vicente,Arouca
+9,Guimaraes,Sp Lisbon
+9,Maritimo,Moreirense
+9,Pacos Ferreira,Setubal
+9,Penafiel,Estoril
+9,Porto,Nacional
+10,Arouca,Guimaraes
+10,Boavista,Penafiel
+10,Estoril,Porto
+10,Moreirense,Belenenses
+10,Nacional,Benfica
+10,Rio Ave,Academica
+10,Setubal,Maritimo
+10,Sp Braga,Gil Vicente
+10,Sp Lisbon,Pacos Ferreira
+11,Academica,Benfica
+11,Belenenses,Arouca
+11,Gil Vicente,Nacional
+11,Guimaraes,Moreirense
+11,Maritimo,Boavista
+11,Pacos Ferreira,Estoril
+11,Penafiel,Sp Braga
+11,Porto,Rio Ave
+11,Sp Lisbon,Setubal
+12,Academica,Porto
+12,Arouca,Penafiel
+12,Benfica,Belenenses
+12,Boavista,Sp Lisbon
+12,Estoril,Setubal
+12,Moreirense,Pacos Ferreira
+12,Nacional,Maritimo
+12,Rio Ave,Gil Vicente
+12,Sp Braga,Guimaraes
+13,Belenenses,Sp Braga
+13,Gil Vicente,Academica
+13,Guimaraes,Rio Ave
+13,Maritimo,Estoril
+13,Pacos Ferreira,Arouca
+13,Penafiel,Nacional
+13,Porto,Benfica
+13,Setubal,Boavista
+13,Sp Lisbon,Moreirense
