@@ -1,14 +1,18 @@
 def main():
+    budget = 0
     journeys = {}
     get_journeys(journeys, 'Jornadas.csv')
-    get_user_input(journeys)
+    get_user_input(journeys, budget)
 
 
-def get_user_input(journeys: dict) -> None:
+def get_user_input(journeys: dict, budget: int) -> None:
     while True:
         journey_input = input('Jornada? ')
         if journey_input in journeys:
             break
+        elif journey_input == '0':
+            print(f"Saldo: {budget:.2f} euro")
+            exit(0)
         else:
             print('Jornada inválida')
 
@@ -24,10 +28,11 @@ def get_user_input(journeys: dict) -> None:
                 else:
                     print('Aposta inválida')
 
-    print_results(journeys, int(journey_input))
+    budget -= 0.4
+    print_results(journeys, int(journey_input), budget)
 
 
-def print_results(journeys: dict, journey: int) -> None:
+def print_results(journeys: dict, journey: int, budget: int) -> None:
     with open(f'apostas_jornadas/jornada{journey}.csv', 'r') as f:
         bets = f.readlines()
         bets = [bet.strip().split(',') for bet in bets]
@@ -37,6 +42,7 @@ def print_results(journeys: dict, journey: int) -> None:
         games = f.readlines()
         print('Jornada', journey)
         line_id = 1
+        right_bets_count = 0
         for match in journeys[str(journey)]:
             for game in games:
                 game = game.strip().split(',')
@@ -47,8 +53,22 @@ def print_results(journeys: dict, journey: int) -> None:
                         or (bet == 'X' and game[3] == game[4])
                         or (bet == '2' and game[3] < game[4])
                     ) else 'ERRADO'
+                    if result == 'CERTO':
+                        right_bets_count += 1
                     print(f'{line_id} {match[0]:>30}  {game[3]}-{game[4]}  {match[1]:<30}: {bet}    ({result})')
             line_id += 1
+        if right_bets_count < 7:
+            price = 0
+        elif right_bets_count < 8:
+            price = 100
+        elif right_bets_count < 9:
+            price = 1000
+        else:
+            price = 5000
+        print(f"TEM {right_bets_count} CERTAS. {'SEM PRÉMIO' if right_bets_count < 7 else ('3º PRÉMIO' if right_bets_count < 8 else ('2º PRÉMIO' if right_bets_count < 9 else '1º PRÉMIO'))}")
+        budget += price
+
+        get_user_input(journeys, budget)
 
 
 def get_journeys(journeys: dict, fname: str) -> None:
