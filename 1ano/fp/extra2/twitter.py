@@ -23,3 +23,36 @@ print(twits[0]["text"])
 # Algumas mensagens contêm hashtags:
 print(twits[880]["text"])
 
+
+# A)
+word_count: dict[str, int] = {}
+
+for tweet in twits:
+    tweet_content: str = tweet["text"]
+    for word in tweet_content.split():
+        if word not in word_count:
+            word_count[word] = 0
+        word_count[word] += 1
+
+word_list = list(word_count.keys())
+
+print("A)\n" + str(word_list), end="\n\n")
+
+
+# B)
+
+ordered_list = sorted(word_list, key=lambda t: word_count[t], reverse=True)
+print("B)\n" + str(ordered_list), end="\n\n")
+
+
+# C)
+
+ordered_hashtag_list = [word for word in ordered_list if word.startswith('#')]
+print("C)\n" + str(ordered_hashtag_list), end="\n\n")
+
+
+# D)
+print("D)\n")
+most_used = word_count[ordered_hashtag_list[0]]
+for hashtag in ordered_hashtag_list:
+    print(f"{hashtag:<30} ({word_count[hashtag]:>2})  {'+' * ((word_count[hashtag]*18)//most_used)}")
