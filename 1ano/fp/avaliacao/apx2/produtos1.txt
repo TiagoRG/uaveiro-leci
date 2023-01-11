@@ -1,0 +1,6 @@
+CODIGO;NOME;SECCAO;PRECO-BASE;TAXA
+q1;Televisor 43pol;Tecnologia;300.0;23%
+q2;Computador i7;Tecnologia;500.0;23%
+q3;Frigorifico;Eletrodomesticos;400.0;23%
+q4;Forno microondas;Eletrodomesticos;60.0;23%
+q5;Tinteiro impressora;Consumiveis;10.0;13%

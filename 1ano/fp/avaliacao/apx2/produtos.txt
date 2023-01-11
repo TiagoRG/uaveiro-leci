@@ -1,0 +1,26 @@
+CODIGO;NOME;SECCAO;PRECO-BASE;TAXA
+p1;Ketchup;Mercearia Salgado;1.59;23%
+p2;Atum;Mercearia Salgado;3.38;6%
+p3;Cogumelos;Mercearia Salgado;1.98;23%
+p4;Bolachas Cacau;Mercearia Doce;1.39;23%
+p5;Cerelac;Mercearia Doce;5.65;6%
+p6;Heineken 12x25CL;Bebidas;8.99;23%
+p7;Gel Banho;Higiene;5.99;23%
+p8;Lencos de Bolso;Limpeza;1.59;23%
+p9;Jardineira;Congelados;1.99;6%
+p10;Leite 6x1L;Lacticinios;4.92;6%
+p11;Natas;Lacticinios;0.79;6%
+p12;Ovos;Lacticinios;0.94;6%
+p13;Espadarte Posta;Peixaria;6.49;6%
+p14;Queijo;Charcutaria;3.89;6%
+p15;Laranjas;Frutas e Legumes;1.449;6%
+p16;Ameixa Seca;Frutas e Legumes;2.00;6%
+p17;Tabuleiro;Casa;7.00;23%
+p18;Batatas;Frutas e Legumes;17.0;6%
+p19;Limpa Vidros;Limpeza;3.69;23%
+p20;Oregaos;Mercearia Salgado;1.42;6%
+p21;Bolachas Maria;Mercearia Doce;2.39;23%
+p22;Pedras Salgadas;Bebidas;2.46;13%
+p23;Detergente Roupa;Limpeza;12.99;23%
+p24;Pao Aveia;Padaria;1.99;6%
+p25;Iogurte Grego;Lacticinios;2.59;6%
