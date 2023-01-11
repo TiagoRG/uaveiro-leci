@@ -1,0 +1,47 @@
+|Adder
+Cout <= AdderDemo:inst6.Cout
+Cin => AdderDemo:inst.Cin
+A[0] => AdderDemo:inst6.A
+A[1] => AdderDemo:inst4.A
+A[2] => AdderDemo:inst3.A
+A[3] => AdderDemo:inst.A
+B[0] => AdderDemo:inst6.B
+B[1] => AdderDemo:inst4.B
+B[2] => AdderDemo:inst3.B
+B[3] => AdderDemo:inst.B
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Overflow <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Adder|AdderDemo:inst6
+Cout <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Cin => gdfx_temp0.IN0
+A => gdfx_temp0.IN1
+B => gdfx_temp0.IN2
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Adder|AdderDemo:inst4
+Cout <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Cin => gdfx_temp0.IN0
+A => gdfx_temp0.IN1
+B => gdfx_temp0.IN2
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Adder|AdderDemo:inst3
+Cout <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Cin => gdfx_temp0.IN0
+A => gdfx_temp0.IN1
+B => gdfx_temp0.IN2
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Adder|AdderDemo:inst
+Cout <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Cin => gdfx_temp0.IN0
+A => gdfx_temp0.IN1
+B => gdfx_temp0.IN2
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,75 @@
+Determining the location of the ModelSim executable...
+
+Using: /home/tiagorg/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MuxDemo -c MuxDemo --vector_source="/home/tiagorg/repos/uaveiro-leci/1ano/isd/quartus-projects/MuxDemo/Waveform.vwf" --testbench_file="/home/tiagorg/repos/uaveiro-leci/1ano/isd/quartus-projects/MuxDemo/simulation/qsim/Waveform.vwf.vht"
+
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Fri Nov 18 14:55:34 2022Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MuxDemo -c MuxDemo --vector_source=/home/tiagorg/repos/uaveiro-leci/1ano/isd/quartus-projects/MuxDemo/Waveform.vwf --testbench_file=/home/tiagorg/repos/uaveiro-leci/1ano/isd/quartus-projects/MuxDemo/simulation/qsim/Waveform.vwf.vhtWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/tiagorg/repos/uaveiro-leci/1ano/isd/quartus-projects/MuxDemo/simulation/qsim/" MuxDemo -c MuxDemo
+
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Fri Nov 18 14:55:35 2022Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/tiagorg/repos/uaveiro-leci/1ano/isd/quartus-projects/MuxDemo/simulation/qsim/ MuxDemo -c MuxDemoWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file MuxDemo.vho in folder "/home/tiagorg/repos/uaveiro-leci/1ano/isd/quartus-projects/MuxDemo/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 602 megabytes    Info: Processing ended: Fri Nov 18 14:55:36 2022    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+/home/tiagorg/repos/uaveiro-leci/1ano/isd/quartus-projects/MuxDemo/simulation/qsim/MuxDemo.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+/home/tiagorg/intelFPGA_lite/20.1/modelsim_ase/linuxaloem//vsim -c -do MuxDemo.do
+
+Reading pref.tcl
+# 2020.1
+# do MuxDemo.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:55:37 on Nov 18,2022# vcom -work work MuxDemo.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack# -- Loading package cycloneive_components
+# -- Compiling entity hard_block
+# -- Compiling architecture structure of hard_block
+# -- Compiling entity Mux16_1# -- Compiling architecture structure of Mux16_1
+# End time: 14:55:37 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020# Start time: 14:55:37 on Nov 18,2022
+# vcom -work work Waveform.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164# -- Compiling entity Mux16_1_vhd_vec_tst# -- Compiling architecture Mux16_1_arch of Mux16_1_vhd_vec_tst
+# End time: 14:55:37 on Nov 18,2022, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
+# vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Mux16_1_vhd_vec_tst # Start time: 14:55:37 on Nov 18,2022# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.mux16_1_vhd_vec_tst(mux16_1_arch)# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading cycloneive.cycloneive_atom_pack(body)# Loading cycloneive.cycloneive_components# Loading work.mux16_1(structure)# Loading work.hard_block(structure)# Loading ieee.std_logic_arith(body)# Loading cycloneive.cycloneive_io_obuf(arch)# Loading cycloneive.cycloneive_io_ibuf(arch)# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# after#33
+# End time: 14:55:38 on Nov 18,2022, Elapsed time: 0:00:01# Errors: 0, Warnings: 0
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading /home/tiagorg/repos/uaveiro-leci/1ano/isd/quartus-projects/MuxDemo/Waveform.vwf...
+
+Reading /home/tiagorg/repos/uaveiro-leci/1ano/isd/quartus-projects/MuxDemo/simulation/qsim/MuxDemo.msim.vcd...
+
+Processing channel transitions... 
+
+Warning: I1 - signal not found in VCD.
+
+Writing the resulting VWF to /home/tiagorg/repos/uaveiro-leci/1ano/isd/quartus-projects/MuxDemo/simulation/qsim/MuxDemo_20221118145538.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.
