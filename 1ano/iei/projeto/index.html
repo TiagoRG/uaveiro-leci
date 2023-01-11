@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Integração de Componentes em Páginas WEB</title>
+    <!-- Bootstrap minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- Personal Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Personal JavaScript -->
+    <script src="js/index.js"></script>
+    <!-- Personal Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Highcharts JavaScript -->
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <!-- LeaftLet CSS e JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <!-- Chart builder -->
+    <script src="js/chart.js"></script>
+    <!-- Images -->
+    <script src="js/image.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">Introdução à Engenharia Informática</a>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Outras páginas<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Contacto</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#popups">Pop Up</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#charts">Chart</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#maps">Maps</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#images">Images</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="about.html" target="_blank">
+                <span class="glyphicon glyphicon-user"></span> About</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <h2 id="popups" style="text-align:center">Popups</h2>
+    <div id="myPopup" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button
+                            type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+                    </button>
+                    <h4 class="modal-title">Popup Title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Popup Contents</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myPopup">
+        Popup Throw
+    </button>
+
+    <h2 id="charts" style="text-align:center">Charts</h2>
+    <div id="myGraph" style="width: 400px; height: 300px;"></div>
+    <label for="selection">Tipo de gráfico</label><select id="selection" onchange="graphic()">
+        <option value="line">Line</option>
+        <option value="column">Column</option>
+        <option value="pie">Pie</option>
+        <option value="scatter">Scatter</option>
+        <option value="bar">Bar</option>
+        <option value="area">Area</option>
+    </select>
+    <button class="btn btn-primary" onclick="draw()">Graphic Draw</button>
+
+    <h2 id="maps" style="text-align: center">Maps</h2>
+    <div class="row">
+        <div class="columnleft" style="text-align: center">
+            <div id="myMap" style="width: 550px; height: 450px"></div>
+            <!-- JavaScript for map design and other functionalities -->
+            <script src="js/map.js"></script>
+        </div>
+        <span style="color:blue" id="coordinates"></span>
+    </div>
+
+
+
+    <div class="row">
+        <h2 id="images" style="text-align: center">Images</h2>
+        <div class="columnright" style="text-align: center">
+            <div>
+                <button onclick="decreaseImage(document.getElementById('myImage'))">
+                    Decrease Image
+                </button>
+                <button onclick="resetImage(document.getElementById('myImage'))">
+                    Reset Image
+                </button>
+            </div>
+            <img id="myImage" src="images/ua.png" alt="Ups!" style="width: 550px; height: 450px;">
+        </div>
+    </div>
+</div>
+</body>
+</html>

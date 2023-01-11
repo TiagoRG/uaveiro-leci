@@ -1,0 +1,19 @@
+/* style for the about page */
+.style_about {
+    color: black;
+    background-color: gray;
+    text-align: center;
+}
+/* Create two columns (left and right boxes) with the same size */
+/* Put map and image side by side */
+.columnleft {
+    float: left;
+    height: 450px;
+    width: 550px;
+    margin: 10px;
+}
+.columnright {
+    float: right;
+    height: 450px;
+    width: 550px;
+}
