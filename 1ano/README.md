@@ -3,7 +3,7 @@
 ### 1º Semestre
 
 - [Fundamentos de Programação](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/fp)&emsp;|&emsp;Ano de conclusão: 2022/2023
-- [Introdução à Engenharia Informática](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/iei)
+- [Introdução à Engenharia Informática](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/iei)&emsp;|&emsp;Ano de conclusão: 2022/2023
 - [Introdução aos Sistemas Digitais](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/isd)&emsp;|&emsp;Ano de conclusão: 2022/2023
 
 ---
