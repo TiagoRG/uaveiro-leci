@@ -2,6 +2,8 @@
 ### Projetos + resoluções de exercícios organizados por aulas
 ### Linguagem usada: [Python](https://www.python.org/)
 
+## [Finished]
+
 ---
 ## Índice
 | Aula nº                                                                  | Tópicos                                |
