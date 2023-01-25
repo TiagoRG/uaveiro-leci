@@ -24,7 +24,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 152 -40 168 128)
 	(text "INPUT" (rect 6 125 16 154)(font "Arial" (font_size 6))(vertical))
-	(text "S" (rect 6 5 17 15)(font "Arial" )(vertical))
+	(text "S" (rect 6 5 17 14)(font "Arial" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -39,9 +39,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 192 -40 208 128)
+	(rect 168 -40 184 128)
 	(text "INPUT" (rect 6 125 16 154)(font "Arial" (font_size 6))(vertical))
-	(text "I1" (rect 5 5 18 16)(font "Intel Clear" )(vertical))
+	(text "I1" (rect 5 5 18 15)(font "Intel Clear" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -56,9 +56,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 232 -40 248 128)
+	(rect 184 -40 200 128)
 	(text "INPUT" (rect 6 125 16 154)(font "Arial" (font_size 6))(vertical))
-	(text "I0" (rect 5 5 18 17)(font "Intel Clear" )(vertical))
+	(text "I0" (rect 5 5 18 16)(font "Intel Clear" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -73,7 +73,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 552 208 728 224)
+	(rect 344 152 520 168)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "Y" (rect 90 0 100 11)(font "Arial" ))
 	(pt 0 8)
@@ -88,7 +88,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 312 152 376 200)
+	(rect 216 112 280 160)
 	(text "AND2" (rect 1 0 29 10)(font "Arial" (font_size 6)))
 	(text "inst" (rect 3 37 21 48)(font "Arial" ))
 	(port
@@ -120,7 +120,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 312 240 376 288)
+	(rect 216 160 280 208)
 	(text "AND2" (rect 1 0 29 10)(font "Arial" (font_size 6)))
 	(text "inst1" (rect 3 37 27 50)(font "Intel Clear" ))
 	(port
@@ -152,7 +152,32 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 472 192 536 240)
+	(rect 168 128 216 160)
+	(text "NOT" (rect 1 0 22 10)(font "Arial" (font_size 6)))
+	(text "inst3" (rect 3 21 27 34)(font "Intel Clear" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 16 18)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 16 18)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 13 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 53 18)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 53 18)(font "Courier New" (bold))(invisible))
+		(line (pt 39 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
+	)
+)
+(symbol
+	(rect 280 136 344 184)
 	(text "OR2" (rect 1 0 23 10)(font "Arial" (font_size 6)))
 	(text "inst2" (rect 3 37 27 50)(font "Intel Clear" ))
 	(port
@@ -184,85 +209,40 @@ https://fpgasoftware.intel.com/eula.
 		(arc (pt 25 35)(pt 49 24)(rect -6 -27 57 36))
 	)
 )
-(symbol
-	(rect 256 168 304 200)
-	(text "NOT" (rect 1 0 22 10)(font "Arial" (font_size 6)))
-	(text "inst3" (rect 3 21 27 34)(font "Intel Clear" ))
-	(port
-		(pt 0 16)
-		(input)
-		(text "IN" (rect 2 7 16 18)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 2 7 16 18)(font "Courier New" (bold))(invisible))
-		(line (pt 0 16)(pt 13 16))
-	)
-	(port
-		(pt 48 16)
-		(output)
-		(text "OUT" (rect 32 7 53 18)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 53 18)(font "Courier New" (bold))(invisible))
-		(line (pt 39 16)(pt 48 16))
-	)
-	(drawing
-		(line (pt 13 25)(pt 13 7))
-		(line (pt 13 7)(pt 31 16))
-		(line (pt 13 25)(pt 31 16))
-		(circle (rect 31 12 39 20))
-	)
+(connector
+	(pt 160 144)
+	(pt 168 144)
 )
 (connector
-	(pt 376 176)
-	(pt 472 176)
+	(pt 192 128)
+	(pt 216 128)
 )
 (connector
-	(pt 472 176)
-	(pt 472 208)
+	(pt 160 192)
+	(pt 216 192)
 )
 (connector
-	(pt 376 264)
-	(pt 472 264)
+	(pt 176 176)
+	(pt 216 176)
 )
 (connector
-	(pt 472 264)
-	(pt 472 224)
-)
-(connector
-	(pt 312 184)
-	(pt 304 184)
-)
-(connector
-	(pt 256 184)
-	(pt 160 184)
-)
-(connector
-	(pt 312 168)
-	(pt 240 168)
-)
-(connector
-	(pt 240 128)
-	(pt 240 168)
-)
-(connector
-	(pt 312 256)
-	(pt 200 256)
-)
-(connector
-	(pt 200 128)
-	(pt 200 256)
-)
-(connector
-	(pt 160 272)
-	(pt 312 272)
-)
-(connector
-	(pt 536 216)
-	(pt 552 216)
-)
-(connector
-	(pt 160 184)
-	(pt 160 272)
+	(pt 176 128)
+	(pt 176 176)
 )
 (connector
 	(pt 160 128)
-	(pt 160 184)
+	(pt 160 144)
 )
-(junction (pt 160 184))
+(connector
+	(pt 160 144)
+	(pt 160 192)
+)
+(connector
+	(pt 280 184)
+	(pt 280 168)
+)
+(connector
+	(pt 280 136)
+	(pt 280 152)
+)
+(junction (pt 160 144))

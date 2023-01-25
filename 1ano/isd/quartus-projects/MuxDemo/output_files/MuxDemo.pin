@@ -144,7 +144,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 72        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 73        :        :                   :         : 5         :                
 I2                           : 74        : input  : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 75        :        :                   :         : 5         :                
-pin_name1                    : 76        : output : 2.5 V             :         : 5         : N              
+Y                            : 76        : output : 2.5 V             :         : 5         : N              
 I15                          : 77        : input  : 2.5 V             :         : 5         : N              
 VCCINT                       : 78        : power  :                   : 1.2V    :           :                
 GND                          : 79        : gnd    :                   :         :           :                
@@ -158,7 +158,7 @@ I6                           : 86        : input  : 2.5 V             :         
 I11                          : 87        : input  : 2.5 V             :         : 5         : N              
 I7                           : 88        : input  : 2.5 V             :         : 5         : N              
 Sel3                         : 89        : input  : 2.5 V             :         : 5         : N              
-ze                           : 90        : input  : 2.5 V             :         : 6         : N              
+I1                           : 90        : input  : 2.5 V             :         : 6         : N              
 I0                           : 91        : input  : 2.5 V             :         : 6         : N              
 CONF_DONE                    : 92        :        :                   :         : 6         :                
 VCCIO6                       : 93        : power  :                   : 2.5V    : 6         :                

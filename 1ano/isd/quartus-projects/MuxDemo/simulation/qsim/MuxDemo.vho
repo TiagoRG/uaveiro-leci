@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "11/18/2022 14:55:36"
+-- DATE "01/25/2023 23:43:19"
 
 -- 
 -- Device: Altera EP4CE6E22C6 Package TQFP144
@@ -77,13 +77,13 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY 	Mux16_1 IS
     PORT (
-	pin_name1 : OUT std_logic;
+	Y : OUT std_logic;
 	Sel4 : IN std_logic;
 	Sel3 : IN std_logic;
 	Sel2 : IN std_logic;
 	Sel1 : IN std_logic;
 	I0 : IN std_logic;
-	ze : IN std_logic;
+	I1 : IN std_logic;
 	I2 : IN std_logic;
 	I3 : IN std_logic;
 	I4 : IN std_logic;
@@ -102,7 +102,7 @@ ENTITY 	Mux16_1 IS
 END Mux16_1;
 
 -- Design Ports Information
--- pin_name1	=>  Location: PIN_76,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Y	=>  Location: PIN_76,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- I10	=>  Location: PIN_46,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- Sel2	=>  Location: PIN_80,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- I9	=>  Location: PIN_65,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -116,7 +116,7 @@ END Mux16_1;
 -- I7	=>  Location: PIN_88,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- Sel3	=>  Location: PIN_89,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- I2	=>  Location: PIN_74,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- ze	=>  Location: PIN_90,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- I1	=>  Location: PIN_90,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- I0	=>  Location: PIN_91,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- I3	=>  Location: PIN_84,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- I13	=>  Location: PIN_66,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -135,13 +135,13 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
-SIGNAL ww_pin_name1 : std_logic;
+SIGNAL ww_Y : std_logic;
 SIGNAL ww_Sel4 : std_logic;
 SIGNAL ww_Sel3 : std_logic;
 SIGNAL ww_Sel2 : std_logic;
 SIGNAL ww_Sel1 : std_logic;
 SIGNAL ww_I0 : std_logic;
-SIGNAL ww_ze : std_logic;
+SIGNAL ww_I1 : std_logic;
 SIGNAL ww_I2 : std_logic;
 SIGNAL ww_I3 : std_logic;
 SIGNAL ww_I4 : std_logic;
@@ -156,7 +156,7 @@ SIGNAL ww_I12 : std_logic;
 SIGNAL ww_I13 : std_logic;
 SIGNAL ww_I14 : std_logic;
 SIGNAL ww_I15 : std_logic;
-SIGNAL \pin_name1~output_o\ : std_logic;
+SIGNAL \Y~output_o\ : std_logic;
 SIGNAL \I14~input_o\ : std_logic;
 SIGNAL \Sel2~input_o\ : std_logic;
 SIGNAL \Sel1~input_o\ : std_logic;
@@ -174,7 +174,7 @@ SIGNAL \inst14|inst2~3_combout\ : std_logic;
 SIGNAL \Sel4~input_o\ : std_logic;
 SIGNAL \Sel3~input_o\ : std_logic;
 SIGNAL \I2~input_o\ : std_logic;
-SIGNAL \ze~input_o\ : std_logic;
+SIGNAL \I1~input_o\ : std_logic;
 SIGNAL \I0~input_o\ : std_logic;
 SIGNAL \inst14|inst2~4_combout\ : std_logic;
 SIGNAL \I3~input_o\ : std_logic;
@@ -197,13 +197,13 @@ END COMPONENT;
 
 BEGIN
 
-pin_name1 <= ww_pin_name1;
+Y <= ww_Y;
 ww_Sel4 <= Sel4;
 ww_Sel3 <= Sel3;
 ww_Sel2 <= Sel2;
 ww_Sel1 <= Sel1;
 ww_I0 <= I0;
-ww_ze <= ze;
+ww_I1 <= I1;
 ww_I2 <= I2;
 ww_I3 <= I3;
 ww_I4 <= I4;
@@ -228,7 +228,7 @@ PORT MAP (
 	devpor => ww_devpor);
 
 -- Location: IOOBUF_X34_Y4_N23
-\pin_name1~output\ : cycloneive_io_obuf
+\Y~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -237,7 +237,7 @@ GENERIC MAP (
 PORT MAP (
 	i => \inst14|inst2~9_combout\,
 	devoe => ww_devoe,
-	o => \pin_name1~output_o\);
+	o => \Y~output_o\);
 
 -- Location: IOIBUF_X23_Y24_N8
 \I14~input\ : cycloneive_io_ibuf
@@ -451,15 +451,15 @@ PORT MAP (
 	o => \I2~input_o\);
 
 -- Location: IOIBUF_X34_Y12_N8
-\ze~input\ : cycloneive_io_ibuf
+\I1~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_ze,
-	o => \ze~input_o\);
+	i => ww_I1,
+	o => \I1~input_o\);
 
 -- Location: IOIBUF_X34_Y12_N1
 \I0~input\ : cycloneive_io_ibuf
@@ -475,7 +475,7 @@ PORT MAP (
 -- Location: LCCOMB_X33_Y8_N8
 \inst14|inst2~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \inst14|inst2~4_combout\ = (\Sel2~input_o\ & (((\Sel1~input_o\)))) # (!\Sel2~input_o\ & ((\Sel1~input_o\ & (\ze~input_o\)) # (!\Sel1~input_o\ & ((\I0~input_o\)))))
+-- \inst14|inst2~4_combout\ = (\Sel2~input_o\ & (((\Sel1~input_o\)))) # (!\Sel2~input_o\ & ((\Sel1~input_o\ & (\I1~input_o\)) # (!\Sel1~input_o\ & ((\I0~input_o\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -483,7 +483,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ze~input_o\,
+	dataa => \I1~input_o\,
 	datab => \Sel2~input_o\,
 	datac => \Sel1~input_o\,
 	datad => \I0~input_o\,
@@ -629,7 +629,7 @@ PORT MAP (
 	datad => \inst14|inst2~1_combout\,
 	combout => \inst14|inst2~9_combout\);
 
-ww_pin_name1 <= \pin_name1~output_o\;
+ww_Y <= \Y~output_o\;
 END structure;
 
 

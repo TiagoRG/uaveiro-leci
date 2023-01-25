@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "12/01/2022 18:12:53"
+// DATE "01/25/2023 23:41:57"
 
 // 
 // Device: Altera EP4CE6E22C6 Package TQFP144
@@ -30,13 +30,13 @@
 `timescale 1 ps/ 1 ps
 
 module Mux16_1 (
-	pin_name1,
+	Y,
 	Sel4,
 	Sel3,
 	Sel2,
 	Sel1,
 	I0,
-	ze,
+	I1,
 	I2,
 	I3,
 	I4,
@@ -51,13 +51,13 @@ module Mux16_1 (
 	I13,
 	I14,
 	I15);
-output 	pin_name1;
+output 	Y;
 input 	Sel4;
 input 	Sel3;
 input 	Sel2;
 input 	Sel1;
 input 	I0;
-input 	ze;
+input 	I1;
 input 	I2;
 input 	I3;
 input 	I4;
@@ -74,7 +74,7 @@ input 	I14;
 input 	I15;
 
 // Design Ports Information
-// pin_name1	=>  Location: PIN_76,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Y	=>  Location: PIN_76,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // I10	=>  Location: PIN_46,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Sel2	=>  Location: PIN_80,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // I9	=>  Location: PIN_65,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -88,7 +88,7 @@ input 	I15;
 // I7	=>  Location: PIN_88,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Sel3	=>  Location: PIN_89,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // I2	=>  Location: PIN_74,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ze	=>  Location: PIN_90,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// I1	=>  Location: PIN_90,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // I0	=>  Location: PIN_91,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // I3	=>  Location: PIN_84,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // I13	=>  Location: PIN_66,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -108,7 +108,7 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \pin_name1~output_o ;
+wire \Y~output_o ;
 wire \I14~input_o ;
 wire \Sel2~input_o ;
 wire \Sel1~input_o ;
@@ -126,7 +126,7 @@ wire \inst14|inst2~3_combout ;
 wire \Sel4~input_o ;
 wire \Sel3~input_o ;
 wire \I2~input_o ;
-wire \ze~input_o ;
+wire \I1~input_o ;
 wire \I0~input_o ;
 wire \inst14|inst2~4_combout ;
 wire \I3~input_o ;
@@ -147,16 +147,16 @@ hard_block auto_generated_inst(
 	.devoe(devoe));
 
 // Location: IOOBUF_X34_Y4_N23
-cycloneive_io_obuf \pin_name1~output (
+cycloneive_io_obuf \Y~output (
 	.i(\inst14|inst2~9_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\pin_name1~output_o ),
+	.o(\Y~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \pin_name1~output .bus_hold = "false";
-defparam \pin_name1~output .open_drain_output = "false";
+defparam \Y~output .bus_hold = "false";
+defparam \Y~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOIBUF_X23_Y24_N8
@@ -358,13 +358,13 @@ defparam \I2~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X34_Y12_N8
-cycloneive_io_ibuf \ze~input (
-	.i(ze),
+cycloneive_io_ibuf \I1~input (
+	.i(I1),
 	.ibar(gnd),
-	.o(\ze~input_o ));
+	.o(\I1~input_o ));
 // synopsys translate_off
-defparam \ze~input .bus_hold = "false";
-defparam \ze~input .simulate_z_as = "z";
+defparam \I1~input .bus_hold = "false";
+defparam \I1~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X34_Y12_N1
@@ -380,9 +380,9 @@ defparam \I0~input .simulate_z_as = "z";
 // Location: LCCOMB_X33_Y8_N8
 cycloneive_lcell_comb \inst14|inst2~4 (
 // Equation(s):
-// \inst14|inst2~4_combout  = (\Sel2~input_o  & (((\Sel1~input_o )))) # (!\Sel2~input_o  & ((\Sel1~input_o  & (\ze~input_o )) # (!\Sel1~input_o  & ((\I0~input_o )))))
+// \inst14|inst2~4_combout  = (\Sel2~input_o  & (((\Sel1~input_o )))) # (!\Sel2~input_o  & ((\Sel1~input_o  & (\I1~input_o )) # (!\Sel1~input_o  & ((\I0~input_o )))))
 
-	.dataa(\ze~input_o ),
+	.dataa(\I1~input_o ),
 	.datab(\Sel2~input_o ),
 	.datac(\Sel1~input_o ),
 	.datad(\I0~input_o ),
@@ -529,7 +529,7 @@ defparam \inst14|inst2~9 .lut_mask = 16'hBC8C;
 defparam \inst14|inst2~9 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-assign pin_name1 = \pin_name1~output_o ;
+assign Y = \Y~output_o ;
 
 endmodule
 

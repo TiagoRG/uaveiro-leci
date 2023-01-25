@@ -1,5 +1,5 @@
 Fitter report for MuxDemo
-Thu Dec  1 18:12:50 2022
+Wed Jan 25 23:41:55 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Dec  1 18:12:50 2022       ;
+; Fitter Status                      ; Successful - Wed Jan 25 23:41:55 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; MuxDemo                                     ;
 ; Top-level Entity Name              ; Mux16_1                                     ;
@@ -147,12 +147,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.2%      ;
+;     Processors 2-4         ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -325,6 +325,7 @@ The pin-out file can be found in /home/tiagorg/repos/uaveiro-leci/1ano/isd/quart
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; I0   ; 91    ; 6        ; 34           ; 12           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; I1   ; 90    ; 6        ; 34           ; 12           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; I10  ; 46    ; 3        ; 7            ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; I11  ; 87    ; 5        ; 34           ; 10           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; I12  ; 83    ; 5        ; 34           ; 9            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
@@ -343,17 +344,16 @@ The pin-out file can be found in /home/tiagorg/repos/uaveiro-leci/1ano/isd/quart
 ; Sel2 ; 80    ; 5        ; 34           ; 7            ; 7            ; 6                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Sel3 ; 89    ; 5        ; 34           ; 12           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Sel4 ; 121   ; 7        ; 23           ; 24           ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; ze   ; 90    ; 6        ; 34           ; 12           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
-+-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
-+-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; pin_name1 ; 76    ; 5        ; 34           ; 4            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-+-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
++------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; Y    ; 76    ; 5        ; 34           ; 4            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
++------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -475,7 +475,7 @@ The pin-out file can be found in /home/tiagorg/repos/uaveiro-leci/1ano/isd/quart
 ; 73       ; 102        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; 74       ; 103        ; 5        ; I2                                                        ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 75       ; 104        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 76       ; 106        ; 5        ; pin_name1                                                 ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 76       ; 106        ; 5        ; Y                                                         ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 77       ; 107        ; 5        ; I15                                                       ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 78       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 79       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -489,7 +489,7 @@ The pin-out file can be found in /home/tiagorg/repos/uaveiro-leci/1ano/isd/quart
 ; 87       ; 121        ; 5        ; I11                                                       ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 88       ; 125        ; 5        ; I7                                                        ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 89       ; 126        ; 5        ; Sel3                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 90       ; 127        ; 6        ; ze                                                        ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 90       ; 127        ; 6        ; I1                                                        ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 91       ; 128        ; 6        ; I0                                                        ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 92       ; 129        ; 6        ; ^CONF_DONE                                                ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 93       ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -550,54 +550,54 @@ The pin-out file can be found in /home/tiagorg/repos/uaveiro-leci/1ano/isd/quart
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+-------------------------------------------+
-; I/O Assignment Warnings                   ;
-+-----------+-------------------------------+
-; Pin Name  ; Reason                        ;
-+-----------+-------------------------------+
-; pin_name1 ; Incomplete set of assignments ;
-; I10       ; Incomplete set of assignments ;
-; Sel2      ; Incomplete set of assignments ;
-; I9        ; Incomplete set of assignments ;
-; Sel1      ; Incomplete set of assignments ;
-; I8        ; Incomplete set of assignments ;
-; I11       ; Incomplete set of assignments ;
-; Sel4      ; Incomplete set of assignments ;
-; I5        ; Incomplete set of assignments ;
-; I6        ; Incomplete set of assignments ;
-; I4        ; Incomplete set of assignments ;
-; I7        ; Incomplete set of assignments ;
-; Sel3      ; Incomplete set of assignments ;
-; I2        ; Incomplete set of assignments ;
-; ze        ; Incomplete set of assignments ;
-; I0        ; Incomplete set of assignments ;
-; I3        ; Incomplete set of assignments ;
-; I13       ; Incomplete set of assignments ;
-; I14       ; Incomplete set of assignments ;
-; I12       ; Incomplete set of assignments ;
-; I15       ; Incomplete set of assignments ;
-; pin_name1 ; Missing location assignment   ;
-; I10       ; Missing location assignment   ;
-; Sel2      ; Missing location assignment   ;
-; I9        ; Missing location assignment   ;
-; Sel1      ; Missing location assignment   ;
-; I8        ; Missing location assignment   ;
-; I11       ; Missing location assignment   ;
-; Sel4      ; Missing location assignment   ;
-; I5        ; Missing location assignment   ;
-; I6        ; Missing location assignment   ;
-; I4        ; Missing location assignment   ;
-; I7        ; Missing location assignment   ;
-; Sel3      ; Missing location assignment   ;
-; I2        ; Missing location assignment   ;
-; ze        ; Missing location assignment   ;
-; I0        ; Missing location assignment   ;
-; I3        ; Missing location assignment   ;
-; I13       ; Missing location assignment   ;
-; I14       ; Missing location assignment   ;
-; I12       ; Missing location assignment   ;
-; I15       ; Missing location assignment   ;
-+-----------+-------------------------------+
++------------------------------------------+
+; I/O Assignment Warnings                  ;
++----------+-------------------------------+
+; Pin Name ; Reason                        ;
++----------+-------------------------------+
+; Y        ; Incomplete set of assignments ;
+; I10      ; Incomplete set of assignments ;
+; Sel2     ; Incomplete set of assignments ;
+; I9       ; Incomplete set of assignments ;
+; Sel1     ; Incomplete set of assignments ;
+; I8       ; Incomplete set of assignments ;
+; I11      ; Incomplete set of assignments ;
+; Sel4     ; Incomplete set of assignments ;
+; I5       ; Incomplete set of assignments ;
+; I6       ; Incomplete set of assignments ;
+; I4       ; Incomplete set of assignments ;
+; I7       ; Incomplete set of assignments ;
+; Sel3     ; Incomplete set of assignments ;
+; I2       ; Incomplete set of assignments ;
+; I1       ; Incomplete set of assignments ;
+; I0       ; Incomplete set of assignments ;
+; I3       ; Incomplete set of assignments ;
+; I13      ; Incomplete set of assignments ;
+; I14      ; Incomplete set of assignments ;
+; I12      ; Incomplete set of assignments ;
+; I15      ; Incomplete set of assignments ;
+; Y        ; Missing location assignment   ;
+; I10      ; Missing location assignment   ;
+; Sel2     ; Missing location assignment   ;
+; I9       ; Missing location assignment   ;
+; Sel1     ; Missing location assignment   ;
+; I8       ; Missing location assignment   ;
+; I11      ; Missing location assignment   ;
+; Sel4     ; Missing location assignment   ;
+; I5       ; Missing location assignment   ;
+; I6       ; Missing location assignment   ;
+; I4       ; Missing location assignment   ;
+; I7       ; Missing location assignment   ;
+; Sel3     ; Missing location assignment   ;
+; I2       ; Missing location assignment   ;
+; I1       ; Missing location assignment   ;
+; I0       ; Missing location assignment   ;
+; I3       ; Missing location assignment   ;
+; I13      ; Missing location assignment   ;
+; I14      ; Missing location assignment   ;
+; I12      ; Missing location assignment   ;
+; I15      ; Missing location assignment   ;
++----------+-------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -611,33 +611,33 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------+
-; Delay Chain Summary                                                                       ;
-+-----------+----------+---------------+---------------+-----------------------+-----+------+
-; Name      ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
-+-----------+----------+---------------+---------------+-----------------------+-----+------+
-; pin_name1 ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; I10       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Sel2      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; I9        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; Sel1      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; I8        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; I11       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Sel4      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; I5        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; I6        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; I4        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; I7        ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; Sel3      ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; I2        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; ze        ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; I0        ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; I3        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; I13       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; I14       ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; I12       ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; I15       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-+-----------+----------+---------------+---------------+-----------------------+-----+------+
++--------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                  ;
++------+----------+---------------+---------------+-----------------------+-----+------+
+; Name ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
++------+----------+---------------+---------------+-----------------------+-----+------+
+; Y    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; I10  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Sel2 ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; I9   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; Sel1 ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; I8   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; I11  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Sel4 ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; I5   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; I6   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; I4   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; I7   ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; Sel3 ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; I2   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; I1   ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; I0   ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; I3   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; I13  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; I14  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; I12  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; I15  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
++------+----------+---------------+---------------+-----------------------+-----+------+
 
 
 +------------------------------------------------------------+
@@ -680,7 +680,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Sel3                         ;                   ;         ;
 ; I2                           ;                   ;         ;
 ;      - Mux2_1:inst14|inst2~5 ; 0                 ; 6       ;
-; ze                           ;                   ;         ;
+; I1                           ;                   ;         ;
 ; I0                           ;                   ;         ;
 ; I3                           ;                   ;         ;
 ;      - Mux2_1:inst14|inst2~5 ; 0                 ; 6       ;
@@ -852,7 +852,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0         ; 0            ; 0            ;
 ; Total Inapplicable ; 21           ; 21           ; 21           ; 21           ; 21           ; 0         ; 21           ; 21           ; 21           ; 21           ; 21           ; 21           ; 21           ; 20           ; 21           ; 21           ; 21           ; 1            ; 20           ; 21           ; 1            ; 21           ; 21           ; 20           ; 21           ; 0         ; 0         ; 0         ; 21           ; 21           ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0         ; 0            ; 0            ;
-; pin_name1          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; Y                  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; I10                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; Sel2               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; I9                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
@@ -866,7 +866,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; I7                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; Sel3               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; I2                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; ze                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; I1                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; I0                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; I3                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; I13                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
@@ -976,13 +976,13 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (144001): Generated suppressed messages file /home/tiagorg/repos/uaveiro-leci/1ano/isd/quartus-projects/MuxDemo/output_files/MuxDemo.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 937 megabytes
-    Info: Processing ended: Thu Dec  1 18:12:50 2022
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 941 megabytes
+    Info: Processing ended: Wed Jan 25 23:41:55 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +----------------------------+

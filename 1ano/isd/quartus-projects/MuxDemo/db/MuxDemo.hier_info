@@ -1,5 +1,5 @@
 |Mux16_1
-pin_name1 <= Mux2_1:inst14.Y
+Y <= Mux2_1:inst14.Y
 Sel4 => Mux2_1:inst14.S
 Sel3 => Mux2_1:inst12.S
 Sel3 => Mux2_1:inst13.S
@@ -16,7 +16,7 @@ Sel1 => Mux2_1:inst7.S
 Sel1 => Mux2_1:inst8.S
 Sel1 => Mux2_1:inst9.S
 I0 => Mux2_1:inst.I0
-ze => Mux2_1:inst.I1
+I1 => Mux2_1:inst.I1
 I2 => Mux2_1:inst1.I0
 I3 => Mux2_1:inst1.I1
 I4 => Mux2_1:inst2.I0
