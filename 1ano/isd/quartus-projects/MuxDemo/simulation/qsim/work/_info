@@ -11,14 +11,14 @@ z2
 cModel Technology
 Z0 d/home/tiagorg/repos/uaveiro-leci/1ano/isd/quartus-projects/MuxDemo/simulation/qsim
 Ehard_block
-Z1 w1668783336
+Z1 w1674690199
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 WOh:M[al;oVzG5c`<He>D0
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z7 DPx10 cycloneive 21 cycloneive_components 0 22 zGMDhP>8e@2k@f0e<PY]k2
-!i122 6
+!i122 8
 R0
 Z8 8MuxDemo.vho
 Z9 FMuxDemo.vho
@@ -28,9 +28,9 @@ VB]0;STalBkCB1_B4BXQDW2
 !s100 >mXi5[`cD`bFC`UBKA<om3
 Z10 OV;C;2020.1;71
 32
-Z11 !s110 1668783337
+Z11 !s110 1674690200
 !i10b 1
-Z12 !s108 1668783337.000000
+Z12 !s108 1674690199.000000
 Z13 !s90 -work|work|MuxDemo.vho|
 Z14 !s107 MuxDemo.vho|
 !i113 1
@@ -44,7 +44,7 @@ R5
 R6
 R7
 DEx4 work 10 hard_block 0 22 B]0;STalBkCB1_B4BXQDW2
-!i122 6
+!i122 8
 l65
 L51 20
 Via>5o7W??azG@W@@eFOTF0
@@ -91,14 +91,14 @@ R4
 R5
 R6
 R7
-!i122 6
+!i122 8
 R0
 R8
 R9
 l0
 L78 1
-V_[<5QT[cKCKWO]4zYkAiW0
-!s100 AQ@MMf;YNBo^>T:5oe^i`2
+VWfhRR@YRlVTX;G^41GT2V0
+!s100 Hf0j32A73^aefV<F:UghC2
 R10
 32
 R11
@@ -116,12 +116,12 @@ R4
 R5
 R6
 R7
-DEx4 work 7 mux16_1 0 22 _[<5QT[cKCKWO]4zYkAiW0
-!i122 6
+DEx4 work 7 mux16_1 0 22 WfhRR@YRlVTX;G^41GT2V0
+!i122 8
 l198
 L128 506
-VE53ONc_lWHj566L6l[>ai0
-!s100 KIXkSbDN1e_>fZh5:WOQK0
+VFQ@fMU4PNS9mD5ThzPj:k0
+!s100 c]0_zE^;H?0K<37=MgF>S0
 R10
 32
 R11
@@ -133,13 +133,13 @@ R14
 R15
 R16
 Emux16_1_vhd_vec_tst
-Z23 w1668783334
+Z23 w1674690198
 R5
 R6
-!i122 7
+!i122 9
 R0
-Z24 8Waveform.vwf.vht
-Z25 FWaveform.vwf.vht
+8Waveform1.vwf.vht
+FWaveform1.vwf.vht
 l0
 L32 1
 VmNT^X?j@RMXm0]Ya8nNl`1
@@ -148,9 +148,9 @@ R10
 32
 R11
 !i10b 1
-R12
-Z26 !s90 -work|work|Waveform.vwf.vht|
-!s107 Waveform.vwf.vht|
+!s108 1674690200.000000
+!s90 -work|work|Waveform1.vwf.vht|
+!s107 Waveform1.vwf.vht|
 !i113 1
 R15
 R16
@@ -165,14 +165,16 @@ VFBWFJ5RYmb>P@;VkJH>QP3
 !s100 ?8VU68hai5dW6h<d7_:M?0
 R10
 32
-R11
+!s110 1668783337
 !i10b 1
-R12
-R26
-Z27 !s107 Waveform.vwf.vht|
+!s108 1668783337.000000
+!s90 -work|work|Waveform.vwf.vht|
+!s107 Waveform.vwf.vht|
 !i113 1
 R15
 R16
+FWaveform.vwf.vht
+8Waveform.vwf.vht
 vMux16_1_vlg_vec_tst
 R17
 !i10b 1
