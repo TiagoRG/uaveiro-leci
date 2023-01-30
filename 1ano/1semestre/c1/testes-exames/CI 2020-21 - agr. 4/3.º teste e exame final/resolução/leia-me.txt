@@ -1,0 +1,5 @@
+Nesta pasta encontram-se explicitamente
+- a resolução do 3.º teste
+- e a resolução da questão 1 da 1.ª parte do exame final, juntamente com a resolução da 2.ª parte do exame final.
+
+As restantes questões da 1.ª parte do exame final estão contidas no 3.º teste, embora com numeração diferente.
