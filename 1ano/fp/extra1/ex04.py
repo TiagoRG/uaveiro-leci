@@ -1,4 +1,4 @@
-# Not passing codecheck tests
+# Not passing codecheck tests although not sure why :skull:
 
 def hondt(votes, numseats):
     v = [vote for vote in votes]

@@ -14,20 +14,19 @@ Fibonacci numbers. For example, if n=6, it should return [0, 1, 1, 2, 3, 5].
 The function only has to work for n>=2.
 """
 
+
 def genFibonacci(n):
-   assert n >= 2
-   # Complete ...
-   lst = []
-   for i in range(n):
-      if i == 0:
-         lst.append(0)
-      elif i == 1:
-         lst.append(1)
-      else:
-         lst.append(lst[i-2] + lst[i-1])
-   return lst
-   
+    assert n >= 2
+    # Complete ...
+    lst = []
+    for i in range(n):
+        if i == 0:
+            lst.append(0)
+        elif i == 1:
+            lst.append(1)
+        else:
+            lst.append(lst[i - 2] + lst[i - 1])
+    return lst
 
 # NÃO precisa de invocar a função.  O codecheck trata disso.
 # You DO NOT need to call the function.  Codecheck does that for you.
-

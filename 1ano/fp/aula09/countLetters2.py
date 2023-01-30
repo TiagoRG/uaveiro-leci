@@ -14,6 +14,7 @@ def main():
     print(f"A letra mais usada foi '{usedTheMost}', usada {usedTheMostCount} vezes.")
 
 
+# This is the same function used in ../aula07/countLetters.py
 def countLetters(filename):
     # Read the file and count the letters
     letters = {}

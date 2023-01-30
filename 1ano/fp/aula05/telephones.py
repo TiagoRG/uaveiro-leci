@@ -4,23 +4,19 @@
 
 def telToName(tel, telList, nameList):
     # your code here
-    index = 0
-    for t in telList:
+    for index, t in enumerate(telList):
         if t == tel:
-            break
-        index += 1
-    return tel if index == len(telList) else nameList[index]
+            return nameList[index]
+    return tel
 
 
 # Return list of telephone numbers corresponding to names containing partName.
 def nameToTels(partName, telList, nameList):
     # your code here
     tels = []
-    index = 0
-    for name in nameList:
+    for index, name in enumerate(nameList):
         if partName in name:
             tels.append(telList[index])
-        index += 1
     return tels
 
 def main():

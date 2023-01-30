@@ -18,7 +18,7 @@ P = float(input("Pressure (kPa)? "))
 # Determine the phase.
 if (T > 400) and (P > 50):
     phase = "LIQUID"
-elif (P > 0.125 * T):
+elif P > 0.125 * T:
     phase = "SOLID"
 else:
     phase = "GAS"
