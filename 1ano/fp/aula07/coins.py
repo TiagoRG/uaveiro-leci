@@ -32,12 +32,21 @@ def transfer(bag1, amount, bag2):
     If possible, transfer coins and return True,
     otherwise, return False and leave bags with same values."""
 
-    # Creates a backup of the bags in case the transfer is not possible
-    bagBackup = (bag1.copy(), bag2.copy())
+    # Uses a support method not to reuse the coins if they will make the process not possible
+    return transferProcess(bag1, amount, bag2, COINS)
 
-    for coin in COINS:
+
+def transferProcess(bag1, amount, bag2, coins):
+
+    bagBackup = (bag1.copy(), bag2.copy())
+    amountBackup = amount
+
+    firstUsedCoin = None
+    for coin in coins:
         while amount >= coin and transfer1coin(bag1, coin, bag2) and amount > 0:
             amount -= coin
+            if firstUsedCoin is None:
+                firstUsedCoin = coin
 
     if amount == 0:
         return True
@@ -45,7 +54,10 @@ def transfer(bag1, amount, bag2):
     for coin in COINS:
         bag1[coin] = bagBackup[0][coin] if coin in bagBackup[0] else 0
         bag2[coin] = bagBackup[1][coin] if coin in bagBackup[1] else 0
-    return False
+
+    if len(coins) == 1:
+        return False
+    return transferProcess(bag1, amountBackup, bag2, COINS[COINS.index(firstUsedCoin)+1:])
 
 
 def strbag(bag):
