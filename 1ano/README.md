@@ -1,16 +1,16 @@
 # 1º Ano
 ## Todo o material das cadeiras do 1º ano:
-### 1º Semestre
+### [1º Semestre](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/1semestre)
 
-- [Fundamentos de Programação](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/fp)&emsp;|&emsp;Ano de conclusão: 2022/2023
-- [Introdução à Engenharia Informática](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/iei)&emsp;|&emsp;Ano de conclusão: 2022/2023
-- [Introdução aos Sistemas Digitais](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/isd)&emsp;|&emsp;Ano de conclusão: 2022/2023
+- [Fundamentos de Programação](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/1semestre/fp)&emsp;|&emsp;Ano de conclusão: 2022/2023
+- [Introdução à Engenharia Informática](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/1semestre/iei)&emsp;|&emsp;Ano de conclusão: 2022/2023
+- [Introdução aos Sistemas Digitais](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/1semestre/isd)&emsp;|&emsp;Ano de conclusão: 2022/2023
 
-### 2º Semestre
+### [2º Semestre](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre)
 
-- [Programação Orientada a Objetos](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/poo)
-- [Laboratórios de Informática](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/labi)
-- [Laboratório de Sistemas Digitais](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/lsd)
+- [Programação Orientada a Objetos](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo)
+- [Laboratórios de Informática](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/labi)
+- [Laboratório de Sistemas Digitais](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/lsd)
 
 ---
 *Pode conter erros, caso encontre algum, crie um* [*ticket*](https://github.com/TiagoRG/uaveiro-leci/issues/new)
