@@ -1,3 +1,9 @@
+"""
+This code is in no way optimal.
+A lot could be upgraded here.
+"""
+
+
 def main():
     budget = 0
     journeys = {}
@@ -17,18 +23,21 @@ def get_user_input(journeys: dict, budget: int) -> None:
             print('Jornada inválida')
 
     match_id = 1
+    true_bet_count = [0,0]
     with open(f'apostas_jornadas/jornada{journey_input}.csv', 'w') as f:
         for match in journeys[journey_input]:
             while True:
-                bet = input(f"{match_id} {match[0]} vs {match[1]}: ")
-                if bet in ['1', 'x', 'X', '2']:
-                    f.write(f"{match_id},{bet if bet != 'x' else 'X'}\n")
+                bet = input(f"{match_id} {match[0]} vs {match[1]}: ").upper()
+                if bet in ['1', 'X', '2', '1X', 'X2', '12', '1X2']:
+                    f.write(f"{match_id},{bet}\n")
                     match_id += 1
+                    if len(bet) != 1:
+                        true_bet_count[len(bet)-2] += 1
                     break
                 else:
                     print('Aposta inválida')
 
-    budget -= 0.4
+    budget -= 0.4 * (2**true_bet_count[0] * 3**true_bet_count[1])
     print_results(journeys, int(journey_input), budget)
 
 
@@ -49,13 +58,13 @@ def print_results(journeys: dict, journey: int, budget: int) -> None:
                 if game[1] == match[0] and game[2] == match[1]:
                     bet = bets[str(journeys[str(journey)].index(match)+1)]
                     result = 'CERTO' if (
-                        (bet == '1' and game[3] > game[4])
-                        or (bet == 'X' and game[3] == game[4])
-                        or (bet == '2' and game[3] < game[4])
+                        ('1' in bet and game[3] > game[4])
+                        or ('X' in bet and game[3] == game[4])
+                        or ('2' in bet and game[3] < game[4])
                     ) else 'ERRADO'
                     if result == 'CERTO':
                         right_bets_count += 1
-                    print(f'{line_id} {match[0]:>30}  {game[3]}-{game[4]}  {match[1]:<30}: {bet}    ({result})')
+                    print(f'{line_id} {match[0]:>30}  {game[3]}-{game[4]}  {match[1]:<30}: {bet:<5} ({result})')
             line_id += 1
         if right_bets_count < 7:
             price = 0
