@@ -27,8 +27,7 @@ def removeAdjacentDuplicates(s):
 def reapeatNumTimes(n):
     lst = []
     for i in range(1, n+1):
-        for j in range(i):
-            lst.append(i)
+        lst += [i] * i
     return lst
 
 
