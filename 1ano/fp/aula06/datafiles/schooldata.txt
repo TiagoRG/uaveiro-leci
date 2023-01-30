@@ -36,7 +36,7 @@ Numero                        Nome                        Nota
  39450           RUI BARBOSA SOARES FIGUEIREDO            12.9
  39652              FABIO ANDRE SABINO REAL               11.4
  39840        JOAO FILIPE MAGALHAES CARVALHO PINTO        17.7
- 40000                    TIAGO GARCIA                    20.0
+ 40000                 TIAGO ROCHA GARCIA                 20.0
  40301         FILIPE MIGUEL FIGUEIREDO DA SILVA           9.5
  40747              JOEL DOS SANTOS MIRANDA               17.0
  41084        RICARDO JORGE MOREIRA SILVA MACHADO         11.4

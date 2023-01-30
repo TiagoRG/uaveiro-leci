@@ -1,12 +1,13 @@
 # Pede ao utilizadores todas as parcelas e adiciona-as à lista 'values'
 def GetValues():
-    c = 1
+    count = 1
     values = []
     while True:
-        n = input('n{}: '.format(c))
-        if n == "": break
+        n = input('n{}: '.format(count))
+        if n == "":
+            break
         values.append(float(n))
-        c += 1
+        count += 1
     return values
 
 # Calcula a média dos valores da lista 'values'

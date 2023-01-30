@@ -3,11 +3,9 @@
 # a)
 def loadFile(fname, lst):
     with open(fname, 'r') as f:
+        f.readline()
         for line in f:
-            line = line.strip('\n')
-            if not line[0].isnumeric():
-                continue
-            data = line.split('\t')
+            data = line.strip('\n').split('\t')
             dataTuple = (int(data[0]), data[1], float(data[5]), float(data[6]), float(data[7]))
             lst.append(dataTuple)
 
@@ -23,6 +21,7 @@ def printPauta(lst, filename=""):
     text = f'{"Numero":>6} {"Nome":^50} {"Nota":>4}\n'
     for aluno in lst:
         text += f'{aluno[0]:>6} {aluno[1]:^50} {notaFinal(aluno):>4.1f}\n'
+
     print(text)
     with open(filename, 'w') as f:
         f.write(text)

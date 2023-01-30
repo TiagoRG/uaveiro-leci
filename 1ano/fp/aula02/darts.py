@@ -1,5 +1,6 @@
 import math
 
+
 def main():
     print("""Introduza as coordenadas (x, y) do dardo.
 Representa as posicoes horizontal e vertical respetivamente.
@@ -23,13 +24,14 @@ Ambas em milimetros.
         return
 
     score = BasePoint(x, y)
-    if mod > 99 and mod < 107:
+    if 99 < mod < 107:
         score *= 3
     if mod > 162:
         score *= 2
         
     print(f'Pontuacao: {score} pontos.')
     exit(1)
+
 
 def BasePoint(x, y):
     angleRad = math.atan2(y, x)
@@ -38,6 +40,7 @@ def BasePoint(x, y):
     POINTS = (6, 13, 4, 18, 1, 20, 5, 12, 9, 14, 11, 8, 16, 7, 19, 3, 17, 2, 15, 10)
 
     return POINTS[int(angleDeg / 20)]
-    
+
+
 if __name__ == '__main__':
     main()

@@ -1,12 +1,13 @@
 def main():
-    lst = [1, 2, 4, 5]
+    lst = [1, 2, 4, 5, 6]
     print(median(lst))
 
 
 def median(lst):
     lst = sorted(lst, reverse=True)
     if len(lst) % 2 == 0:
-        return (lst[len(lst) // 2] + lst[len(lst) // 2 - 1]) / 2
+        middle = len(lst) // 2 - 1
+        return sum(lst[middle:middle+2]) / 2
     else:
         return lst[len(lst) // 2]
 
