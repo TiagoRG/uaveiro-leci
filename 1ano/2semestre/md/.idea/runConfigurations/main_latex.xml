@@ -8,8 +8,8 @@
       <viewer-command />
       <compiler-arguments />
       <envs />
-      <main-file>$PROJECT_DIR$/apontamentos/dev/src/main.tex</main-file>
-      <output-path>$PROJECT_DIR$/apontamentos/dev/out</output-path>
+      <main-file>$PROJECT_DIR$/apontamentos/template/src/main.tex</main-file>
+      <output-path>$PROJECT_DIR$/apontamentos/template/out</output-path>
       <auxil-path>{projectDir}/auxil</auxil-path>
       <compile-twice>true</compile-twice>
       <output-format>PDF</output-format>
