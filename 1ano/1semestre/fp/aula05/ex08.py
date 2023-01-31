@@ -32,18 +32,13 @@ def reapeatNumTimes(n):
 
 
 def positionOfFirstLargest(arr):
-    mx = maxArray(arr)
-    for index, a in enumerate(arr):
-        if a == mx:
-            return index
-
-
-def maxArray(arr):
     mx = arr[0]
-    for a in arr:
+    index = 0
+    for i, a in enumerate(arr):
         if a > mx:
             mx = a
-    return mx
+            index = i
+    return index
 
 
 if __name__ == "__main__":
