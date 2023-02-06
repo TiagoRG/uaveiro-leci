@@ -21,7 +21,7 @@ def main():
     print("a) Table of common interests:")
     commoninterests = {(p1, p2): interests[p1].intersection(interests[p2])
                        for p1 in interests for p2 in interests
-                       if p1 != p2 and list(interests.keys()).index(p1) < list(interests.keys()).index(p2)}
+                       if list(interests.keys()).index(p1) < list(interests.keys()).index(p2)}
     print(commoninterests)
 
     print("b) Maximum number of common interests:")
