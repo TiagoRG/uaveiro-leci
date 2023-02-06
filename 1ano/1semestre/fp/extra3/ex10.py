@@ -20,11 +20,12 @@ def unload(t, m, q):
     for v in t[::-1]:
         if v[0] != m:
             continue
-        while v[1] > 0 and q > 0:
-            v[1] -= 1
-            q -= 1
-        if v[1] == 0:
+        if v[1] <= q:
+            q -= v[1]
             t.remove(v)
+        else:
+            v[1] -= q
+            q = 0
     return q
     
 
