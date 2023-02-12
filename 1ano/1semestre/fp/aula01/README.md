@@ -1,5 +1,5 @@
 # Fundamentos de Programação
-## Aula 01 - [Slides](https://github.com/TiagoRG/uaveiro-leci/blob/master/1ano/fp/slides/tp01-intro.pdf)
+## Aula 01 - [Slides](https://github.com/TiagoRG/uaveiro-leci/blob/master/1ano/1semestre/fp/slides/tp01-intro.pdf)
 ### Tópico principal da aula: Introduction, Basics
 
 ---
