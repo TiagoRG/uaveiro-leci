@@ -9,17 +9,26 @@ then
   echo "Correct usage: md [class name (may not include spaces!)]"
 
 else
+  if [ "$1" == "reset" ]
+  then
+    # Reinicializa o template usando o git restore
+    git restore template
+
+    # Termina o script
+    exit 0
+  fi
+
   # Cria o diretório da determinada aula
-  mkdir "aulas/$1"
+  mkdir "classes/$1"
 
   # Copia o conteúdo da aula para o diretório respetivo
-  cp -a "template/out" "aulas/$1"
-  cp -a "template/src" "aulas/$1"
+  cp -a "template/out" "classes/$1"
+  cp -a "template/src" "classes/$1"
 
   # Reinicializa o template usando o git restore
   git restore template
 
   # Copia o pdf da aula para a pasta que contém todos os pdf
-  cp "aulas/$1/out/main.pdf" "pdf"
+  cp "classes/$1/out/main.pdf" "pdf"
   mv "pdf/main.pdf" "pdf/$1.pdf"
 fi
