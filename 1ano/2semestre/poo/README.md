@@ -1,5 +1,5 @@
 # Programação Orientada a Objetos
-### Projetos + resoluções de exercícios organizados por aulas
+### Projetos + resoluções de exercícios
 ### Linguagem usada: [Java](https://www.java.com/en/)
 
 ---
