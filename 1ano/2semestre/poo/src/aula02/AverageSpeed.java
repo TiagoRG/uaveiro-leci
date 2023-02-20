@@ -1,6 +1,9 @@
 package aula02;
 
 import java.util.Scanner;
+
+// Código da package utils disponível em
+// https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/src/utils
 import utils.UserInput;
 
 // Solução do exercício 5
