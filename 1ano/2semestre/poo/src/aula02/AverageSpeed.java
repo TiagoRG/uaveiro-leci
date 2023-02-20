@@ -18,6 +18,8 @@ public class AverageSpeed {
         double d2 = UserInput.getPositiveNumber(sin);
 
         double vm = (d1 + d2) / ((d1 / v1) + (d2 / v2));
-        System.out.printf("Velocidade final da viagem: %fkm/h", vm);
+        System.out.printf("Velocidade final da viagem: %.2fkm/h", vm);
+
+        sin.close();
     }
 }

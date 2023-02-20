@@ -12,6 +12,8 @@ public class KmToMiles {
         Scanner sin = new Scanner(System.in);
         double km = UserInput.getPositiveNumber(sin);
         double miles = km / 1.609;
-        System.out.printf("%fkm = %f miles", km, miles);
+        System.out.printf("%.3fkm = %.3f miles", km, miles);
+
+        sin.close();
     }
 }
