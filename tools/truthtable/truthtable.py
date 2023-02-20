@@ -14,61 +14,26 @@ truthtable '<function>':
     > Variables: a-z
     > Operators: +, *, ~, (, ); You can't use ~ before ()
 
-truthtable bash:
-    Adds the command truthtable to bash, so you can use it from anywhere.
-
-truthtable bash --reset:
-    Resets the command truthtable in bash in case it's broken, so you can use it from anywhere.
-
 truthtable usage:
     Prints this message.""")
         return
-    if sys.argv[1] == "bash":
-        username = os.getlogin()
-        if len(sys.argv) == 2:
-            with open(f'/home/{username}/.bashrc', 'r') as bashrc:
-                for line in bashrc:
-                    if line.startswith('alias truthtable='):
-                        print('Command already exists, try using, after opening a new terminal, truthtable \'<function>\'')
-                        return
-            os.system(f'echo "\n\nalias truthtable=\'python3 {pathlib.Path(__file__).parent.absolute()}/truthtable.py\'\n" >> \'/home/{username}/.bashrc\'')
-            print('Command added to bash, try using truthtable <function>.\nIf it doesn\'t work, do truthtable bash --reset.')
-        elif sys.argv[2] == '--reset':
-            with open(f'/home/{username}/.bashrc', 'r') as bashrc:
-                lines = bashrc.readlines()
-                linesDict = {}
-                index = 1
-                for line in lines:
-                    linesDict[index] = line
-                    index += 1
-                for key in linesDict:
-                    if linesDict[key].startswith('alias truthtable='):
-                        del linesDict[key]
-                        break
-                string = ''
-                for key in linesDict:
-                    string += linesDict[key]
-                string += f'\n\nalias truthtable=\'python3 {pathlib.Path(__file__).parent.absolute()}/truthtable.py\'\n'
-            with open(f'/home/{username}/.bashrc', 'w') as bashrc:
-                bashrc.write(string)
-            print('Command readded to bash, try using, after opening a new terminal, truthtable <function>.')
-    else:
-        function = sys.argv[1]
 
-        validVariables = r"[a-z]"
-        validOperators = ['+', '*', '(', ')', '~', ' ', '0', '1']
+    function = sys.argv[1]
 
-        for char in function:
-            if not (re.match(validVariables, char) or char in validOperators):
-                print("Invalid function, use 'truthtable usage' to see the valid characters.")
-                return
+    validVariables = r"[a-z]"
+    validOperators = ['+', '*', '(', ')', '~', ' ', '0', '1']
 
-        variables = re.findall(validVariables, function)
-        variables = list(dict.fromkeys(variables))
-        variables.sort()
+    for char in function:
+        if not (re.match(validVariables, char) or char in validOperators):
+            print("Invalid function, use 'truthtable usage' to see the valid characters.")
+            return
 
-        truthTable = getTable(variables, function)
-        printTable(variables, truthTable)
+    variables = re.findall(validVariables, function)
+    variables = list(dict.fromkeys(variables))
+    variables.sort()
+
+    truthTable = getTable(variables, function)
+    printTable(variables, truthTable)
 
 
 def getTable(variables, function):
