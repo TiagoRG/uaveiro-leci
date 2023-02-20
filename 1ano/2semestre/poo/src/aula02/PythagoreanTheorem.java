@@ -17,11 +17,10 @@ public class PythagoreanTheorem {
         double b = UserInput.getPositiveNumber(sin);
 
         double c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+        double angDeg = Math.acos(a / c) * 180 / Math.PI;
 
-        double cossin = a / c;
-        double angRad = Math.acos(cossin);
-        double angDeg = angRad * 180 / Math.PI;
+        System.out.printf("O comprimento da hipotenusa é %.2f e o valor do angulo entre o cateto A e a hipotenusa é %.2f°", c, angDeg);
 
-        System.out.printf("O comprimento da hipotenusa é %f e o valor do angulo entre o cateto A e a hipotenusa é %f°", MathTools.round(c, 2), MathTools.round(angDeg, 2));
+        sin.close();
     }
 }
