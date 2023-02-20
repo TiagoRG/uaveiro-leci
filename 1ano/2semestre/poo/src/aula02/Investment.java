@@ -16,7 +16,7 @@ public class Investment {
         System.out.print("Taxa de juro mensal (%)? ");
         double tax = sin.nextDouble();
         double finalWallet = initialWallet * Math.pow(1 + tax/100, 3);
-        System.out.printf("O saldo final será de %.2f euros", finalWallet);
+        System.out.printf("O saldo final será de %.2f euros\n", finalWallet);
 
         sin.close();
     }

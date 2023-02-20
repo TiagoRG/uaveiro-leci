@@ -19,7 +19,7 @@ public class DistanceBetweenPoints {
                 Math.pow(Double.parseDouble(p1[0]) - Double.parseDouble(p2[0]), 2) +
                 Math.pow(Double.parseDouble(p1[1]) - Double.parseDouble(p2[1]), 2));
 
-        System.out.printf("A distância entre os dois pontos é %.3f", distance);
+        System.out.printf("A distância entre os dois pontos é %.3f\n", distance);
 
         sin.close();
     }
