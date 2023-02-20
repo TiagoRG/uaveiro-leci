@@ -10,8 +10,8 @@
 #### 4. Run the following commands:
 1. Make sure the setup.sh is executable: `sudo chmod +x setup.sh`<br>
 2. Install the script: `./setup.sh install`
-#### 5. Done! You can now use the tool by running `truthtable` in terminal.
+#### 5. Done! You can now use the tool by running `truthtable` in terminal. Use `truthtable usage` to know better how to use this tool.
 
 ---
-#### Use `truthtable usage` to know better how to use this tool.
-#### If you want to remove the tool, run `./setup.sh uninstall`, delete setup.sh and it will be removed.
+## Uninstalling
+If you want to remove the tool, run `./setup.sh uninstall`, delete setup.sh and it will be removed.
