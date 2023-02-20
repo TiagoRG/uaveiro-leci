@@ -28,7 +28,7 @@ public class RealNumbers {
             ++readNumbers;
         }
 
-        System.out.printf("Valor máximo: %f\nValor mínimo: %f\nMédia: %f\nTotal: %f", max, min, (float) sum/readNumbers, sum);
+        System.out.printf("Valor máximo: %f\nValor mínimo: %f\nMédia: %f\nTotal: %f\n", max, min, (float) sum/readNumbers, sum);
 
         sin.close();
     }

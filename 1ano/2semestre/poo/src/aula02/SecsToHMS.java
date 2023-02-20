@@ -18,7 +18,7 @@ public class SecsToHMS {
         int mins = Math.round((float) (totalSecs / 60));
         int hours = Math.round((float) (mins / 60));
         mins = mins % 60;
-        System.out.printf("%d segundos no formato hh:mm:ss : %d:%d:%d", totalSecs, hours, mins, secs);
+        System.out.printf("%d segundos no formato hh:mm:ss : %d:%d:%d\n", totalSecs, hours, mins, secs);
 
         sin.close();
     }

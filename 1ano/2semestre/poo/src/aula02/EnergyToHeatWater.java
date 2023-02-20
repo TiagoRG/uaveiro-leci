@@ -18,7 +18,7 @@ public class EnergyToHeatWater {
         System.out.print("Temperatura final da água (ºC)? ");
         double finalTemperature = sin.nextDouble();
         double energy = kgOfWater * (finalTemperature - initialTemperature) * 4184;
-        System.out.printf("Para aquecer %.3fkg de água de %.2fºC para %.2fºC, serão necessários %.3fJ de energia.", kgOfWater, initialTemperature, finalTemperature, energy);
+        System.out.printf("Para aquecer %.3fkg de água de %.2fºC para %.2fºC, serão necessários %.3fJ de energia.\n", kgOfWater, initialTemperature, finalTemperature, energy);
 
         sin.close();
     }
