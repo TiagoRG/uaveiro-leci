@@ -1,5 +1,7 @@
 package aula02;
 
+// Código da package utils disponível em
+// https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/src/utils
 import utils.UserInput;
 
 import java.util.Scanner;
@@ -17,7 +19,7 @@ public class DistanceBetweenPoints {
                 Math.pow(Double.parseDouble(p1[0]) - Double.parseDouble(p2[0]), 2) +
                 Math.pow(Double.parseDouble(p1[1]) - Double.parseDouble(p2[1]), 2));
 
-        System.out.printf("A distância entre os dois pontos é %.3f", distance);
+        System.out.printf("A distância entre os dois pontos é %.3f\n", distance);
 
         sin.close();
     }

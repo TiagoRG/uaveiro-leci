@@ -10,7 +10,7 @@ public class CelciusToFahrenheit {
         Scanner sin = new Scanner(System.in);
         double celcius = sin.nextDouble();
         double fahrenheit = 1.8*celcius+32;
-        System.out.printf("%.2fºC = %.2fºF", celcius, fahrenheit);
+        System.out.printf("%.2fºC = %.2fºF\n", celcius, fahrenheit);
 
         sin.close();
     }
