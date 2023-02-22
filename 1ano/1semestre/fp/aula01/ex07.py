@@ -1,8 +1,11 @@
-viagensDia = 2 * (1 + 2 + 3)
+A = 3
+M = 2
+
+viagensDia = 2 * M * sum(i for i in range(1, A+1))
 viagensAno = viagensDia * 365
 
 mAno = viagensAno * 3
-kmAno = mAno
+kmAno = mAno / 1000
 
 secsAno = mAno
 hAno = secsAno / 3600

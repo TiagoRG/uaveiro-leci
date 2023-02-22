@@ -1,0 +1,101 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part1/simulation/qsim
+Egatedemo
+Z1 w1676732113
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 WOh:M[al;oVzG5c`<He>D0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 zGMDhP>8e@2k@f0e<PY]k2
+!i122 0
+R0
+Z8 8GateDemo.vho
+Z9 FGateDemo.vho
+l0
+L35 1
+VMhC`a08fJQO[Za^U;f6H72
+!s100 TRa8gXiQBPgA:N]fTEAQ31
+Z10 OV;C;2020.1;71
+32
+Z11 !s110 1676732114
+!i10b 1
+Z12 !s108 1676732114.000000
+Z13 !s90 -work|work|GateDemo.vho|
+Z14 !s107 GateDemo.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 8 gatedemo 0 22 MhC`a08fJQO[Za^U;f6H72
+!i122 0
+l59
+L42 72
+Va6f1CSbH6B1H03`^dlWeK1
+!s100 k7c0?EMLkP][bRPKo]l_B2
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Egatedemo_vhd_vec_tst
+Z17 w1676732112
+R5
+R6
+!i122 1
+R0
+Z18 8GateDemo.vwf.vht
+Z19 FGateDemo.vwf.vht
+l0
+L32 1
+V6cP6Ym2gH5GlGLc>USo020
+!s100 XYFQ4nK6noeeQ6Oi7R@NC2
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|GateDemo.vwf.vht|
+!s107 GateDemo.vwf.vht|
+!i113 1
+R15
+R16
+Agatedemo_arch
+R5
+R6
+DEx4 work 20 gatedemo_vhd_vec_tst 0 22 6cP6Ym2gH5GlGLc>USo020
+!i122 1
+l45
+L34 65
+VAWn[ofOfCQJAS:J35V3Ag3
+!s100 ld`k5>H9L8ZlW>XlPiCJF0
+R10
+32
+R11
+!i10b 1
+R12
+R20
+Z21 !s107 GateDemo.vwf.vht|
+!i113 1
+R15
+R16
