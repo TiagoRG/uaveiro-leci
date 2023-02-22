@@ -1,0 +1,13 @@
+|GateDemo
+SW[0] => and2gate:system_core.inPort0
+SW[1] => and2gate:system_core.inPort1
+LEDR[0] <= and2gate:system_core.outPort
+LEDR[1] <= <GND>
+
+
+|GateDemo|AND2Gate:system_core
+inPort0 => outPort.IN0
+inPort1 => outPort.IN1
+outPort <= outPort.DB_MAX_OUTPUT_PORT_TYPE
+
+
