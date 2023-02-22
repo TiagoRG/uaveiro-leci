@@ -47,9 +47,9 @@ def getTable(variables, function):
             if index == len(tempFunction):
                 break
             if var in "01" and tempFunction[index - 1] == '~':
-                tempFunction = tempFunction.replace('~' + var, str(1 - int(var)))
+                tempFunction = tempFunction.replace('~' + var, str(1 - int(var) + " "))
             if var in variables:
-                tempFunction = tempFunction.replace(tempFunction[index], binary[variables.index(var)]) if tempFunction[index - 1] != '~' else tempFunction.replace(f"~{tempFunction[index]}", str(int(not int(binary[variables.index(tempFunction[index])])))+" ")
+                tempFunction = tempFunction[:index] + binary[variables.index(var)] + tempFunction[index+1:] if tempFunction[index - 1] != '~' else tempFunction[:index-1] + str(int(not bool(int(binary[variables.index(tempFunction[index])]))))+" " + tempFunction[index+1:]
             index += 1
         try:
             truthTable[binary] = eval(tempFunction)
@@ -58,6 +58,8 @@ def getTable(variables, function):
             return
         if truthTable[binary] > 1:
             truthTable[binary] = 1
+        if truthTable[binary] < 0:
+            truthTable[binary] = 0
 
     return truthTable
 
