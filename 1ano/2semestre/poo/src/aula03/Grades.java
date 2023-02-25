@@ -31,16 +31,16 @@ public class Grades {
             System.out.printf("%5.1f  %5.1f  %5d\n", student.notaT, student.notaP, student.notaFinal);
         }
     }
-}
 
-class Student {
-    public double notaT;
-    public double notaP;
-    public int notaFinal;
+    private static class Student {
+        public double notaT;
+        public double notaP;
+        public int notaFinal;
 
-    public Student(double notaT, double notaP) {
-        this.notaT = notaT;
-        this.notaP = notaP;
-        this.notaFinal = (notaT < 7 || notaP < 7) ? 66 : (int) Math.round(0.4 * notaT + 0.6 * notaP);
+        public Student(double notaT, double notaP) {
+            this.notaT = notaT;
+            this.notaP = notaP;
+            this.notaFinal = (notaT < 7 || notaP < 7) ? 66 : (int) Math.round(0.4 * notaT + 0.6 * notaP);
+        }
     }
 }
