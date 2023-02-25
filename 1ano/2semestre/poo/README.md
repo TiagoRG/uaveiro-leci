@@ -6,10 +6,8 @@
 
 ## Organização do diretório
 * [src](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/src)&emsp;&bullet;&emsp;Código fonte das aulas/projetos
-* [out](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/out)&emsp;&bullet;&emsp;Output da compilação da [src](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/src)
 * [guides](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/guides)&emsp;&bullet;&emsp;Guiões das aulas práticas
 * [slides](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/slides)&emsp;&bullet;&emsp;Slides das aulas teóricas
-* [datafiles](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/datafiles)&emsp;&bullet;&emsp;Ficheiros extra com texto/dados
 
 ---
 ## Índice
