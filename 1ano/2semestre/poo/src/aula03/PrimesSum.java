@@ -1,5 +1,6 @@
 package aula03;
 
+import utils.MathTools;
 import utils.UserInput;
 import java.util.Scanner;
 
@@ -14,20 +15,11 @@ public class PrimesSum {
 
         int sum = 0;
         for (int i = 0; i <= n; i++)
-            if (isNumPrime(i))
+            if (MathTools.isNumPrime(i))
                 sum += i;
 
         System.out.printf("A soma dos números primos até %d é %d\n", n, sum);
 
         sin.close();
-    }
-
-    private static boolean isNumPrime(int n) {
-        if (n == 1)
-            return false;
-        for (int i = 2; i < n; i++)
-            if (n % i == 0)
-                return false;
-        return true;
     }
 }

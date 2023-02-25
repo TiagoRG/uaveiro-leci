@@ -45,7 +45,7 @@ public class Calendar {
     }
 
     private static void printCalendar(int[] data, int monthDays) {
-        System.out.printf("\n%13s %d\n", monthName(data[0]), data[1]);
+        System.out.printf("\n%15s %d\n", monthName(data[0]), data[1]);
         System.out.println("Dom Seg Ter Qua Qui Sex Sab");
 
         if (data[2] != 7)
