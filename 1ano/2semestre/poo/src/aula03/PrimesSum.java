@@ -17,7 +17,7 @@ public class PrimesSum {
             if (isNumPrime(i))
                 sum += i;
 
-        System.out.printf("A soma dos números primos até %d é %d", n, sum);
+        System.out.printf("A soma dos números primos até %d é %d\n", n, sum);
 
         sin.close();
     }

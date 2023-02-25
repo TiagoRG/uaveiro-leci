@@ -4,6 +4,8 @@ import utils.UserInput;
 import java.util.Random;
 import java.util.Scanner;
 
+// Solução do exercício 3
+
 public class HiLo {
     private static final Scanner sin = new Scanner(System.in);
     private static final Random rand = new Random();
