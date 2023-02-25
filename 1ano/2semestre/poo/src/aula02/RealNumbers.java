@@ -16,17 +16,16 @@ public class RealNumbers {
         double min = first;
         double sum = first;
 
-        while (true) {
-            double n = sin.nextDouble();
-            if (n == first)
-                break;
+        double n;
+        do {
+            n = sin.nextDouble();
             if (n > max)
                 max = n;
             if (n < min)
                 min = n;
             sum += n;
             ++readNumbers;
-        }
+        } while (n != first);
 
         System.out.printf("Valor máximo: %f\nValor mínimo: %f\nMédia: %f\nTotal: %f\n", max, min, (float) sum/readNumbers, sum);
 
