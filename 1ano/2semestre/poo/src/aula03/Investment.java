@@ -9,7 +9,7 @@ public class Investment {
     public static void main(String[] args) {
         Scanner sin = new Scanner(System.in);
 
-        int investment;
+        double investment;
         do {
             System.out.print("Introduza o investimento inicial (múltiplo de 1000): ");
             investment = sin.nextInt();
@@ -20,7 +20,7 @@ public class Investment {
 
         for (int i = 1; i <= 12; i++) {
             investment *= 1+tax/100;
-            System.out.printf("Investimento em %d %s: %d\n", i, i==1?"mês":"meses", investment);
+            System.out.printf("Investimento em %d %s: %.2f\n", i, i==1?"mês":"meses", investment);
         }
 
         sin.close();
