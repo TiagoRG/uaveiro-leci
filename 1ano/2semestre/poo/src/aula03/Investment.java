@@ -1,8 +1,9 @@
 package aula03;
 
 import utils.UserInput;
-
 import java.util.Scanner;
+
+// Solução do exercício 2
 
 public class Investment {
     public static void main(String[] args) {
