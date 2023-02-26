@@ -12,8 +12,8 @@ public class Investment {
         double investment;
         do {
             System.out.print("Introduza o investimento inicial (múltiplo de 1000): ");
-            investment = sin.nextInt();
-        } while (investment <= 0 || investment % 1000 != 0);
+            investment = UserInput.getPositiveNumber(sin);
+        } while (investment % 1000 != 0);
 
         System.out.print("Introduza a taxa a aplicar (entre 0% e 5%): ");
         double tax = UserInput.getNumberBetween(sin, 0, 5);
