@@ -45,7 +45,8 @@ public class Calendar {
     }
 
     private static void printCalendar(int[] data, int monthDays) {
-        System.out.printf("\n%15s %d\n", monthName(data[0]), data[1]);
+        String[] monthNames = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
+        System.out.printf("\n%15s %d\n", monthNames[data[0]-1], data[1]);
         System.out.println("Dom Seg Ter Qua Qui Sex Sab");
 
         if (data[2] != 7)
@@ -57,25 +58,5 @@ public class Calendar {
             if ((monthDay + data[2]) % 7 == 0)
                 System.out.println();
         }
-    }
-
-    private static String monthName(int month) {
-        /* Note that this does not work in codecheck.
-           In codecheck use the usual switch case.
-         */
-        return switch (month) {
-            case 1 -> "Janeiro";
-            case 2 -> "Fevereiro";
-            case 3 -> "Março";
-            case 4 -> "Abril";
-            case 5 -> "Maio";
-            case 6 -> "Junho";
-            case 7 -> "Julho";
-            case 8 -> "Agosto";
-            case 9 -> "Setembro";
-            case 10 -> "Outubro";
-            case 11 -> "Novembro";
-            default -> "Dezembro";
-        };
     }
 }
