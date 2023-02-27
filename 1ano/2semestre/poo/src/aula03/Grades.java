@@ -3,7 +3,7 @@ package aula03;
 import java.util.Scanner;
 import utils.UserInput;
 
-// Solução do exercício 4
+// Solução do exercício 4 com o utilizador a introduzir as notas individualmente
 
 public class Grades {
     private static final Scanner sin = new Scanner(System.in);
