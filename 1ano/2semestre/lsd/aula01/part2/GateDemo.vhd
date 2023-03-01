@@ -10,7 +10,7 @@ end GateDemo;
 
 architecture Shell of GateDemo is
 begin
-    system_core: entity work.AND2Gate(Behavioral)
+    system_core: entity work.NAND2Gate(Structural)
     port map(
         inPort0 => SW(0),
         inPort1 => SW(1),

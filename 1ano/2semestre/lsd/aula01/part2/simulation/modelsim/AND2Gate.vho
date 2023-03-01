@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "02/18/2023 15:46:03"
+-- DATE "03/01/2023 12:11:29"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -105,7 +105,8 @@ SIGNAL \LEDR[0]~output_o\ : std_logic;
 SIGNAL \LEDR[1]~output_o\ : std_logic;
 SIGNAL \SW[1]~input_o\ : std_logic;
 SIGNAL \SW[0]~input_o\ : std_logic;
-SIGNAL \system_core|outPort~combout\ : std_logic;
+SIGNAL \system_core|and_gate|outPort~combout\ : std_logic;
+SIGNAL \system_core|and_gate|ALT_INV_outPort~combout\ : std_logic;
 
 COMPONENT hard_block
     PORT (
@@ -121,6 +122,7 @@ LEDR <= ww_LEDR;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
+\system_core|and_gate|ALT_INV_outPort~combout\ <= NOT \system_core|and_gate|outPort~combout\;
 auto_generated_inst : hard_block
 PORT MAP (
 	devoe => ww_devoe,
@@ -135,7 +137,7 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \system_core|outPort~combout\,
+	i => \system_core|and_gate|ALT_INV_outPort~combout\,
 	devoe => ww_devoe,
 	o => \LEDR[0]~output_o\);
 
@@ -174,9 +176,9 @@ PORT MAP (
 	o => \SW[0]~input_o\);
 
 -- Location: LCCOMB_X114_Y17_N8
-\system_core|outPort\ : cycloneive_lcell_comb
+\system_core|and_gate|outPort\ : cycloneive_lcell_comb
 -- Equation(s):
--- \system_core|outPort~combout\ = (\SW[1]~input_o\ & \SW[0]~input_o\)
+-- \system_core|and_gate|outPort~combout\ = (\SW[1]~input_o\ & \SW[0]~input_o\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -186,7 +188,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \SW[1]~input_o\,
 	datad => \SW[0]~input_o\,
-	combout => \system_core|outPort~combout\);
+	combout => \system_core|and_gate|outPort~combout\);
 
 ww_LEDR(0) <= \LEDR[0]~output_o\;
 
