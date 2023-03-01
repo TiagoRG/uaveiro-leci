@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AND2Gate
-Sat Feb 18 15:45:48 2023
+Wed Mar  1 12:11:00 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 18 15:45:48 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar  1 12:11:00 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; AND2Gate                                    ;
 ; Top-level Entity Name              ; GateDemo                                    ;
@@ -162,56 +162,59 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                  ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
-; AND2Gate.vhd                     ; yes             ; User VHDL File  ; /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/AND2Gate.vhd ;         ;
-; GateDemo.vhd                     ; yes             ; User VHDL File  ; /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/GateDemo.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; AND2Gate.vhd                     ; yes             ; User VHDL File  ; /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/AND2Gate.vhd  ;         ;
+; GateDemo.vhd                     ; yes             ; User VHDL File  ; /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/GateDemo.vhd  ;         ;
+; NOTGate.vhd                      ; yes             ; User VHDL File  ; /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/NOTGate.vhd   ;         ;
+; NAND2Gate.vhd                    ; yes             ; User VHDL File  ; /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/NAND2Gate.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                ;
-+---------------------------------------------+------------------------------+
-; Resource                                    ; Usage                        ;
-+---------------------------------------------+------------------------------+
-; Estimated Total logic elements              ; 1                            ;
-;                                             ;                              ;
-; Total combinational functions               ; 1                            ;
-; Logic element usage by number of LUT inputs ;                              ;
-;     -- 4 input functions                    ; 0                            ;
-;     -- 3 input functions                    ; 0                            ;
-;     -- <=2 input functions                  ; 1                            ;
-;                                             ;                              ;
-; Logic elements by mode                      ;                              ;
-;     -- normal mode                          ; 1                            ;
-;     -- arithmetic mode                      ; 0                            ;
-;                                             ;                              ;
-; Total registers                             ; 0                            ;
-;     -- Dedicated logic registers            ; 0                            ;
-;     -- I/O registers                        ; 0                            ;
-;                                             ;                              ;
-; I/O pins                                    ; 4                            ;
-;                                             ;                              ;
-; Embedded Multiplier 9-bit elements          ; 0                            ;
-;                                             ;                              ;
-; Maximum fan-out node                        ; AND2Gate:system_core|outPort ;
-; Maximum fan-out                             ; 1                            ;
-; Total fan-out                               ; 7                            ;
-; Average fan-out                             ; 0.78                         ;
-+---------------------------------------------+------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                   ;
++---------------------------------------------+-------------------------------------------------+
+; Resource                                    ; Usage                                           ;
++---------------------------------------------+-------------------------------------------------+
+; Estimated Total logic elements              ; 1                                               ;
+;                                             ;                                                 ;
+; Total combinational functions               ; 1                                               ;
+; Logic element usage by number of LUT inputs ;                                                 ;
+;     -- 4 input functions                    ; 0                                               ;
+;     -- 3 input functions                    ; 0                                               ;
+;     -- <=2 input functions                  ; 1                                               ;
+;                                             ;                                                 ;
+; Logic elements by mode                      ;                                                 ;
+;     -- normal mode                          ; 1                                               ;
+;     -- arithmetic mode                      ; 0                                               ;
+;                                             ;                                                 ;
+; Total registers                             ; 0                                               ;
+;     -- Dedicated logic registers            ; 0                                               ;
+;     -- I/O registers                        ; 0                                               ;
+;                                             ;                                                 ;
+; I/O pins                                    ; 4                                               ;
+;                                             ;                                                 ;
+; Embedded Multiplier 9-bit elements          ; 0                                               ;
+;                                             ;                                                 ;
+; Maximum fan-out node                        ; NAND2Gate:system_core|AND2Gate:and_gate|outPort ;
+; Maximum fan-out                             ; 1                                               ;
+; Total fan-out                               ; 7                                               ;
+; Average fan-out                             ; 0.78                                            ;
++---------------------------------------------+-------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+-------------+--------------+
-; |GateDemo                  ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |GateDemo                      ; GateDemo    ; work         ;
-;    |AND2Gate:system_core|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GateDemo|AND2Gate:system_core ; AND2Gate    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-------------+--------------+
+; |GateDemo                  ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |GateDemo                                         ; GateDemo    ; work         ;
+;    |NAND2Gate:system_core| ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GateDemo|NAND2Gate:system_core                   ; NAND2Gate   ; work         ;
+;       |AND2Gate:and_gate|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GateDemo|NAND2Gate:system_core|AND2Gate:and_gate ; AND2Gate    ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -236,13 +239,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 4                           ;
-; cycloneiii_lcell_comb ; 2                           ;
-;     normal            ; 2                           ;
+; cycloneiii_lcell_comb ; 3                           ;
+;     normal            ; 3                           ;
 ;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.75                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.60                        ;
 +-----------------------+-----------------------------+
 
 
@@ -251,7 +255,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -261,7 +265,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Feb 18 15:45:41 2023
+    Info: Processing started: Wed Mar  1 12:10:47 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VHDLDemo -c AND2Gate
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -271,9 +275,17 @@ Info (12021): Found 2 design units, including 1 entities, in source file AND2Gat
 Info (12021): Found 2 design units, including 1 entities, in source file GateDemo.vhd
     Info (12022): Found design unit 1: GateDemo-Shell File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/GateDemo.vhd Line: 11
     Info (12023): Found entity 1: GateDemo File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/GateDemo.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file NOTGate.vhd
+    Info (12022): Found design unit 1: NOTGate-Behavioral File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/NOTGate.vhd Line: 11
+    Info (12023): Found entity 1: NOTGate File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/NOTGate.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file NAND2Gate.vhd
+    Info (12022): Found design unit 1: NAND2Gate-Structural File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/NAND2Gate.vhd Line: 12
+    Info (12023): Found entity 1: NAND2Gate File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/NAND2Gate.vhd Line: 4
 Info (12127): Elaborating entity "GateDemo" for the top level hierarchy
 Warning (10873): Using initial value X (don't care) for net "LEDR[1]" at GateDemo.vhd(7) File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/GateDemo.vhd Line: 7
-Info (12129): Elaborating entity "AND2Gate" using architecture "A:behavioral" for hierarchy "AND2Gate:system_core" File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/GateDemo.vhd Line: 13
+Info (12129): Elaborating entity "NAND2Gate" using architecture "A:structural" for hierarchy "NAND2Gate:system_core" File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/GateDemo.vhd Line: 13
+Info (12129): Elaborating entity "AND2Gate" using architecture "A:behavioral" for hierarchy "NAND2Gate:system_core|AND2Gate:and_gate" File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/NAND2Gate.vhd Line: 15
+Info (12129): Elaborating entity "NOTGate" using architecture "A:behavioral" for hierarchy "NAND2Gate:system_core|NOTGate:not_gate" File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/NAND2Gate.vhd Line: 22
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/aula01/part2/GateDemo.vhd Line: 7
 Info (286030): Timing-Driven Synthesis is running
@@ -284,9 +296,9 @@ Info (21057): Implemented 5 device resources after synthesis - the final resourc
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 1 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 427 megabytes
-    Info: Processing ended: Sat Feb 18 15:45:48 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 431 megabytes
+    Info: Processing ended: Wed Mar  1 12:11:00 2023
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:34
 
 
