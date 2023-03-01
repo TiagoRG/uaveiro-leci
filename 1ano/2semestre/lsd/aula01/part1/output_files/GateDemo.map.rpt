@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GateDemo
-Sat Feb 18 15:06:49 2023
+Wed Mar  1 12:01:27 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 18 15:06:49 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar  1 12:01:27 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; GateDemo                                    ;
 ; Top-level Entity Name              ; GateDemo                                    ;
@@ -258,7 +258,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Feb 18 15:06:43 2023
+    Info: Processing started: Wed Mar  1 12:01:19 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GateDemo -c GateDemo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -273,9 +273,9 @@ Info (21057): Implemented 4 device resources after synthesis - the final resourc
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 1 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 403 megabytes
-    Info: Processing ended: Sat Feb 18 15:06:49 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 407 megabytes
+    Info: Processing ended: Wed Mar  1 12:01:27 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:19
 
 
