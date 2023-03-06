@@ -4,8 +4,7 @@ class Circle {
     public double radius;
     
     public Circle(double radius) {
-        if (radius <= 0)
-            return;
+        assert radius > 0;
         this.radius = radius;
     }
 
@@ -14,6 +13,7 @@ class Circle {
     }
 
     public void setRadius(double radius) {
+        assert radius > 0;
         this.radius = radius;
     }
 
@@ -40,8 +40,7 @@ class Triangle {
     public double side3;
 
     public Triangle(double side1, double side2, double side3) {
-        if (side1 <= 0 || side2 <= 0 || side3 <= 0)
-            return;
+        assert side1 > 0 && side2 > 0 && side3 > 0;
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
@@ -52,6 +51,7 @@ class Triangle {
     }
 
     public void setSides(double side1, double side2, double side3) {
+        assert side1 > 0 && side2 > 0 && side3 > 0;
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
@@ -80,8 +80,7 @@ class Rectangle {
     public double side2;
 
     public Rectangle(double side1, double side2) {
-        if (side1 <= 0 || side2 <= 0)
-            return;
+        assert side1 > 0 && side2 > 0;
         this.side1 = side1;
         this.side2 = side2;
     }
@@ -91,6 +90,7 @@ class Rectangle {
     }
 
     public void setSides(double side1, double side2) {
+        assert side1 > 0 && side2 > 0;
         this.side1 = side1;
         this.side2 = side2;
     }
