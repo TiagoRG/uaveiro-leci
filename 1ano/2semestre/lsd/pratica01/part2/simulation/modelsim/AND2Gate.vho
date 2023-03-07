@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "03/01/2023 12:11:29"
+-- DATE "03/07/2023 20:31:07"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -78,7 +78,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY 	GateDemo IS
     PORT (
 	SW : IN std_logic_vector(1 DOWNTO 0);
-	LEDR : OUT std_logic_vector(1 DOWNTO 0)
+	LEDR : BUFFER std_logic_vector(1 DOWNTO 0)
 	);
 END GateDemo;
 
