@@ -1,5 +1,9 @@
 package aula04;
 
+import utils.UserInput;
+
+import java.util.Scanner;
+
 class Circle {
     public double radius;
     
@@ -41,6 +45,10 @@ class Triangle {
 
     public Triangle(double side1, double side2, double side3) {
         assert side1 > 0 && side2 > 0 && side3 > 0;
+        if(Math.abs(side2 - side3) < side1 || side1 < side2 + side3
+        || Math.abs(side1 - side3) < side2 || side2 < side1 + side3
+        || Math.abs(side1 - side2) < side3 || side3 < side1 + side2)
+            throw new IllegalArgumentException("Triangle cannot be created with those sides.");
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
@@ -52,6 +60,10 @@ class Triangle {
 
     public void setSides(double side1, double side2, double side3) {
         assert side1 > 0 && side2 > 0 && side3 > 0;
+        if(Math.abs(side2 - side3) < side1 || side1 < side2 + side3
+        || Math.abs(side1 - side3) < side2 || side2 < side1 + side3
+        || Math.abs(side1 - side2) < side3 || side3 < side1 + side2)
+            throw new IllegalArgumentException("Triangle cannot be created with those sides.");
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
@@ -114,5 +126,72 @@ class Rectangle {
 
 public class Shapes {
     public static void main(String[] args) {
+        Scanner sin = new Scanner(System.in);
+
+        // Circle
+
+        System.out.print("Raio do circulo 1: ");
+        double radius = UserInput.getPositiveNumber(sin);
+        Circle c1 = new Circle(radius);
+        System.out.print("Raio do circulo 2: ");
+        radius = UserInput.getPositiveNumber(sin);
+        Circle c2 = new Circle(radius);
+
+        System.out.println("Circulo 1: " + c1);
+        System.out.println("Area do circulo 1: " + c1.getArea());
+        System.out.println("Perimetro do circulo 1: " + c1.getPerimeter());
+        System.out.println("Circulo 2: " + c2);
+        System.out.println("Area do circulo 2: " + c2.getArea());
+        System.out.println("Perimetro do circulo 2: " + c2.getPerimeter());
+        System.out.println("Circulo 1 e igual ao circulo 2? " + c1.equals(c2));
+
+
+        // Triangle
+
+        System.out.print("\n\n\nLado 1 do triangulo 1: ");
+        double side1 = UserInput.getPositiveNumber(sin);
+        System.out.print("Lado 2 do triangulo 1: ");
+        double side2 = UserInput.getPositiveNumber(sin);
+        System.out.print("Lado 3 do triangulo 1: ");
+        double side3 = UserInput.getPositiveNumber(sin);
+        Triangle t1 = new Triangle(side1, side2, side3);
+        System.out.print("Lado 1 do triangulo 2: ");
+        side1 = UserInput.getPositiveNumber(sin);
+        System.out.print("Lado 2 do triangulo 2: ");
+        side2 = UserInput.getPositiveNumber(sin);
+        System.out.print("Lado 3 do triangulo 2: ");
+        side3 = UserInput.getPositiveNumber(sin);
+        Triangle t2 = new Triangle(side1, side2, side3);
+
+        System.out.println("Triangulo 1: " + t1);
+        System.out.println("Area do triangulo 1: " + t1.getArea());
+        System.out.println("Perimetro do triangulo 1: " + t1.getPerimeter());
+        System.out.println("Triangulo 2: " + t2);
+        System.out.println("Area do triangulo 2: " + t2.getArea());
+        System.out.println("Perimetro do triangulo 2: " + t2.getPerimeter());
+        System.out.println("Triangulo 1 e igual ao triangulo 2? " + t1.equals(t2));
+
+
+        // Rectangle
+        System.out.print("\n\n\nLado 1 do retangulo 1: ");
+        side1 = UserInput.getPositiveNumber(sin);
+        System.out.print("Lado 2 do retangulo 1: ");
+        side2 = UserInput.getPositiveNumber(sin);
+        Rectangle r1 = new Rectangle(side1, side2);
+        System.out.print("Lado 1 do retangulo 2: ");
+        side1 = UserInput.getPositiveNumber(sin);
+        System.out.print("Lado 2 do retangulo 2: ");
+        side2 = UserInput.getPositiveNumber(sin);
+        Rectangle r2 = new Rectangle(side1, side2);
+
+        System.out.println("Retangulo 1: " + r1);
+        System.out.println("Area do retangulo 1: " + r1.getArea());
+        System.out.println("Perimetro do retangulo 1: " + r1.getPerimeter());
+        System.out.println("Retangulo 2: " + r2);
+        System.out.println("Area do retangulo 2: " + r2.getArea());
+        System.out.println("Perimetro do retangulo 2: " + r2.getPerimeter());
+        System.out.println("Retangulo 1 e igual ao retangulo 2? " + r1.equals(r2));
+
+        sin.close();
     }
 }

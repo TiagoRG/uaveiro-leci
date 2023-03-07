@@ -18,4 +18,8 @@ class Car {
         this.kms += distance;
     }
 
+    public String toString() {
+        return String.format("%s %s, %d, kms: %d", this.make, this.model, this.year, this.kms);
+    }
+
 }
