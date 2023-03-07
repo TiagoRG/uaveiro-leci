@@ -26,7 +26,7 @@ else
   cp -a "template/src" "classes/$1"
 
   # Reinicializa o template usando o git restore
-  git restore template
+  git checkout 657720aba1fa3bde17d30f2021e001a972c18795 -- 1ano/2semestre/md/apontamentos/template/
 
   # Copia o pdf da aula para a pasta que contém todos os pdf
   cp "classes/$1/out/main.pdf" "pdf"
