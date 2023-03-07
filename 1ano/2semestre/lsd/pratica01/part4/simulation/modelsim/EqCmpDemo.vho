@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "03/07/2023 18:06:08"
+-- DATE "03/07/2023 20:55:19"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -294,13 +294,13 @@ SIGNAL \SW[1]~input_o\ : std_logic;
 SIGNAL \SW[0]~input_o\ : std_logic;
 SIGNAL \SW[5]~input_o\ : std_logic;
 SIGNAL \SW[4]~input_o\ : std_logic;
-SIGNAL \inst|inst~0_combout\ : std_logic;
+SIGNAL \inst1|inst~0_combout\ : std_logic;
 SIGNAL \SW[7]~input_o\ : std_logic;
 SIGNAL \SW[6]~input_o\ : std_logic;
 SIGNAL \SW[3]~input_o\ : std_logic;
 SIGNAL \SW[2]~input_o\ : std_logic;
-SIGNAL \inst|inst~1_combout\ : std_logic;
-SIGNAL \inst|inst~combout\ : std_logic;
+SIGNAL \inst1|inst~1_combout\ : std_logic;
+SIGNAL \inst1|inst~combout\ : std_logic;
 
 COMPONENT hard_block
     PORT (
@@ -330,7 +330,7 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \inst|inst~combout\,
+	i => \inst1|inst~combout\,
 	devoe => ww_devoe,
 	o => \LEDG[0]~output_o\);
 
@@ -379,9 +379,9 @@ PORT MAP (
 	o => \SW[4]~input_o\);
 
 -- Location: LCCOMB_X114_Y15_N24
-\inst|inst~0\ : cycloneive_lcell_comb
+\inst1|inst~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \inst|inst~0_combout\ = (\SW[1]~input_o\ & (\SW[5]~input_o\ & (\SW[0]~input_o\ $ (!\SW[4]~input_o\)))) # (!\SW[1]~input_o\ & (!\SW[5]~input_o\ & (\SW[0]~input_o\ $ (!\SW[4]~input_o\))))
+-- \inst1|inst~0_combout\ = (\SW[1]~input_o\ & (\SW[5]~input_o\ & (\SW[0]~input_o\ $ (!\SW[4]~input_o\)))) # (!\SW[1]~input_o\ & (!\SW[5]~input_o\ & (\SW[0]~input_o\ $ (!\SW[4]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -393,7 +393,7 @@ PORT MAP (
 	datab => \SW[0]~input_o\,
 	datac => \SW[5]~input_o\,
 	datad => \SW[4]~input_o\,
-	combout => \inst|inst~0_combout\);
+	combout => \inst1|inst~0_combout\);
 
 -- Location: IOIBUF_X115_Y15_N1
 \SW[7]~input\ : cycloneive_io_ibuf
@@ -440,9 +440,9 @@ PORT MAP (
 	o => \SW[2]~input_o\);
 
 -- Location: LCCOMB_X114_Y15_N10
-\inst|inst~1\ : cycloneive_lcell_comb
+\inst1|inst~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \inst|inst~1_combout\ = (\SW[7]~input_o\ & (\SW[3]~input_o\ & (\SW[6]~input_o\ $ (!\SW[2]~input_o\)))) # (!\SW[7]~input_o\ & (!\SW[3]~input_o\ & (\SW[6]~input_o\ $ (!\SW[2]~input_o\))))
+-- \inst1|inst~1_combout\ = (\SW[7]~input_o\ & (\SW[3]~input_o\ & (\SW[6]~input_o\ $ (!\SW[2]~input_o\)))) # (!\SW[7]~input_o\ & (!\SW[3]~input_o\ & (\SW[6]~input_o\ $ (!\SW[2]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -454,12 +454,12 @@ PORT MAP (
 	datab => \SW[6]~input_o\,
 	datac => \SW[3]~input_o\,
 	datad => \SW[2]~input_o\,
-	combout => \inst|inst~1_combout\);
+	combout => \inst1|inst~1_combout\);
 
 -- Location: LCCOMB_X114_Y15_N28
-\inst|inst\ : cycloneive_lcell_comb
+\inst1|inst\ : cycloneive_lcell_comb
 -- Equation(s):
--- \inst|inst~combout\ = (\inst|inst~0_combout\ & \inst|inst~1_combout\)
+-- \inst1|inst~combout\ = (\inst1|inst~0_combout\ & \inst1|inst~1_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -467,9 +467,9 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \inst|inst~0_combout\,
-	datad => \inst|inst~1_combout\,
-	combout => \inst|inst~combout\);
+	datab => \inst1|inst~0_combout\,
+	datad => \inst1|inst~1_combout\,
+	combout => \inst1|inst~combout\);
 
 ww_LEDG(0) <= \LEDG[0]~output_o\;
 END structure;

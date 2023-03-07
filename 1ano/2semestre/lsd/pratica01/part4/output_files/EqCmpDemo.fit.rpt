@@ -1,5 +1,5 @@
 Fitter report for EqCmpDemo
-Tue Mar  7 18:06:02 2023
+Tue Mar  7 20:55:13 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Mar  7 18:06:02 2023       ;
+; Fitter Status                      ; Successful - Tue Mar  7 20:55:13 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; EqCmpDemo                                   ;
 ; Top-level Entity Name              ; EqCmpDemo                                   ;
@@ -151,12 +151,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.2%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -2171,14 +2171,14 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------+--------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                            ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name    ; Entity Name ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------+-------------+--------------+
-; |EqCmpDemo                 ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 73   ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |EqCmpDemo             ; EqCmpDemo   ; work         ;
-;    |EqCmp4:inst|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |EqCmpDemo|EqCmp4:inst ; EqCmp4      ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                             ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name     ; Entity Name ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------+-------------+--------------+
+; |EqCmpDemo                 ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 73   ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |EqCmpDemo              ; EqCmpDemo   ; work         ;
+;    |EqCmp4:inst1|          ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |EqCmpDemo|EqCmp4:inst1 ; EqCmp4      ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -2199,28 +2199,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+---------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                          ;
-+---------------------------+-------------------+---------+
-; Source Pin / Fanout       ; Pad To Core Index ; Setting ;
-+---------------------------+-------------------+---------+
-; SW[4]                     ;                   ;         ;
-;      - EqCmp4:inst|inst~0 ; 0                 ; 6       ;
-; SW[5]                     ;                   ;         ;
-;      - EqCmp4:inst|inst~0 ; 0                 ; 6       ;
-; SW[1]                     ;                   ;         ;
-;      - EqCmp4:inst|inst~0 ; 0                 ; 6       ;
-; SW[0]                     ;                   ;         ;
-;      - EqCmp4:inst|inst~0 ; 0                 ; 6       ;
-; SW[6]                     ;                   ;         ;
-;      - EqCmp4:inst|inst~1 ; 0                 ; 6       ;
-; SW[7]                     ;                   ;         ;
-;      - EqCmp4:inst|inst~1 ; 1                 ; 6       ;
-; SW[3]                     ;                   ;         ;
-;      - EqCmp4:inst|inst~1 ; 0                 ; 6       ;
-; SW[2]                     ;                   ;         ;
-;      - EqCmp4:inst|inst~1 ; 0                 ; 6       ;
-+---------------------------+-------------------+---------+
++----------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                           ;
++----------------------------+-------------------+---------+
+; Source Pin / Fanout        ; Pad To Core Index ; Setting ;
++----------------------------+-------------------+---------+
+; SW[4]                      ;                   ;         ;
+;      - EqCmp4:inst1|inst~0 ; 0                 ; 6       ;
+; SW[5]                      ;                   ;         ;
+;      - EqCmp4:inst1|inst~0 ; 0                 ; 6       ;
+; SW[1]                      ;                   ;         ;
+;      - EqCmp4:inst1|inst~0 ; 0                 ; 6       ;
+; SW[0]                      ;                   ;         ;
+;      - EqCmp4:inst1|inst~0 ; 0                 ; 6       ;
+; SW[6]                      ;                   ;         ;
+;      - EqCmp4:inst1|inst~1 ; 0                 ; 6       ;
+; SW[7]                      ;                   ;         ;
+;      - EqCmp4:inst1|inst~1 ; 1                 ; 6       ;
+; SW[3]                      ;                   ;         ;
+;      - EqCmp4:inst1|inst~1 ; 0                 ; 6       ;
+; SW[2]                      ;                   ;         ;
+;      - EqCmp4:inst1|inst~1 ; 0                 ; 6       ;
++----------------------------+-------------------+---------+
 
 
 +------------------------------------------------+
@@ -3058,7 +3058,7 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 25 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin AUD_ADCDAT uses I/O standard 3.3-V LVTTL at D2
@@ -3088,10 +3088,10 @@ Warning (169177): 25 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 
     Info (169178): Pin UART_RXD uses I/O standard 3.3-V LVTTL at G12
 Info (144001): Generated suppressed messages file /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica01/part4/output_files/EqCmpDemo.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 534 warnings
-    Info: Peak virtual memory: 1155 megabytes
-    Info: Processing ended: Tue Mar  7 18:06:02 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 1157 megabytes
+    Info: Processing ended: Tue Mar  7 20:55:13 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +----------------------------+
