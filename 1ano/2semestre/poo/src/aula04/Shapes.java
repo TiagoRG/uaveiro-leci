@@ -45,9 +45,9 @@ class Triangle {
 
     public Triangle(double side1, double side2, double side3) {
         assert side1 > 0 && side2 > 0 && side3 > 0;
-        if((Math.abs(side2 - side3) < side1 || side1 < side2 + side3
+        if(Math.abs(side2 - side3) < side1 || side1 < side2 + side3
         || Math.abs(side1 - side3) < side2 || side2 < side1 + side3
-        || Math.abs(side1 - side2) < side3 || side3 < side1 + side2))
+        || Math.abs(side1 - side2) < side3 || side3 < side1 + side2)
             throw new IllegalArgumentException("Triangle cannot be created with those sides.");
         this.side1 = side1;
         this.side2 = side2;
@@ -60,9 +60,9 @@ class Triangle {
 
     public void setSides(double side1, double side2, double side3) {
         assert side1 > 0 && side2 > 0 && side3 > 0;
-        if((Math.abs(side2 - side3) < side1 || side1 < side2 + side3
+        if(Math.abs(side2 - side3) < side1 || side1 < side2 + side3
         || Math.abs(side1 - side3) < side2 || side2 < side1 + side3
-        || Math.abs(side1 - side2) < side3 || side3 < side1 + side2))
+        || Math.abs(side1 - side2) < side3 || side3 < side1 + side2)
             throw new IllegalArgumentException("Triangle cannot be created with those sides.");
         this.side1 = side1;
         this.side2 = side2;
