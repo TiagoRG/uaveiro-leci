@@ -8,7 +8,8 @@ class Circle {
     public double radius;
     
     public Circle(double radius) {
-        assert radius > 0;
+        if (!(radius > 0))
+            throw new IllegalArgumentException("Sizes must be positive.");
         this.radius = radius;
     }
 
@@ -17,7 +18,8 @@ class Circle {
     }
 
     public void setRadius(double radius) {
-        assert radius > 0;
+        if (!(radius > 0))
+            throw new IllegalArgumentException("Sizes must be positive.");
         this.radius = radius;
     }
 
@@ -44,10 +46,9 @@ class Triangle {
     public double side3;
 
     public Triangle(double side1, double side2, double side3) {
-        assert side1 > 0 && side2 > 0 && side3 > 0;
-        if(Math.abs(side2 - side3) < side1 || side1 < side2 + side3
-        || Math.abs(side1 - side3) < side2 || side2 < side1 + side3
-        || Math.abs(side1 - side2) < side3 || side3 < side1 + side2)
+        if (!(side1 > 0 && side2 > 0 && side3 > 0))
+            throw new IllegalArgumentException("Sizes must be positive.");
+        if(!(side1 < side2 + side3 && side2 < side1 + side3 && side3 < side1 + side2))
             throw new IllegalArgumentException("Triangle cannot be created with those sides.");
         this.side1 = side1;
         this.side2 = side2;
@@ -59,10 +60,9 @@ class Triangle {
     }
 
     public void setSides(double side1, double side2, double side3) {
-        assert side1 > 0 && side2 > 0 && side3 > 0;
-        if(Math.abs(side2 - side3) < side1 || side1 < side2 + side3
-        || Math.abs(side1 - side3) < side2 || side2 < side1 + side3
-        || Math.abs(side1 - side2) < side3 || side3 < side1 + side2)
+        if (!(side1 > 0 && side2 > 0 && side3 > 0))
+            throw new IllegalArgumentException("Sizes must be positive.");
+        if(!(side1 < side2 + side3 && side2 < side1 + side3 && side3 < side1 + side2))
             throw new IllegalArgumentException("Triangle cannot be created with those sides.");
         this.side1 = side1;
         this.side2 = side2;
@@ -92,7 +92,8 @@ class Rectangle {
     public double side2;
 
     public Rectangle(double side1, double side2) {
-        assert side1 > 0 && side2 > 0;
+        if (!(side1 > 0 && side2 > 0))
+            throw new IllegalArgumentException("Sizes must be positive.");
         this.side1 = side1;
         this.side2 = side2;
     }
@@ -102,7 +103,8 @@ class Rectangle {
     }
 
     public void setSides(double side1, double side2) {
-        assert side1 > 0 && side2 > 0;
+        if (!(side1 > 0 && side2 > 0))
+            throw new IllegalArgumentException("Sizes must be positive.");
         this.side1 = side1;
         this.side2 = side2;
     }
