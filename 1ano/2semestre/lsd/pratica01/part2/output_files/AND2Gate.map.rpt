@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AND2Gate
-Tue Mar  7 20:30:50 2023
+Tue Mar  7 23:03:50 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar  7 20:30:50 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar  7 23:03:50 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; AND2Gate                                    ;
 ; Top-level Entity Name              ; GateDemo                                    ;
@@ -265,7 +265,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Mar  7 20:30:43 2023
+    Info: Processing started: Tue Mar  7 23:03:44 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VHDLDemo -c AND2Gate
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -298,9 +298,9 @@ Info (21057): Implemented 5 device resources after synthesis - the final resourc
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 1 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 432 megabytes
-    Info: Processing ended: Tue Mar  7 20:30:50 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 433 megabytes
+    Info: Processing ended: Tue Mar  7 23:03:50 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:13
 
 
