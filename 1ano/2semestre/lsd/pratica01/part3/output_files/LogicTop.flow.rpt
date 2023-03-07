@@ -1,5 +1,5 @@
 Flow report for LogicTop
-Mon Mar  6 12:05:23 2023
+Tue Mar  7 20:45:46 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Mar  6 12:05:23 2023       ;
+; Flow Status                        ; Successful - Tue Mar  7 20:45:46 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; LogicTop                                    ;
 ; Top-level Entity Name              ; LogicTop                                    ;
@@ -104,7 +104,9 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; 00:00:01     ; 1.0                     ; 366 MB              ; 00:00:02                           ;
 ; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 540 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 612 MB              ; 00:00:00                           ;
-; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:25                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 609 MB              ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 613 MB              ; 00:00:00                           ;
+; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,6 +120,8 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; rendlaptop       ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
 ; Timing Analyzer      ; rendlaptop       ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
 ; EDA Netlist Writer   ; rendlaptop       ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
+; EDA Netlist Writer   ; rendlaptop       ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
+; EDA Netlist Writer   ; rendlaptop       ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
@@ -129,6 +133,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off LogicDemo -c Lo
 quartus_asm --read_settings_files=off --write_settings_files=off LogicDemo -c LogicTop
 quartus_sta LogicDemo -c LogicTop
 quartus_eda --read_settings_files=off --write_settings_files=off LogicDemo -c LogicTop
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicDemo -c LogicTop --vector_source=/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica01/part3/LogicUnit.vwf --testbench_file=/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica01/part3/simulation/qsim/LogicUnit.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica01/part3/simulation/qsim/ LogicDemo -c LogicTop
 
 
 
