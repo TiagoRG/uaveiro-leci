@@ -12,7 +12,7 @@ else
   if [ "$1" == "reset" ]
   then
     # Reinicializa o template usando o git restore
-    git restore template
+    git checkout 657720aba1fa3bde17d30f2021e001a972c18795 -- 1ano/2semestre/md/apontamentos/template/
 
     # Termina o script
     exit 0
