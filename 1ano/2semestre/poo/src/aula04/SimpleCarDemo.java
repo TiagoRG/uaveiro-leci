@@ -16,8 +16,8 @@ public class SimpleCarDemo {
 
         System.out.println();
         System.out.println("Carros registados: ");
-        for (int i=0; i<cars.length; i++) {
-            System.out.printf("%s %s, %d, kms: %d\n", cars[i].make, cars[i].model, cars[i].year, cars[i].kms);
+        for (Car car : cars) {
+            System.out.println(car);
         }
         System.out.println();
     }
