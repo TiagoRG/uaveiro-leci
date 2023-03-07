@@ -1,8 +1,8 @@
 |GateDemo
 SW[0] => nand2gate:system_core.inPort0
 SW[1] => nand2gate:system_core.inPort1
-LEDR[0] <= nand2gate:system_core.outPort
-LEDR[1] <= <GND>
+LEDR[0] << nand2gate:system_core.outPort
+LEDR[1] << <GND>
 
 
 |GateDemo|NAND2Gate:system_core
