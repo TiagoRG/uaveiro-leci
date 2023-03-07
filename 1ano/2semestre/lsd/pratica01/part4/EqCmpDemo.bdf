@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 648 200 824 216)
+	(rect 656 200 832 216)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "LEDG[0]" (rect 90 0 132 11)(font "Arial" ))
 	(pt 0 8)
@@ -69,12 +69,12 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 824 216 880 232))
+	(annotation_block (location)(rect 832 216 888 232))
 )
 (symbol
 	(rect 472 176 640 272)
 	(text "EqCmp4" (rect 5 0 55 15)(font "Intel Clear" (font_size 8)))
-	(text "inst" (rect 8 79 28 92)(font "Intel Clear" ))
+	(text "inst1" (rect 8 79 32 92)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -111,6 +111,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
+	(pt 656 208)
 	(pt 640 208)
-	(pt 648 208)
 )

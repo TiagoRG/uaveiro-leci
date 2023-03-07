@@ -1,5 +1,5 @@
 Analysis & Synthesis report for EqCmpDemo
-Tue Mar  7 18:05:54 2023
+Tue Mar  7 20:55:03 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar  7 18:05:54 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar  7 20:55:03 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; EqCmpDemo                                   ;
 ; Top-level Entity Name              ; EqCmpDemo                                   ;
@@ -172,46 +172,46 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                      ;
-+---------------------------------------------+--------------------+
-; Resource                                    ; Usage              ;
-+---------------------------------------------+--------------------+
-; Estimated Total logic elements              ; 3                  ;
-;                                             ;                    ;
-; Total combinational functions               ; 3                  ;
-; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 2                  ;
-;     -- 3 input functions                    ; 0                  ;
-;     -- <=2 input functions                  ; 1                  ;
-;                                             ;                    ;
-; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 3                  ;
-;     -- arithmetic mode                      ; 0                  ;
-;                                             ;                    ;
-; Total registers                             ; 0                  ;
-;     -- Dedicated logic registers            ; 0                  ;
-;     -- I/O registers                        ; 0                  ;
-;                                             ;                    ;
-; I/O pins                                    ; 9                  ;
-;                                             ;                    ;
-; Embedded Multiplier 9-bit elements          ; 0                  ;
-;                                             ;                    ;
-; Maximum fan-out node                        ; EqCmp4:inst|inst~0 ;
-; Maximum fan-out                             ; 1                  ;
-; Total fan-out                               ; 20                 ;
-; Average fan-out                             ; 0.95               ;
-+---------------------------------------------+--------------------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimated Total logic elements              ; 3                   ;
+;                                             ;                     ;
+; Total combinational functions               ; 3                   ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 2                   ;
+;     -- 3 input functions                    ; 0                   ;
+;     -- <=2 input functions                  ; 1                   ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 3                   ;
+;     -- arithmetic mode                      ; 0                   ;
+;                                             ;                     ;
+; Total registers                             ; 0                   ;
+;     -- Dedicated logic registers            ; 0                   ;
+;     -- I/O registers                        ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 9                   ;
+;                                             ;                     ;
+; Embedded Multiplier 9-bit elements          ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; EqCmp4:inst1|inst~0 ;
+; Maximum fan-out                             ; 1                   ;
+; Total fan-out                               ; 20                  ;
+; Average fan-out                             ; 0.95                ;
++---------------------------------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-------------+--------------+
-; |EqCmpDemo                 ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |EqCmpDemo             ; EqCmpDemo   ; work         ;
-;    |EqCmp4:inst|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |EqCmpDemo|EqCmp4:inst ; EqCmp4      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
+; |EqCmpDemo                 ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |EqCmpDemo              ; EqCmpDemo   ; work         ;
+;    |EqCmp4:inst1|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |EqCmpDemo|EqCmp4:inst1 ; EqCmp4      ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -261,7 +261,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Mar  7 18:05:47 2023
+    Info: Processing started: Tue Mar  7 20:54:54 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EqCmpDemo -c EqCmpDemo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -269,8 +269,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file EqCmp4.
     Info (12023): Found entity 1: EqCmp4
 Info (12021): Found 1 design units, including 1 entities, in source file EqCmpDemo.bdf
     Info (12023): Found entity 1: EqCmpDemo
+Info (12021): Found 2 design units, including 1 entities, in source file EqCmp8.vhd
+    Info (12022): Found design unit 1: EqCmp8-Behavioral File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica01/part4/EqCmp8.vhd Line: 13
+    Info (12023): Found entity 1: EqCmp8 File: /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica01/part4/EqCmp8.vhd Line: 4
 Info (12127): Elaborating entity "EqCmpDemo" for the top level hierarchy
-Info (12128): Elaborating entity "EqCmp4" for hierarchy "EqCmp4:inst"
+Info (12128): Elaborating entity "EqCmp4" for hierarchy "EqCmp4:inst1"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -279,9 +282,9 @@ Info (21057): Implemented 12 device resources after synthesis - the final resour
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 3 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 403 megabytes
-    Info: Processing ended: Tue Mar  7 18:05:54 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 433 megabytes
+    Info: Processing ended: Tue Mar  7 20:55:03 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:20
 
 
