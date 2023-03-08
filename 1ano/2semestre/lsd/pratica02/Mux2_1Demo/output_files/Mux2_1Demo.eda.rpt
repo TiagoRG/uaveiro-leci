@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Mux2_1Demo
-Tue Mar  7 22:14:32 2023
+Wed Mar  8 09:48:32 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -8,9 +8,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ---------------------
   1. Legal Notice
   2. EDA Netlist Writer Summary
-  3. Simulation Settings
-  4. Simulation Generated Files
-  5. EDA Netlist Writer Messages
+  3. EDA Netlist Writer Messages
 
 
 
@@ -34,45 +32,14 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------+
-; EDA Netlist Writer Summary                                        ;
-+---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Mar  7 22:14:32 2023 ;
-; Revision Name             ; Mux2_1Demo                            ;
-; Top-level Entity Name     ; Mux2_1Demo                            ;
-; Family                    ; Cyclone IV E                          ;
-; Simulation Files Creation ; Successful                            ;
-+---------------------------+---------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                        ;
-+---------------------------------------------------------------------------------------------------+------------------------+
-; Option                                                                                            ; Setting                ;
-+---------------------------------------------------------------------------------------------------+------------------------+
-; Tool Name                                                                                         ; ModelSim-Altera (VHDL) ;
-; Generate functional simulation netlist                                                            ; On                     ;
-; Truncate long hierarchy paths                                                                     ; Off                    ;
-; Map illegal HDL characters                                                                        ; Off                    ;
-; Flatten buses into individual nodes                                                               ; Off                    ;
-; Maintain hierarchy                                                                                ; Off                    ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                    ;
-; Enable glitch filtering                                                                           ; Off                    ;
-; Do not write top level VHDL entity                                                                ; Off                    ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                    ;
-; Architecture name in VHDL output netlist                                                          ; structure              ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                    ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                    ;
-+---------------------------------------------------------------------------------------------------+------------------------+
-
-
-+------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                           ;
-+------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                      ;
-+------------------------------------------------------------------------------------------------------+
-; /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/Mux2_1/simulation/qsim//Mux2_1Demo.vho ;
-+------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------+
+; EDA Netlist Writer Summary                                    ;
++---------------------------+-----------------------------------+
+; EDA Netlist Writer Status ; Failed - Wed Mar  8 09:48:32 2023 ;
+; Revision Name             ; Mux2_1Demo                        ;
+; Top-level Entity Name     ; Mux2_1Demo                        ;
+; Family                    ; Cyclone IV E                      ;
++---------------------------+-----------------------------------+
 
 
 +-----------------------------+
@@ -95,14 +62,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Mar  7 22:14:31 2023
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/Mux2_1/simulation/qsim/ Mux2_1Demo -c Mux2_1Demo
+    Info: Processing started: Wed Mar  8 09:48:31 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Mux2_1Demo -c Mux2_1Demo --vector_source=/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/Mux2_1/Mux2_1.vwf --testbench_file=/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/Mux2_1/simulation/qsim/Mux2_1.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file Mux2_1Demo.vho in folder "/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/Mux2_1/simulation/qsim//" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 611 megabytes
-    Info: Processing ended: Tue Mar  7 22:14:32 2023
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+Error (199013): HDL output file name "/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/Mux2_1/simulation/qsim/Mux2_1.vwf.vht" used with --testbench_file option contains a non-existent directory path
+Error (199014): Vector source file /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/Mux2_1/Mux2_1.vwf specified with --testbench_vector_input_file option does not exist
+Error: Quartus Prime EDA Netlist Writer was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 608 megabytes
+    Error: Processing ended: Wed Mar  8 09:48:32 2023
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:00
 
 
