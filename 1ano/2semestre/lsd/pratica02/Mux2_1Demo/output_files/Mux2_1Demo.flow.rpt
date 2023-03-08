@@ -1,5 +1,5 @@
 Flow report for Mux2_1Demo
-Tue Mar  7 22:14:32 2023
+Wed Mar  8 09:48:32 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,26 +38,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Flow Summary                                                                     ;
-+------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Mar  7 22:14:32 2023       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                      ; Mux2_1Demo                                  ;
-; Top-level Entity Name              ; Mux2_1Demo                                  ;
-; Family                             ; Cyclone IV E                                ;
-; Device                             ; EP4CE115F29C7                               ;
-; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1 / 114,480 ( < 1 % )                       ;
-;     Total combinational functions  ; 1 / 114,480 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                         ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 4 / 529 ( < 1 % )                           ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
-+------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Flow Summary                                                                              ;
++------------------------------------+------------------------------------------------------+
+; Flow Status                        ; EDA Netlist Writer Failed - Wed Mar  8 09:48:32 2023 ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition          ;
+; Revision Name                      ; Mux2_1Demo                                           ;
+; Top-level Entity Name              ; Mux2_1Demo                                           ;
+; Family                             ; Cyclone IV E                                         ;
+; Device                             ; EP4CE115F29C7                                        ;
+; Timing Models                      ; Final                                                ;
+; Total logic elements               ; 1 / 114,480 ( < 1 % )                                ;
+;     Total combinational functions  ; 1 / 114,480 ( < 1 % )                                ;
+;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                                  ;
+; Total registers                    ; 0                                                    ;
+; Total pins                         ; 4 / 529 ( < 1 % )                                    ;
+; Total virtual pins                 ; 0                                                    ;
+; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                                ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                      ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                        ;
++------------------------------------+------------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -108,7 +108,8 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 611 MB              ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 608 MB              ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 611 MB              ; 00:00:00                           ;
-; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:24                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 608 MB              ; 00:00:00                           ;
+; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -121,6 +122,7 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; rendlaptop       ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
 ; Assembler            ; rendlaptop       ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
 ; Timing Analyzer      ; rendlaptop       ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
+; EDA Netlist Writer   ; rendlaptop       ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
 ; EDA Netlist Writer   ; rendlaptop       ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
 ; EDA Netlist Writer   ; rendlaptop       ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
 ; EDA Netlist Writer   ; rendlaptop       ; Ubuntu 22.04.2 ; 22         ; x86_64         ;
@@ -141,6 +143,7 @@ quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_f
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/Mux2_1/simulation/qsim/ Mux2_1Demo -c Mux2_1Demo
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Mux2_1Demo -c Mux2_1Demo --vector_source=/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/Mux2_1/Mux2_1.vwf --testbench_file=/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/Mux2_1/simulation/qsim/Mux2_1.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/Mux2_1/simulation/qsim/ Mux2_1Demo -c Mux2_1Demo
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Mux2_1Demo -c Mux2_1Demo --vector_source=/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/Mux2_1/Mux2_1.vwf --testbench_file=/home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/Mux2_1/simulation/qsim/Mux2_1.vwf.vht
 
 
 
