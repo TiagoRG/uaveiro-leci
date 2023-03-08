@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DisplayDemo
-Wed Mar  8 17:50:10 2023
+Wed Mar  8 20:51:57 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar  8 17:50:10 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar  8 20:51:57 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; DisplayDemo                                 ;
 ; Top-level Entity Name              ; DisplayDemo                                 ;
@@ -262,7 +262,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -272,7 +272,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar  8 17:49:57 2023
+    Info: Processing started: Wed Mar  8 20:51:51 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DisplayDemo -c DisplayDemo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -291,9 +291,9 @@ Info (21057): Implemented 37 device resources after synthesis - the final resour
     Info (21059): Implemented 18 output pins
     Info (21061): Implemented 14 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 433 megabytes
-    Info: Processing ended: Wed Mar  8 17:50:10 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Peak virtual memory: 428 megabytes
+    Info: Processing ended: Wed Mar  8 20:51:57 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:13
 
 
