@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Wed Jan 25 23:41:52 2023
+Analysis & Synthesis Status : Successful - Thu Mar  9 17:22:00 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : MuxDemo
-Top-level Entity Name : Mux16_1
+Top-level Entity Name : MuxDemo
 Family : Cyclone IV E
 Total logic elements : 10
     Total combinational functions : 10
