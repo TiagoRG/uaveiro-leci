@@ -1,5 +1,5 @@
 Fitter report for DisplayDemo
-Wed Mar  8 20:52:03 2023
+Thu Mar  9 10:12:37 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Mar  8 20:52:03 2023       ;
+; Fitter Status                      ; Successful - Thu Mar  9 10:12:37 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; DisplayDemo                                 ;
 ; Top-level Entity Name              ; DisplayDemo                                 ;
@@ -2592,10 +2592,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file /home/tiagorg/repos/uaveiro-leci/1ano/2semestre/lsd/pratica02/DisplayDemo/output_files/DisplayDemo.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 503 warnings
-    Info: Peak virtual memory: 1148 megabytes
-    Info: Processing ended: Wed Mar  8 20:52:03 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 1149 megabytes
+    Info: Processing ended: Thu Mar  9 10:12:37 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +----------------------------+
