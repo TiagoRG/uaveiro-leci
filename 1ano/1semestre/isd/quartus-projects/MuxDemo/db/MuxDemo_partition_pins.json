@@ -4,87 +4,87 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Y",
+					"name" : "LEDG[8]",
 					"strict" : false
 				},
 				{
-					"name" : "I10",
+					"name" : "SW[10]",
 					"strict" : false
 				},
 				{
-					"name" : "Sel2",
+					"name" : "KEY[1]",
 					"strict" : false
 				},
 				{
-					"name" : "I9",
+					"name" : "SW[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Sel1",
+					"name" : "KEY[0]",
 					"strict" : false
 				},
 				{
-					"name" : "I8",
+					"name" : "SW[8]",
 					"strict" : false
 				},
 				{
-					"name" : "I11",
+					"name" : "SW[11]",
 					"strict" : false
 				},
 				{
-					"name" : "Sel4",
+					"name" : "KEY[3]",
 					"strict" : false
 				},
 				{
-					"name" : "I5",
+					"name" : "SW[5]",
 					"strict" : false
 				},
 				{
-					"name" : "I6",
+					"name" : "SW[6]",
 					"strict" : false
 				},
 				{
-					"name" : "I4",
+					"name" : "SW[4]",
 					"strict" : false
 				},
 				{
-					"name" : "I7",
+					"name" : "SW[7]",
 					"strict" : false
 				},
 				{
-					"name" : "Sel3",
+					"name" : "KEY[2]",
 					"strict" : false
 				},
 				{
-					"name" : "I2",
+					"name" : "SW[2]",
 					"strict" : false
 				},
 				{
-					"name" : "I1",
+					"name" : "SW[1]",
 					"strict" : false
 				},
 				{
-					"name" : "I0",
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
-					"name" : "I3",
+					"name" : "SW[3]",
 					"strict" : false
 				},
 				{
-					"name" : "I13",
+					"name" : "SW[13]",
 					"strict" : false
 				},
 				{
-					"name" : "I14",
+					"name" : "SW[14]",
 					"strict" : false
 				},
 				{
-					"name" : "I12",
+					"name" : "SW[12]",
 					"strict" : false
 				},
 				{
-					"name" : "I15",
+					"name" : "SW[15]",
 					"strict" : false
 				}
 			]
