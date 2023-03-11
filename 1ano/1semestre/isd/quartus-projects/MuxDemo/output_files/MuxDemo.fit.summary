@@ -1,7 +1,7 @@
-Fitter Status : Successful - Wed Jan 25 23:41:55 2023
+Fitter Status : Failed - Thu Mar  9 17:22:01 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : MuxDemo
-Top-level Entity Name : Mux16_1
+Top-level Entity Name : MuxDemo
 Family : Cyclone IV E
 Device : EP4CE6E22C6
 Timing Models : Final
