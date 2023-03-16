@@ -3,7 +3,7 @@
 ### Tópico principal da aula: Inheritance
 
 * [Guião](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/guides/POO-2022-aula05.pdf)
-* [Slides](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/slides/POO_04_Herança.pdf)
+* [Slides](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/slides/POO_03_Classes.pdf)
 
 ### Exercise List
 | Exercise Number | File Name                                                                                                      |
