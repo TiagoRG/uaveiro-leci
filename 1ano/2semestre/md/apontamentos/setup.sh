@@ -12,7 +12,7 @@ else
   if [ "$1" == "reset" ]
   then
     # Reinicializa o template usando o git restore
-    git checkout 657720aba1fa3bde17d30f2021e001a972c18795 -- 1ano/2semestre/md/apontamentos/template/
+    git checkout 657720aba1fa3bde17d30f2021e001a972c18795 -- "$parent_path/template/"
 
     # Termina o script
     exit 0
@@ -26,7 +26,7 @@ else
   cp -a "template/src" "classes/$1"
 
   # Reinicializa o template usando o git restore
-  git checkout 657720aba1fa3bde17d30f2021e001a972c18795 -- 1ano/2semestre/md/apontamentos/template/
+  git checkout 657720aba1fa3bde17d30f2021e001a972c18795 -- "$parent_path/template/"
 
   # Copia o pdf da aula para a pasta que contém todos os pdf
   cp "classes/$1/out/main.pdf" "pdf"
