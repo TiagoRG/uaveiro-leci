@@ -10,6 +10,7 @@
 | [03](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/src/aula03) | Classes              |
 | [04](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/src/aula04) | Classes              |
 | [05](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/src/aula05) | Classes              |
+| [05](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/src/aula06) | Inheritance          |
 
 ---
 *Pode conter erros, caso encontre algum, crie um* [*ticket*](https://github.com/TiagoRG/uaveiro-leci/issues/new)
