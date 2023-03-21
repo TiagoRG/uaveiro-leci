@@ -1,6 +1,4 @@
-package aula05;
-
-import java.util.Scanner;
+package utils;
 
 public class DateYMD {
     private int day;
@@ -90,64 +88,7 @@ public class DateYMD {
         return year % 100 == 0 ? year % 400 == 0 : year % 4 == 0;
     }
 
-    static boolean validDate(int day, int month, int year) {
+    public static boolean validDate(int day, int month, int year) {
         return day >= 1 && day <= monthDays(month, year);
-    }
-}
-
-class TestDateYMD {
-    public static void main(String[] args) {
-        Scanner sin = new Scanner(System.in);
-        DateYMD date = null;
-        while (true) {
-            System.out.println("Date operations:");
-            System.out.println("1 - Create date");
-            System.out.println("2 - Show current date");
-            System.out.println("3 - Increment date");
-            System.out.println("4 - Decrement date");
-            System.out.println("0 - Exit");
-            System.out.print("Option: ");
-            int option = sin.nextInt();
-            if (option == 0)
-                break;
-            switch (option) {
-                case 1:
-                    System.out.print("Day: ");
-                    int day = sin.nextInt();
-                    System.out.print("Month: ");
-                    int month = sin.nextInt();
-                    System.out.print("Year: ");
-                    int year = sin.nextInt();
-                    date = new DateYMD(day, month, year);
-                    System.out.println("Date created: " + date);
-                    break;
-                case 2:
-                    if (date == null) {
-                        System.out.println("Date not created");
-                        break;
-                    }
-                    System.out.println("Current date: " + date);
-                    break;
-                case 3:
-                    if (date == null) {
-                        System.out.println("Date not created");
-                        break;
-                    }
-                    date.increment();
-                    System.out.println("Date incremented: " + date);
-                    break;
-                case 4:
-                    if (date == null) {
-                        System.out.println("Date not created");
-                        break;
-                    }
-                    date.decrement();
-                    System.out.println("Date decremented: " + date);
-                    break;
-                default:
-                    System.out.println("Invalid option");
-            }
-        }
-        sin.close();
     }
 }
