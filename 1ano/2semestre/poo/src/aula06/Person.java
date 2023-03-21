@@ -44,6 +44,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return String.format("%s; CC: %d; Date de nascimento: %s", this.name, this.cc, this.birthDate);
+        return String.format("%s; CC: %d; Data de nascimento: %s", this.name, this.cc, this.birthDate);
     }
 }
