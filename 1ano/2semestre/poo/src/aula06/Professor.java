@@ -16,9 +16,10 @@ public class Professor extends Person {
         return this.category;
     }
     public void setCategory(String category) {
-        if (category == null || category.isEmpty()) {
+        if (category == null || category.isEmpty())
             throw new IllegalArgumentException("Category cannot be null or empty");
-        }
+        if (!(category.equals("Auxiliar") || category.equals("Associado") || category.equals("Catedrático")))
+            throw new IllegalArgumentException("Invalid category");
         this.category = category;
     }
 
@@ -26,9 +27,10 @@ public class Professor extends Person {
         return this.department;
     }
     public void setDepartment(String department) {
-        if (department == null || department.isEmpty()) {
+        if (department == null || department.isEmpty())
             throw new IllegalArgumentException("Department cannot be null or empty");
-        }
+        if (!department.matches("^[a-zA-Z ]+$"))
+            throw new IllegalArgumentException("Invalid department");
         this.department = department;
     }
 

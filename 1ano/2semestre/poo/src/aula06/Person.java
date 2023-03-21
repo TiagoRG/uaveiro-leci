@@ -17,9 +17,10 @@ public class Person {
         return this.name;
     }
     public void setName(String name) {
-        if (name == null || name.isEmpty()) {
+        if (name == null || name.isEmpty())
             throw new IllegalArgumentException("Name cannot be null or empty");
-        }
+        if (!name.matches("^[a-zA-Z ]+$"))
+            throw new IllegalArgumentException("Name must only contain letters and spaces");
         this.name = name;
     }
 
@@ -27,6 +28,8 @@ public class Person {
         return this.cc;
     }
     public void setCc(int cc) {
+        if (String.valueOf(cc).length() != 8)
+            throw new IllegalArgumentException("CC must have 8 digits");
         this.cc = cc;
     }
 
@@ -34,9 +37,8 @@ public class Person {
         return this.birthDate;
     }
     public void setBirthDate(DateYMD birthDate) {
-        if (birthDate == null) {
+        if (birthDate == null)
             throw new IllegalArgumentException("Birth date cannot be null");
-        }
         this.birthDate = birthDate;
     }
 
