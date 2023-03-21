@@ -19,8 +19,6 @@ public class Person {
     public void setName(String name) {
         if (name == null || name.isEmpty())
             throw new IllegalArgumentException("Name cannot be null or empty");
-        if (!name.matches("^[a-zA-Z ]+$"))
-            throw new IllegalArgumentException("Name must only contain letters and spaces");
         this.name = name;
     }
 

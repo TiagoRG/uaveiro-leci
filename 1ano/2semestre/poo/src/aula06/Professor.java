@@ -29,8 +29,6 @@ public class Professor extends Person {
     public void setDepartment(String department) {
         if (department == null || department.isEmpty())
             throw new IllegalArgumentException("Department cannot be null or empty");
-        if (!department.matches("^[a-zA-Z ]+$"))
-            throw new IllegalArgumentException("Invalid department");
         this.department = department;
     }
 
