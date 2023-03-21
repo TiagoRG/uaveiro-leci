@@ -88,7 +88,7 @@ public class DateYMD {
         return year % 100 == 0 ? year % 400 == 0 : year % 4 == 0;
     }
 
-    static boolean validDate(int day, int month, int year) {
+    public static boolean validDate(int day, int month, int year) {
         return day >= 1 && day <= monthDays(month, year);
     }
 }
