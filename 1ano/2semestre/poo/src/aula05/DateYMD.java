@@ -71,7 +71,7 @@ public class DateYMD {
     }
 
     public String toString() {
-        return String.format("%04d-%02d-%02d", year, month, day);
+        return String.format("%04d-%02d-%02d", this.year, this.month, this.day);
     }
     static boolean validMonth(int month) {
         return month >= 1 && month <= 12;
