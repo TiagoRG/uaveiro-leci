@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Mon Mar 20 13:27:34 2023
+Analysis & Synthesis Status : Failed - Wed Mar 22 11:14:29 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : CmpN_Demo
-Top-level Entity Name : CmpN_Demo
+Top-level Entity Name : CmpN
 Family : Cyclone IV E
-Total logic elements : 16
-    Total combinational functions : 16
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 26
-Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total logic elements : N/A until Partition Merge
+    Total combinational functions : N/A until Partition Merge
+    Dedicated logic registers : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total memory bits : N/A until Partition Merge
+Embedded Multiplier 9-bit elements : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge
