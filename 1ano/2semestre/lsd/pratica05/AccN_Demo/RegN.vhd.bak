@@ -1,0 +1,10 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity RegN is
+	generic ( N : positive := 8);
+	port
+	(
+		
+	);
+end RegN;
