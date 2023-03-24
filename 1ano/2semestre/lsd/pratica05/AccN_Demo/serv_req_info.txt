@@ -1,0 +1,28 @@
+<internal_error>
+<sub_system>ERR</sub_system>
+<callstack>
+	0x7fec11bb7be6: ccl_err + 0x7be6 (_ZN15ERR_STACKWALKER15get_stack_traceEPPKviiPv + 0xd8)
+	0x7fec11bbae95: ccl_err + 0xae95 (_Z14err_terminatorv + 0x5a)
+	0x7fec2213eae6: jtag_client + 0x82ae6 (_ZN10__cxxabiv111__terminateEPFvvE + 0x6)
+	0x7fec2213eb31: jtag_client + 0x82b31
+	0x7fec2213ec86: jtag_client + 0x82c86 (__cxa_rethrow + 0x46)
+	0x7fec1d7b5074: QtCore.so.4 + 0x1b5074 (_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE + 0x2f4)
+	0x7fec1d7b9cc4: QtCore.so.4 + 0x1b9cc4 (_ZN16QCoreApplication4execEv + 0xb4)
+	   0x401eab: quartus + 0x1eab (_Z8qgq_mainiPPKc + 0x7b)
+	0x7fec12b4fe30: ccl_msg + 0x3ee30 (_Z15msg_main_threadPv + 0x10)
+	0x7fec11b81acc: ccl_thr + 0x5acc (thr_final_wrapper + 0xc)
+	0x7fec12b4feef: ccl_msg + 0x3eeef (_Z18msg_thread_wrapperPFPvS_ES_ + 0x62)
+	0x7fec11be9f9c: ccl_mem + 0x9f9c (_Z18mem_thread_wrapperPFPvS_ES_ + 0x5c)
+	0x7fec11bb8b39: ccl_err + 0x8b39 (_Z18err_thread_wrapperPFPvS_ES_ + 0x27)
+	0x7fec11b81b0f: ccl_thr + 0x5b0f (thr_thread_wrapper + 0x15)
+	0x7fec12b51ea1: ccl_msg + 0x40ea1 (_Z12msg_exe_mainiPPKcPFiiS1_E + 0xb2)
+	   0x401f91: quartus + 0x1f91 (main + 0x26)
+	0x7febff429d90: c.so.6 + 0x29d90
+	0x7febff429e40: c.so.6 + 0x29e40 (__libc_start_main + 0x80)
+	   0x401d39: quartus + 0x1d39
+</callstack>
+<error>*** Fatal Error: Unhandled Exception</error>
+<date>Wed Mar 22 12:37:34 2023
+</date>
+<version>Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition</version>
+</internal_error>
