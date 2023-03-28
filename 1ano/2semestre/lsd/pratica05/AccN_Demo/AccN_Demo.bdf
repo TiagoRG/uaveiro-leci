@@ -182,7 +182,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 304 288 448 368)
 	(text "FreqDivider" (rect 5 0 64 11)(font "Arial" ))
-	(text "inst2" (rect 8 64 32 77)(font "Intel Clear" ))
+	(text "inst4" (rect 8 64 33 77)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -232,10 +232,10 @@ https://fpgasoftware.intel.com/eula.
 	(pt 480 320)
 )
 (connector
-	(pt 448 320)
-	(pt 480 320)
-)
-(connector
 	(pt 296 320)
 	(pt 304 320)
+)
+(connector
+	(pt 448 320)
+	(pt 480 320)
 )
