@@ -13,12 +13,12 @@ architecture Behavioral of FreqDivider is
     signal s_halfWay : unsigned(31 downto 0);
 	 signal k         : std_logic_vector(31 downto 0);
 begin
-	 k <= x"02AD7840";
-    s_halfWay <= unsigned(k);
-    
+	 k <= x"008D7840";
+	 s_halfWay <= unsigned(k);
+        
     process(clkIn)
-    begin
-        if (rising_edge(clkIn)) then
+	 begin
+		  if (rising_edge(clkIn)) then
             if (s_counter = s_halfWay - 1) then 
                 clkOut <= '0';
                 s_counter <= (others => '0');
