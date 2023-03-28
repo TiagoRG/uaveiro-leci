@@ -1,4 +1,4 @@
-package aula06;
+package aula06.ex1;
 
 import java.util.Scanner;
 import utils.DateYMD;

@@ -1,4 +1,6 @@
-package aula06;
+package aula06.ex2;
+
+import aula06.ex1.Person;
 
 public class Contact {
     private final int id;
@@ -9,7 +11,7 @@ public class Contact {
     private static int currentId = 1;
 
     public Contact(Person person, String email, String phone) {
-        if (email == null || email.isEmpty() || phone == null || phone.isEmpty())
+        if ((email == null || email.isEmpty()) && (phone == null || phone.isEmpty()))
             throw new IllegalArgumentException("Either email or phone must be provided");
         this.id = Contact.currentId++;
         this.setPerson(person);
@@ -34,7 +36,8 @@ public class Contact {
         return email;
     }
     public void setEmail(String email) {
-        if (!email.matches("^[a-zA-Z_0-9.]+@[a-zA-Z_0-9.]+\\.[a-zA-Z_0-9]+$"))
+        if (!(email == null || email.isEmpty()) &&
+            !email.matches("^[a-zA-Z_0-9.]+@[a-zA-Z_0-9.]+\\.[a-zA-Z_0-9]+$"))
             throw new IllegalArgumentException("Invalid email");
         this.email = email;
     }
@@ -43,7 +46,8 @@ public class Contact {
         return phone;
     }
     public void setPhone(String phone) {
-        if (!phone.matches("^9[0-9]{8}$"))
+        if (!(phone == null || phone.isEmpty()) &&
+            !phone.matches("^9[0-9]{8}$"))
             throw new IllegalArgumentException("Invalid phone");
         this.phone = phone;
     }

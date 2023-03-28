@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AccN_Demo
-Wed Mar 22 12:50:57 2023
+Tue Mar 28 15:21:59 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -46,13 +46,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 22 12:50:57 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 28 15:21:59 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; AccN_Demo                                   ;
 ; Top-level Entity Name              ; AccN_Demo                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 77                                          ;
-;     Total combinational functions  ; 77                                          ;
+; Total logic elements               ; 75                                          ;
+;     Total combinational functions  ; 75                                          ;
 ;     Dedicated logic registers      ; 50                                          ;
 ; Total registers                    ; 50                                          ;
 ; Total pins                         ; 37                                          ;
@@ -185,16 +185,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 77             ;
+; Estimated Total logic elements              ; 75             ;
 ;                                             ;                ;
-; Total combinational functions               ; 77             ;
+; Total combinational functions               ; 75             ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 12             ;
-;     -- 3 input functions                    ; 21             ;
-;     -- <=2 input functions                  ; 44             ;
+;     -- 4 input functions                    ; 15             ;
+;     -- 3 input functions                    ; 27             ;
+;     -- <=2 input functions                  ; 33             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 30             ;
+;     -- normal mode                          ; 28             ;
 ;     -- arithmetic mode                      ; 47             ;
 ;                                             ;                ;
 ; Total registers                             ; 50             ;
@@ -207,8 +207,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 33             ;
-; Total fan-out                               ; 386            ;
-; Average fan-out                             ; 1.92           ;
+; Total fan-out                               ; 394            ;
+; Average fan-out                             ; 1.98           ;
 +---------------------------------------------+----------------+
 
 
@@ -217,10 +217,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+-------------+--------------+
-; |AccN_Demo                 ; 77 (0)              ; 50 (0)                    ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |AccN_Demo                    ; AccN_Demo   ; work         ;
+; |AccN_Demo                 ; 75 (0)              ; 50 (0)                    ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |AccN_Demo                    ; AccN_Demo   ; work         ;
 ;    |AccN:inst|             ; 17 (0)              ; 17 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AccN_Demo|AccN:inst          ; AccN        ; work         ;
 ;       |RegN:reg|           ; 17 (17)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AccN_Demo|AccN:inst|RegN:reg ; RegN        ; work         ;
-;    |FreqDivider:inst2|     ; 60 (60)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AccN_Demo|FreqDivider:inst2  ; FreqDivider ; work         ;
+;    |FreqDivider:inst2|     ; 58 (58)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AccN_Demo|FreqDivider:inst2  ; FreqDivider ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -279,18 +279,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ff         ; 50                          ;
 ;     ENA CLR           ; 17                          ;
 ;     plain             ; 33                          ;
-; cycloneiii_lcell_comb ; 77                          ;
+; cycloneiii_lcell_comb ; 75                          ;
 ;     arith             ; 47                          ;
 ;         2 data inputs ; 31                          ;
 ;         3 data inputs ; 16                          ;
-;     normal            ; 30                          ;
+;     normal            ; 28                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 12                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 15                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.40                        ;
-; Average LUT depth     ; 3.08                        ;
+; Max LUT depth         ; 4.50                        ;
+; Average LUT depth     ; 3.02                        ;
 +-----------------------+-----------------------------+
 
 
@@ -309,7 +309,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar 22 12:50:52 2023
+    Info: Processing started: Tue Mar 28 15:21:53 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AccN_Demo -c AccN_Demo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -335,14 +335,14 @@ Info (12128): Elaborating entity "FreqDivider" for hierarchy "FreqDivider:inst2"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 114 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 77 logic cells
+    Info (21061): Implemented 75 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 456 megabytes
-    Info: Processing ended: Wed Mar 22 12:50:57 2023
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 453 megabytes
+    Info: Processing ended: Tue Mar 28 15:21:59 2023
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:13
 
 

@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Mar 22 12:51:06 2023
+Fitter Status : Successful - Tue Mar 28 15:22:08 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : AccN_Demo
 Top-level Entity Name : AccN_Demo
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 78 / 114,480 ( < 1 % )
-    Total combinational functions : 77 / 114,480 ( < 1 % )
+Total logic elements : 76 / 114,480 ( < 1 % )
+    Total combinational functions : 75 / 114,480 ( < 1 % )
     Dedicated logic registers : 50 / 114,480 ( < 1 % )
 Total registers : 50
 Total pins : 37 / 529 ( 7 % )
