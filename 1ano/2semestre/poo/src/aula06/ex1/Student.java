@@ -1,4 +1,4 @@
-package aula06;
+package aula06.ex1;
 
 import utils.DateYMD;
 import java.time.LocalDate;

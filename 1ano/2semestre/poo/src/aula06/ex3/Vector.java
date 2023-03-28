@@ -1,4 +1,4 @@
-package aula06;
+package aula06.ex3;
 
 public class Vector {
     private int[] vector;

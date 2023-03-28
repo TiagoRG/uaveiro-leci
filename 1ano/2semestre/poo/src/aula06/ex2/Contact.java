@@ -1,4 +1,6 @@
-package aula06;
+package aula06.ex2;
+
+import aula06.ex1.Person;
 
 public class Contact {
     private final int id;
