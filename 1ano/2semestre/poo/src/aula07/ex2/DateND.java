@@ -77,11 +77,8 @@ public class DateND extends Date {
 
     @Override
     public void removeDays(int days) {
-        if (days > this.absDay)
-            this.absDay = 0;
-        else
-            for (int i = 0; i < days; i++)
-                this.decrement();
+        for (int i = 0; i < days; i++)
+            this.decrement();
     }
 
     @Override
