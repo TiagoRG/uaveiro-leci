@@ -6,48 +6,136 @@ public class DateTest {
     public static void main(String[] args) {
         Scanner sin = new Scanner(System.in);
 
-        while (true) {
+        mainLoop: while (true) {
             System.out.print("Class to test (0-Quit;1-DateYMD;2-DateND): ");
-            String option = sin.nextLine();
+            int classoption = sin.nextInt();
 
-            switch (option) {
-                case "0" -> {
+            switch (classoption) {
+                case 0 -> {
                     sin.close();
-                    System.exit(0);
+                    break mainLoop;
                 }
-                case "1" -> {
-                    System.out.print("Day: ");
-                    int day = Integer.parseInt(sin.nextLine());
-                    System.out.print("Month: ");
-                    int month = Integer.parseInt(sin.nextLine());
-                    System.out.print("Year: ");
-                    int year = Integer.parseInt(sin.nextLine());
-
-                    DateYMD date = new DateYMD(day, month, year);
-                    System.out.printf("Initial date: %s%n%n", date);
-                    System.out.printf("Absolute day: %d%n", date.getAbsDay());
-                    System.out.println("Adding 7 days...");
-                    date.addDays(7);
-                    System.out.printf("New absolute day: %d%n", date.getAbsDay());
-                    System.out.println("Removing 534 days...");
-                    date.removeDays(534);
-                    System.out.printf("New absolute day: %d%n", date.getAbsDay());
-                    System.out.println("Final date: " + date);
+                case 1 -> {
+                    DateYMD date = null;
+                    class1Loop: while (true) {
+                        System.out.println("Date operations:");
+                        System.out.println("1 - Create date");
+                        System.out.println("2 - Show current date");
+                        System.out.println("3 - Show current date (absolute day format)");
+                        System.out.println("4 - Increment date");
+                        System.out.println("5 - Decrement date");
+                        System.out.println("0 - Exit");
+                        System.out.print("Option: ");
+                        int option = sin.nextInt();
+                        if (option == 0)
+                            break class1Loop;
+                        class1Switch: switch (option) {
+                            case 1 -> {
+                                System.out.print("Day: ");
+                                int day = sin.nextInt();
+                                System.out.print("Month: ");
+                                int month = sin.nextInt();
+                                System.out.print("Year: ");
+                                int year = sin.nextInt();
+                                date = new DateYMD(day, month, year);
+                                System.out.println("Date created: " + date);
+                            }
+                            case 2 -> {
+                                if (date == null) {
+                                    System.out.println("Date not created");
+                                    break class1Switch;
+                                }
+                                System.out.println("Current date: " + date);
+                            }
+                            case 3 -> {
+                                if (date == null) {
+                                    System.out.println("Date not created");
+                                    break class1Switch;
+                                }
+                                System.out.println("Current date: " + new DateND(date.getAbsDay()));
+                            }
+                            case 4 -> {
+                                if (date == null) {
+                                    System.out.println("Date not created");
+                                    break class1Switch;
+                                }
+                                System.out.print("Number of days to increment date by: ");
+                                int daysToIncrement = sin.nextInt();
+                                date.addDays(daysToIncrement);
+                                System.out.println("Date incremented: " + date);
+                            }
+                            case 5 -> {
+                                if (date == null) {
+                                    System.out.println("Date not created");
+                                    break class1Switch;
+                                }
+                                System.out.print("Number of days to decremente date by: ");
+                                int daysToDecrement = sin.nextInt();
+                                date.removeDays(daysToDecrement);
+                                System.out.println("Date decremented: " + date);
+                            }
+                            default -> System.out.println("Invalid option");
+                        }
+                    }
                 }
-                case "2" -> {
-                    System.out.print("Days past past 01-01-2000: ");
-                    int days = Integer.parseInt(sin.nextLine());
-
-                    DateND date = new DateND(days);
-                    System.out.printf("Initial date: %s%n%n", date);
-                    System.out.printf("YMD date: %s%n", new DateYMD(date.getDay(), date.getMonth(), date.getYear()));
-                    System.out.println("Adding 74 days...");
-                    date.addDays(74);
-                    System.out.printf("New YMD date: %s%n", new DateYMD(date.getDay(), date.getMonth(), date.getYear()));
-                    System.out.println("Removing 612 days...");
-                    date.removeDays(612);
-                    System.out.printf("New YMD date: %s%n", new DateYMD(date.getDay(), date.getMonth(), date.getYear()));
-                    System.out.println("Final date: " + date);
+                case 2 -> {
+                    DateND date = null;
+                    class2Loop: while (true) {
+                        System.out.println("Date operations:");
+                        System.out.println("1 - Create date");
+                        System.out.println("2 - Show current date");
+                        System.out.println("3 - Show current date (YMD days format)");
+                        System.out.println("4 - Increment date");
+                        System.out.println("5 - Decrement date");
+                        System.out.println("0 - Exit");
+                        System.out.print("Option: ");
+                        int option = sin.nextInt();
+                        if (option == 0)
+                            break class2Loop;
+                        class2Switch: switch (option) {
+                            case 1 -> {
+                                System.out.print("Day: ");
+                                int day = sin.nextInt();
+                                date = new DateND(day);
+                                System.out.println("Date created: " + date);
+                            }
+                            case 2 -> {
+                                if (date == null) {
+                                    System.out.println("Date not created");
+                                    break class2Switch;
+                                }
+                                System.out.println("Current date: " + date);
+                            }
+                            case 3 -> {
+                                if (date == null) {
+                                    System.out.println("Date not created");
+                                    break class2Switch;
+                                }
+                                System.out.println("Current date: " + new DateYMD(date.getDay(), date.getMonth(), date.getYear()));
+                            }
+                            case 4 -> {
+                                if (date == null) {
+                                    System.out.println("Date not created");
+                                    break class2Switch;
+                                }
+                                System.out.print("Number of days to increment date by: ");
+                                int daysToIncrement = sin.nextInt();
+                                date.addDays(daysToIncrement);
+                                System.out.println("Date incremented: " + date);
+                            }
+                            case 5 -> {
+                                if (date == null) {
+                                    System.out.println("Date not created");
+                                    break class2Switch;
+                                }
+                                System.out.print("Number of days to decremente date by: ");
+                                int daysToDecrement = sin.nextInt();
+                                date.removeDays(daysToDecrement);
+                                System.out.println("Date decremented: " + date);
+                            }
+                            default -> System.out.println("Invalid option");
+                        }
+                    }
                 }
                 default -> System.out.println("Invalid option.");
             }
