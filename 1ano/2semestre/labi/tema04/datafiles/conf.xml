@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<conf>
+    <interval>1</interval>
+    <output>
+        <csv active="true" separator="," />
+        <xml active="false" />
+    </output>
+    <monitor>
+        <cpu active="true" />
+        <network active="true" />
+        <ram active="false" />
+    </monitor>
+</conf>
