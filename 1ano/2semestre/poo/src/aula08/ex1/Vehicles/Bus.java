@@ -17,6 +17,10 @@ public class Bus extends Vehicle implements IFuelVehicle, IElectricVehicle {
 
     public Bus(String plate, String brand, String model, int potency, int boardNumber, int weight, int maxPassengers, EngineType engineType) {
         super(plate, brand, model, potency);
+        if (weight <= 0)
+            throw new IllegalArgumentException("Weight must be positive.");
+        if (maxPassengers <= 0)
+            throw new IllegalArgumentException("Max passengers must be positive.");
         this.boardNumber = boardNumber;
         this.weight = weight;
         this.maxPassengers = maxPassengers;

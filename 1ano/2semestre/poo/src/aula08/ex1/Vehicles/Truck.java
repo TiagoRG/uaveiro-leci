@@ -12,6 +12,10 @@ public class Truck extends Vehicle implements IFuelVehicle {
 
     public Truck(String plate, String brand, String model, int potency, int boardNumber, int weight, int maxWeight) {
         super(plate, brand, model, potency);
+        if (weight <= 0)
+            throw new IllegalArgumentException("Weight must be positive.");
+        if (maxWeight <= 0)
+            throw new IllegalArgumentException("Max weight must be positive.");
         this.boardNumber = boardNumber;
         this.weight = weight;
         this.maxWeight = maxWeight;

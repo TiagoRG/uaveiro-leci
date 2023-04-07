@@ -1,6 +1,7 @@
 package aula08.ex1.Vehicles;
 
 import aula08.ex1.Interfaces.IKmTravelled;
+import utils.Validations;
 
 import java.util.Objects;
 
@@ -14,6 +15,10 @@ public abstract class Vehicle implements IKmTravelled {
     private int km;
 
     public Vehicle(String plate, String brand, String model, int potency) {
+        if (!Validations.validateVehiclePlate(plate))
+            throw new IllegalArgumentException("Invalid plate!");
+        if (potency <= 0)
+            throw new IllegalArgumentException("Potency must be positive");
         this.plate = plate;
         this.brand = brand;
         this.model = model;
