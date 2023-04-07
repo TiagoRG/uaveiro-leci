@@ -42,6 +42,7 @@ public class VehicleComp {
         System.out.print("Km to travel: ");
         int km = Integer.parseInt(sin.nextLine());
         Vehicle vehicle = this.getVehicleByPlate(plate);
+
         vehicle.trip(km);
     }
 
@@ -69,13 +70,13 @@ public class VehicleComp {
         String model = sin.nextLine();
         System.out.print("Vehicle potency: ");
         int potency = Integer.parseInt(sin.nextLine());
-        System.out.print("What vehicle are you adding?\n1 - Motorcicle\n2 - Car\n3 - Taxi\n4 - Bus\n5 - Truck\n>> ");
+        System.out.print("What vehicle are you adding?\n1 - Motorcycle\n2 - Car\n3 - Taxi\n4 - Bus\n5 - Truck\n>> ");
         int vehicleType = Integer.parseInt(sin.nextLine());
         switch (vehicleType) {
             case 1 -> {
-                System.out.print("What's the motorcicle type? (SPORT/TOURING): ");
-                Motorcicle.MotorcicleType motorcicleType = Motorcicle.MotorcicleType.fromString(sin.nextLine());
-                addVehicle(new Motorcicle(plate, brand, model, potency, motorcicleType));
+                System.out.print("What's the motorcycle type? (SPORT/TOURING): ");
+                Motorcycle.MotorcycleType motorcycleType = Motorcycle.MotorcycleType.fromString(sin.nextLine());
+                addVehicle(new Motorcycle(plate, brand, model, potency, motorcycleType));
             }
             case 2, 3, 4, 5 -> {
                 System.out.print("Vehicle's board number: ");
@@ -84,7 +85,9 @@ public class VehicleComp {
                     case 2, 3 -> {
                         System.out.print("Car's trunk size: ");
                         int trunkSize = Integer.parseInt(sin.nextLine());
-                        Car car = new Car(plate, brand, model, potency, boardNumber, trunkSize);
+                        System.out.print("What's the engine type? (FUEL/ELETRIC): ");
+                        EngineType engineType = EngineType.fromString(sin.nextLine());
+                        Car car = new Car(plate, brand, model, potency, boardNumber, trunkSize, engineType);
                         if (vehicleType == 2)
                             addVehicle(car);
                         else {
@@ -99,7 +102,9 @@ public class VehicleComp {
                         if (vehicleType == 4) {
                             System.out.print("Bus passenger limit: ");
                             int maxPassengers = Integer.parseInt(sin.nextLine());
-                            addVehicle(new Bus(plate, brand, model, potency, boardNumber, weight, maxPassengers));
+                            System.out.print("What's the engine type? (FUEL/ELETRIC): ");
+                            EngineType engineType = EngineType.fromString(sin.nextLine());
+                            addVehicle(new Bus(plate, brand, model, potency, boardNumber, weight, maxPassengers, engineType));
                         } else {
                             System.out.print("Truck weight limit: ");
                             int maxWeight = Integer.parseInt(sin.nextLine());

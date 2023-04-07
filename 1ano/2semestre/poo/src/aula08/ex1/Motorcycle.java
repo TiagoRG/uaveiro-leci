@@ -2,25 +2,28 @@ package aula08.ex1;
 
 import java.util.Objects;
 
-public class Motorcicle extends Vehicle {
-    private final MotorcicleType type;
+public class Motorcycle extends Vehicle implements IFuelVehicle {
+    private final MotorcycleType type;
 
-    public Motorcicle(String plate, String brand, String model, int potency, MotorcicleType type) {
+    private int fuelLevel;
+
+    public Motorcycle(String plate, String brand, String model, int potency, MotorcycleType type) {
         super(plate, brand, model, potency);
         this.type = type;
+        this.fuelLevel = 0;
     }
 
-    public Motorcicle(Motorcicle motorcicle) {
-        this(motorcicle.getPlate(), motorcicle.getBrand(), motorcicle.getModel(), motorcicle.getPotency(), motorcicle.getType());
+    public Motorcycle(Motorcycle motorcycle) {
+        this(motorcycle.getPlate(), motorcycle.getBrand(), motorcycle.getModel(), motorcycle.getPotency(), motorcycle.getType());
     }
 
-    public MotorcicleType getType() {
+    public MotorcycleType getType() {
         return this.type;
     }
 
     @Override
     public String toString() {
-        return "Motorcicle {" +
+        return "Motorcycle {" +
         "\n\tplate='" + this.getPlate() + '\'' +
         ",\n\tbrand='" + this.getBrand() + '\'' +
         ",\n\tmodel='" + this.getModel() + '\'' +
@@ -28,6 +31,7 @@ public class Motorcicle extends Vehicle {
         ",\n\ttype=" + this.getType().toString() +
         ",\n\tlastTripKm=" + this.lastTrip() +
         ",\n\tkm=" + this.totalDistance() +
+        ",\n\tfuelLevel=" + this.fuelLevel() +
         "\n}";
     }
 
@@ -36,7 +40,7 @@ public class Motorcicle extends Vehicle {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Motorcicle that = (Motorcicle) o;
+        Motorcycle that = (Motorcycle) o;
         return this.getType() == that.getType();
     }
 
@@ -45,7 +49,17 @@ public class Motorcicle extends Vehicle {
         return Objects.hash(super.hashCode(), this.getType());
     }
 
-    enum MotorcicleType {
+    @Override
+    public int fuelLevel() {
+        return this.fuelLevel;
+    }
+
+    @Override
+    public void fillTank(int level) {
+        this.fuelLevel = level;
+    }
+
+    enum MotorcycleType {
         SPORT, TOURING;
 
         public String toString() {
@@ -55,11 +69,11 @@ public class Motorcicle extends Vehicle {
             };
         }
 
-        public static MotorcicleType fromString(String s) {
+        public static MotorcycleType fromString(String s) {
             return switch (s) {
                 case "SPORT", "Sport", "sport" -> SPORT;
                 case "TOURING", "Touring", "touring" -> TOURING;
-                default -> throw new IllegalArgumentException("Invalid MotorcicleType: " + s);
+                default -> throw new IllegalArgumentException("Invalid MotorcycleType: " + s);
             };
         }
     }

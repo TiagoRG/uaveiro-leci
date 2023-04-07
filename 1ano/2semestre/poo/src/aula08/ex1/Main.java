@@ -58,7 +58,7 @@ public class Main {
 
     private static void manageComp(VehicleComp vehicleComp) {
         while (true) {
-            System.out.println("Choose an option\n1 - List vehicle\n2 - Get vehicle info\n3 - Vehicle with most Km\n4 - Send vehicle on a trip\n5 - Add Vehicle\n6 - Remove vehicle\n0 - Exit");
+            System.out.println("Choose an option\n1 - List vehicle\n2 - Get vehicle info\n3 - Vehicle with most Km\n4 - Manage vehicle\n5 - Add Vehicle\n6 - Remove vehicle\n0 - Exit");
             int mainOption = Integer.parseInt(sin.nextLine());
             switch (mainOption) {
                 case 0 -> {
@@ -70,9 +70,92 @@ public class Main {
                     System.out.println(vehicleComp.getVehicleByPlate(sin.nextLine()));
                 }
                 case 3 -> vehicleComp.printVehicleWithMostKm();
-                case 4 -> vehicleComp.tripMenu(sin);
+                case 4 -> {
+                    System.out.print("Plate of the vehicle to manage: ");
+                    String plate = sin.nextLine();
+                    Vehicle vehicle = vehicleComp.getVehicleByPlate(plate);
+                    manageVehicle(vehicle);
+                }
                 case 5 -> vehicleComp.addVehicleMenu(sin);
                 case 6 -> vehicleComp.removeVehicleMenu(sin);
+                default -> System.out.println("Invalid option");
+            }
+        }
+    }
+
+    private static void manageVehicle(Vehicle vehicle) {
+        while (true) {
+            System.out.println("Choose an option\n1 - Send vehicle on a trip\n2 - Refuel/Recharge\n0 - Exit");
+            int mainOption = Integer.parseInt(sin.nextLine());
+            switch (mainOption) {
+                case 0 -> {
+                    return;
+                }
+                case 1 -> {
+                    System.out.print("Km the vehicle is going to travel: ");
+                    int km = Integer.parseInt(sin.nextLine());
+                    vehicle.trip(km);
+                    if (vehicle instanceof Car car) {
+                        if (car.getEngineType() == EngineType.FUEL) {
+                            System.out.print("What fuel level is the car going to be left at: ");
+                            int level = Integer.parseInt(sin.nextLine());
+                            ((Car) vehicle).fillTank(level);
+                        } else {
+                            System.out.print("What battery percentage is the car going to be left at: ");
+                            int battery = Integer.parseInt(sin.nextLine());
+                            ((Car) vehicle).charge(battery);
+                        }
+                    } else if (vehicle instanceof Bus bus) {
+                        if (bus.getEngineType() == EngineType.FUEL) {
+                            System.out.print("What fuel level is the bus going to be left at: ");
+                            int level = Integer.parseInt(sin.nextLine());
+                            ((Bus) vehicle).fillTank(level);
+                        } else {
+                            System.out.print("What battery percentage is the bus going to be left at: ");
+                            int battery = Integer.parseInt(sin.nextLine());
+                            ((Bus) vehicle).charge(battery);
+                        }
+                    } else if (vehicle instanceof Motorcycle) {
+                        System.out.print("What fuel level is the motorcycle going to be left at: ");
+                        int level = Integer.parseInt(sin.nextLine());
+                        ((Motorcycle) vehicle).fillTank(level);
+                    } else if (vehicle instanceof Truck) {
+                        System.out.print("What fuel level is the truck going to be left at: ");
+                        int level = Integer.parseInt(sin.nextLine());
+                        ((Truck) vehicle).fillTank(level);
+                    }
+                }
+                case 2 -> {
+                    if (vehicle instanceof Car car) {
+                        if (car.getEngineType() == EngineType.FUEL) {
+                            System.out.print("What fuel level are you refueling the car to: ");
+                            int level = Integer.parseInt(sin.nextLine());
+                            ((Car) vehicle).fillTank(level);
+                        } else {
+                            System.out.print("What battery percentage are you charging the car to: ");
+                            int battery = Integer.parseInt(sin.nextLine());
+                            ((Car) vehicle).charge(battery);
+                        }
+                    } else if (vehicle instanceof Bus bus) {
+                        if (bus.getEngineType() == EngineType.FUEL) {
+                            System.out.print("What fuel level are you refueling the bus to: ");
+                            int level = Integer.parseInt(sin.nextLine());
+                            ((Bus) vehicle).fillTank(level);
+                        } else {
+                            System.out.print("What battery percentage are you charging the bus to: ");
+                            int battery = Integer.parseInt(sin.nextLine());
+                            ((Bus) vehicle).charge(battery);
+                        }
+                    } else if (vehicle instanceof Motorcycle) {
+                        System.out.print("What fuel level are you refueling the motorcycle to: ");
+                        int level = Integer.parseInt(sin.nextLine());
+                        ((Motorcycle) vehicle).fillTank(level);
+                    } else if (vehicle instanceof Truck) {
+                        System.out.print("What fuel level are you refueling the truck to: ");
+                        int level = Integer.parseInt(sin.nextLine());
+                        ((Truck) vehicle).fillTank(level);
+                    }
+                }
                 default -> System.out.println("Invalid option");
             }
         }
