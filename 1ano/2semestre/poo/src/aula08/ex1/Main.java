@@ -1,5 +1,8 @@
 package aula08.ex1;
 
+import aula08.ex1.Enums.EngineType;
+import aula08.ex1.Vehicles.*;
+
 import java.util.Scanner;
 
 public class Main {

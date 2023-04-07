@@ -1,5 +1,8 @@
 package aula08.ex1;
 
+import aula08.ex1.Enums.EngineType;
+import aula08.ex1.Vehicles.*;
+
 import java.util.Scanner;
 
 public class VehicleComp {
@@ -85,7 +88,7 @@ public class VehicleComp {
                     case 2, 3 -> {
                         System.out.print("Car's trunk size: ");
                         int trunkSize = Integer.parseInt(sin.nextLine());
-                        System.out.print("What's the engine type? (FUEL/ELETRIC): ");
+                        System.out.print("What's the engine type? (FUEL/ELECTRIC): ");
                         EngineType engineType = EngineType.fromString(sin.nextLine());
                         Car car = new Car(plate, brand, model, potency, boardNumber, trunkSize, engineType);
                         if (vehicleType == 2)
@@ -102,7 +105,7 @@ public class VehicleComp {
                         if (vehicleType == 4) {
                             System.out.print("Bus passenger limit: ");
                             int maxPassengers = Integer.parseInt(sin.nextLine());
-                            System.out.print("What's the engine type? (FUEL/ELETRIC): ");
+                            System.out.print("What's the engine type? (FUEL/ELECTRIC): ");
                             EngineType engineType = EngineType.fromString(sin.nextLine());
                             addVehicle(new Bus(plate, brand, model, potency, boardNumber, weight, maxPassengers, engineType));
                         } else {

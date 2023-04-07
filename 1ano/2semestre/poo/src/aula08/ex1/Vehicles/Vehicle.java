@@ -1,4 +1,6 @@
-package aula08.ex1;
+package aula08.ex1.Vehicles;
+
+import aula08.ex1.Interfaces.IKmTravelled;
 
 import java.util.Objects;
 
@@ -11,7 +13,7 @@ public abstract class Vehicle implements IKmTravelled {
     private int lastTripKm;
     private int km;
 
-    protected Vehicle(String plate, String brand, String model, int potency) {
+    public Vehicle(String plate, String brand, String model, int potency) {
         this.plate = plate;
         this.brand = brand;
         this.model = model;
@@ -20,19 +22,19 @@ public abstract class Vehicle implements IKmTravelled {
         this.km = 0;
     }
 
-    protected String getPlate() {
+    public String getPlate() {
         return this.plate;
     }
 
-    protected String getBrand() {
+    public String getBrand() {
         return this.brand;
     }
 
-    protected String getModel() {
+    public String getModel() {
         return this.model;
     }
 
-    protected int getPotency() {
+    public int getPotency() {
         return this.potency;
     }
 
