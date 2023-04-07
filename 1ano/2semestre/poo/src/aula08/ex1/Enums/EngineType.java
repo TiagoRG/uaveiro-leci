@@ -1,12 +1,12 @@
-package aula08.ex1;
+package aula08.ex1.Enums;
 
 public enum EngineType {
-    FUEL, ELETRIC;
+    FUEL, ELECTRIC;
 
     public static EngineType fromString(String string) {
         return switch (string) {
             case "FUEL", "Fuel", "fuel" -> EngineType.FUEL;
-            case "ELETRIC", "Eletric", "eletric" -> EngineType.ELETRIC;
+            case "ELECTRIC", "Electric", "electric" -> EngineType.ELECTRIC;
             default -> null;
         };
     }

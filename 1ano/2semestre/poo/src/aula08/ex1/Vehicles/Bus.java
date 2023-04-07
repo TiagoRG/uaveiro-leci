@@ -1,34 +1,38 @@
-package aula08.ex1;
+package aula08.ex1.Vehicles;
+
+import aula08.ex1.Enums.EngineType;
+import aula08.ex1.Interfaces.IElectricVehicle;
+import aula08.ex1.Interfaces.IFuelVehicle;
 
 import java.util.Objects;
 
-public class Car extends Vehicle implements IEletricVehicle, IFuelVehicle {
+public class Bus extends Vehicle implements IFuelVehicle, IElectricVehicle {
     private final int boardNumber;
-    private final int trunkSize;
+    private final int weight;
+    private final int maxPassengers;
     private final EngineType engineType;
 
     private int fuelLevel;
     private int battery;
 
-    public Car(String plate, String brand, String model, int potency, int boardNumber, int trunkSize, EngineType engineType) {
+    public Bus(String plate, String brand, String model, int potency, int boardNumber, int weight, int maxPassengers, EngineType engineType) {
         super(plate, brand, model, potency);
         this.boardNumber = boardNumber;
-        this.trunkSize = trunkSize;
+        this.weight = weight;
+        this.maxPassengers = maxPassengers;
         this.engineType = engineType;
-        this.fuelLevel = 0;
-        this.battery = 0;
-    }
-
-    public Car(Car car) {
-        this(car.getPlate(), car.getBrand(), car.getModel(), car.getPotency(), car.getBoardNumber(), car.getTrunkSize(), car.getEngineType());
     }
 
     public int getBoardNumber() {
         return this.boardNumber;
     }
 
-    public int getTrunkSize() {
-        return this.trunkSize;
+    public int getWeight() {
+        return this.weight;
+    }
+
+    public int getMaxPassengers() {
+        return this.maxPassengers;
     }
 
     public EngineType getEngineType() {
@@ -37,32 +41,32 @@ public class Car extends Vehicle implements IEletricVehicle, IFuelVehicle {
 
     @Override
     public String toString() {
-        return "Car {" +
+        return "Bus {" +
                 "\n\tplate='" + this.getPlate() + '\'' +
                 ",\n\tbrand='" + this.getBrand() + '\'' +
                 ",\n\tmodel='" + this.getModel() + '\'' +
                 ",\n\tpotency=" + this.getPotency() +
                 ",\n\tboardNumber=" + this.getBoardNumber() +
-                ",\n\ttrunkSize=" + this.getTrunkSize() +
+                ",\n\tweight=" + this.getWeight() +
+                ",\n\tmaxPassengers=" + this.getMaxPassengers() +
                 ",\n\tlastTripKm=" + this.lastTrip() +
                 ",\n\tkm=" + this.totalDistance() +
                 String.format(",\n\t%s=%d", this.engineType == EngineType.FUEL ? "fuelLevel" : "battery", this.engineType == EngineType.FUEL ? this.fuelLevel : this.battery) +
                 "\n}";
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Car car = (Car) o;
-        return this.getBoardNumber() == car.getBoardNumber() && this.getTrunkSize() == car.getTrunkSize() && this.getEngineType().equals(car.getEngineType());
+        Bus bus = (Bus) o;
+        return this.getBoardNumber() == bus.getBoardNumber() && this.getWeight() == bus.getWeight() && this.getMaxPassengers() == bus.getMaxPassengers() && this.getEngineType().equals(bus.getEngineType());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), this.getBoardNumber(), this.getTrunkSize(), this.getEngineType());
+        return Objects.hash(super.hashCode(), this.getBoardNumber(), this.getWeight(), this.getMaxPassengers());
     }
 
     @Override
@@ -84,7 +88,7 @@ public class Car extends Vehicle implements IEletricVehicle, IFuelVehicle {
 
     @Override
     public void fillTank(int level) {
-        if (this.engineType == EngineType.ELETRIC)
+        if (this.engineType == EngineType.ELECTRIC)
             return;
         this.fuelLevel = level;
     }

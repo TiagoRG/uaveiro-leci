@@ -1,4 +1,6 @@
-package aula08.ex1;
+package aula08.ex1.Vehicles;
+
+import aula08.ex1.Enums.EngineType;
 
 import java.util.Objects;
 
