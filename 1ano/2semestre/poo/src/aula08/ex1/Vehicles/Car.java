@@ -16,6 +16,8 @@ public class Car extends Vehicle implements IElectricVehicle, IFuelVehicle {
 
     public Car(String plate, String brand, String model, int potency, int boardNumber, int trunkSize, EngineType engineType) {
         super(plate, brand, model, potency);
+        if (trunkSize <= 0)
+            throw new IllegalArgumentException("Trunk size must be positive.");
         this.boardNumber = boardNumber;
         this.trunkSize = trunkSize;
         this.engineType = engineType;
