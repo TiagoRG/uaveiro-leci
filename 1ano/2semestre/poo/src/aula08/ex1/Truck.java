@@ -2,16 +2,18 @@ package aula08.ex1;
 
 import java.util.Objects;
 
-public class Truck extends Vehicle {
+public class Truck extends Vehicle implements IFuelVehicle {
     private final int boardNumber;
     private final int weight;
     private final int maxWeight;
+    private int fuelLevel;
 
     public Truck(String plate, String brand, String model, int potency, int boardNumber, int weight, int maxWeight) {
         super(plate, brand, model, potency);
         this.boardNumber = boardNumber;
         this.weight = weight;
         this.maxWeight = maxWeight;
+        this.fuelLevel = 0;
     }
 
     public int getBoardNumber() {
@@ -38,6 +40,7 @@ public class Truck extends Vehicle {
                 ",\n\tmaxWeight=" + this.getMaxWeight() +
                 ",\n\tlastTripKm=" + this.lastTrip() +
                 ",\n\tkm=" + this.totalDistance() +
+                ",\n\tfuelLevel=" + this.fuelLevel() +
                 "\n}";
     }
 
@@ -54,5 +57,15 @@ public class Truck extends Vehicle {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), this.getBoardNumber(), this.getWeight(), this.getMaxWeight());
+    }
+
+    @Override
+    public int fuelLevel() {
+        return this.fuelLevel;
+    }
+
+    @Override
+    public void fillTank(int level) {
+        this.fuelLevel = level;
     }
 }

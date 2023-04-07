@@ -15,7 +15,7 @@ public class Taxi extends Car {
     }
 
     public Car getCar() {
-        return new Car(this.getPlate(), this.getBrand(), this.getModel(), this.getPotency(), this.getBoardNumber(), this.getTrunkSize());
+        return new Car(this.getPlate(), this.getBrand(), this.getModel(), this.getPotency(), this.getBoardNumber(), this.getTrunkSize(), this.getEngineType());
     }
 
     public int getLicenseNumber() {
@@ -34,6 +34,7 @@ public class Taxi extends Car {
                 ",\n\ttrunkSize=" + this.getTrunkSize() +
                 ",\n\tlastTripKm=" + this.lastTrip() +
                 ",\n\tkm=" + this.totalDistance() +
+                String.format(",\n\t%s=%d", this.getEngineType() == EngineType.FUEL ? "fuelLevel" : "battery", this.getEngineType() == EngineType.FUEL ? this.fuelLevel() : this.currentBatteryLvl()) +
                 "\n}";
     }
 
