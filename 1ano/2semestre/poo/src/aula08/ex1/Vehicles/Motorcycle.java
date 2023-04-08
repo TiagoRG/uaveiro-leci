@@ -61,7 +61,7 @@ public class Motorcycle extends Vehicle implements IFuelVehicle {
         this.fuelLevel = level;
     }
 
-    enum MotorcycleType {
+    public enum MotorcycleType {
         SPORT, TOURING;
 
         public String toString() {
