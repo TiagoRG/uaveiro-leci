@@ -2,18 +2,18 @@ package aula08.ex3;
 
 public class ShoppingCartTester {
     public static void main(String[] args) {
-        /*Produto p1 = new ProdutoGenerico("Camisolas", 10, 3);
-        Produto p2 = new ProdutoGenerico("Calças", 30, 1);
-        Produto p3 = new ProdutoComDesconto("Sapatilhas", 50, 2, 50);
-        Produto p4 = new ProdutoComDesconto("Casacos", 100, 1, 10);
+        Product p1 = new Product("Camisolas", 10, 3);
+        Product p2 = new Product("Calças", 30, 1);
+        Product p3 = new ProductWithDiscount("Sapatilhas", 50, 2, 50);
+        Product p4 = new ProductWithDiscount("Casacos", 100, 1, 10);
         
-        CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
-        carrinho.adicionarProduto(p1, 1);
-        carrinho.adicionarProduto(p2, 5);
-        carrinho.adicionarProduto(p3, 2);
-        carrinho.adicionarProduto(p4, 1);
+        Purchase compra = new Purchase();
+        compra.addProduct(p2, 5);
+        compra.addProduct(p3, 2);
+        compra.addProduct(p4, 1);
+        compra.addProduct(p1, 1);
 
-        carrinho.listarProdutos();
-        System.out.printf("Preço total da compra %.2f\n", carrinho.calcularTotal());*/
+        compra.listProducts();
+        System.out.printf("Preço total da compra %.2f\n", compra.getTotal());
     }
 }

@@ -3,8 +3,6 @@
 ### Tópico principal da aula: Flux Control
 
 * [Guião](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/guides/POO-2021-aula02.pdf)
-* [Slides 1](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/slides/POO_02_ControloFluxo.pdf)
-* [Slides 2](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/slides/POO_02_Modularidade_MetodosEstaticos.pdf)
 
 ### Exercise List
 | Exercise Number | File Name                                                                                                                              | Exercise Number | File Name                                                                                                                                  |
