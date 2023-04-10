@@ -3,7 +3,6 @@
 ### Tópico principal da aula: Polymorphism
 
 * [Guião](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/guides/POO-2022-aula07.pdf)
-* [Slides](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/slides/POO_05_Polimorfismo.pdf)
 
 ### Exercise List
 | Exercise Number | Files Name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
