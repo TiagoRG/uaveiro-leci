@@ -1,4 +1,4 @@
-# UAveiro - LECI
+# UAveiro - LECI | [Wiki](https://github.com/TiagoRG/uaveiro-leci/wiki)
 ### Todo o material de Licenciatura em Engenharia de Computatores e Informática
 ### [Free for Use]
 ---
