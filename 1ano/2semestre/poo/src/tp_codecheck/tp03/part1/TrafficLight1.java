@@ -1,4 +1,4 @@
-package tp_codecheck.tp03;
+package tp_codecheck.tp03.part1;
 
 /**
    A simulated traffic light.
