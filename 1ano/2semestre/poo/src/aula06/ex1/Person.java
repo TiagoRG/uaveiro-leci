@@ -2,6 +2,8 @@ package aula06.ex1;
 
 import utils.DateYMD;
 
+import java.util.Objects;
+
 public class Person {
     private String name;
     private int cc;
@@ -43,5 +45,18 @@ public class Person {
     @Override
     public String toString() {
         return String.format("%s; CC: %d; Data de nascimento: %s", this.name, this.cc, this.birthDate);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return cc == person.cc && Objects.equals(name, person.name) && Objects.equals(birthDate, person.birthDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, cc, birthDate);
     }
 }
