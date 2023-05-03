@@ -1,0 +1,2 @@
+Testing the file reader with some simple and random text.
+Should also have words ended with s
