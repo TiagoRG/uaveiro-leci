@@ -1,6 +1,8 @@
 package aula08.ex1.Vehicles;
 
 import aula08.ex1.Interfaces.IKmTravelled;
+import aula08.ex1.VehicleComp;
+import aula08.ex1.Main;
 import utils.Validations;
 
 import java.util.Objects;
@@ -17,6 +19,13 @@ public abstract class Vehicle implements IKmTravelled {
     public Vehicle(String plate, String brand, String model, int potency) {
         if (!Validations.validateVehiclePlate(plate))
             throw new IllegalArgumentException("Invalid plate!");
+        for (VehicleComp vehicleComp : Main.vehicleComps)
+            if (vehicleComp.getVehicleByPlate(plate) != null)
+                throw new IllegalArgumentException("Plate already exists!");
+        if (brand == null || brand.isEmpty())
+            throw new IllegalArgumentException("Brand must not be empty");
+        if (model == null || model.isEmpty())
+            throw new IllegalArgumentException("Model must not be empty");
         if (potency <= 0)
             throw new IllegalArgumentException("Potency must be positive");
         this.plate = plate;

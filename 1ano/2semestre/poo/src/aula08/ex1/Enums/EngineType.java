@@ -4,9 +4,9 @@ public enum EngineType {
     FUEL, ELECTRIC;
 
     public static EngineType fromString(String string) {
-        return switch (string) {
-            case "FUEL", "Fuel", "fuel" -> EngineType.FUEL;
-            case "ELECTRIC", "Electric", "electric" -> EngineType.ELECTRIC;
+        return switch (string.toUpperCase()) {
+            case "FUEL" -> FUEL;
+            case "ELECTRIC" -> ELECTRIC;
             default -> null;
         };
     }
