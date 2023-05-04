@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Main {
     private static final Scanner sin = new Scanner(System.in);
-    private static VehicleComp[] vehicleComps;
+    public static VehicleComp[] vehicleComps;
 
     public static void main(String[] args) {
         while (true) {
