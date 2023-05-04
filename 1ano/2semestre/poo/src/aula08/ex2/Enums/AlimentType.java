@@ -4,11 +4,11 @@ public enum AlimentType {
     MEAT, FISH, CEREAL, VEGETABLE;
 
     public static AlimentType fromString(String string) {
-        return switch (string) {
-            case "MEAT", "Meat", "meat" -> MEAT;
-            case "FISH", "Fish", "fish" -> FISH;
-            case "CEREAL", "Cereal", "cereal" -> CEREAL;
-            case "VEGETABLE", "Vegetable", "vegetable" -> VEGETABLE;
+        return switch (string.toUpperCase()) {
+            case "MEAT"-> MEAT;
+            case "FISH" -> FISH;
+            case "CEREAL" -> CEREAL;
+            case "VEGETABLE" -> VEGETABLE;
             default -> null;
         };
     }

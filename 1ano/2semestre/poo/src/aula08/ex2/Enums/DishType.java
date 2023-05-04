@@ -4,10 +4,10 @@ public enum DishType {
     NORMAL, VEGAN, DIET;
 
     public static DishType fromString(String string) {
-        return switch (string) {
-            case "NORMAL", "Normal", "normal" -> NORMAL;
-            case "VEGAN", "Vegan", "vegan" -> VEGAN;
-            case "DIET", "Diet", "diet" -> DIET;
+        return switch (string.toUpperCase()) {
+            case "NORMAL" -> NORMAL;
+            case "VEGAN" -> VEGAN;
+            case "DIET" -> DIET;
             default -> null;
         };
     }
