@@ -1,7 +1,7 @@
 package aula08.ex2.Enums;
 
 public enum MeatType {
-    COW, PORK, TURKEY, CHICKEN;
+    COW, PORK, TURKEY, CHICKEN, OTHER;
 
     public static MeatType fromString(String string) {
         return switch (string.toUpperCase()) {
@@ -9,7 +9,7 @@ public enum MeatType {
             case "PORK" -> PORK;
             case "TURKEY" -> TURKEY;
             case "CHICKEN" -> CHICKEN;
-            default -> null;
+            default -> OTHER;
         };
     }
 
@@ -20,6 +20,7 @@ public enum MeatType {
             case PORK -> "PORK";
             case TURKEY -> "TURKEY";
             case CHICKEN -> "CHICKEN";
+            default -> "OTHER";
         };
     }
 }
