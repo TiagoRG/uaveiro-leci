@@ -1,5 +1,6 @@
 package utils;
 
+import java.util.List;
 import java.util.Random;
 
 public class MathTools {
@@ -19,5 +20,16 @@ public class MathTools {
             if (n % i == 0)
                 return false;
         return true;
+    }
+
+    public static double sum(List<Double> list) {
+        double sum = 0;
+        for (double n : list)
+            sum += n;
+        return sum;
+    }
+
+    public static double media(List<Double> list) {
+        return sum(list) / list.size();
     }
 }
