@@ -31,34 +31,15 @@ public class WordPairCounter {
 			System.out.printf("Certifique-se que o ficheiro \"%s\" está na raiz da pasta do projeto", path);
             System.exit(1);
 		}
-        String[] words = text.split("[\\s.,:'‘’;?!\\-*{}=+&/()\\[\\]”“\"]+");
+        Object[] words = Arrays.stream(text.split("[\\s.,:'‘’;?!\\-*{}=+&/()\\[\\]”“\"]+")).filter(word -> word.length() > 2).map(String::toLowerCase).toArray();
 
-        for (int i = 0; i < words.length; i++) {
-            String word1 = words[i];
-            if (word1.length() < 3) continue;
-            word1 = word1.toLowerCase();
+        for (int i = 1; i < words.length-1; i++) {
+            String word1 = (String) words[i-1];
+            String word2 = (String) words[i];
 
-            String word2 = null;
-            for (int j = i+1; j < words.length; j++)
-                if (words[j].length() > 2) {
-                    word2 = words[j];
-                    break;
-                }
-            if (word2 == null) break;
-            word2 = word2.toLowerCase();
-
-            HashMap<String, Integer> word1Pair;
-            if (wordPairs.containsKey(word1))
-                word1Pair = wordPairs.get(word1);
-            else {
-                word1Pair = new HashMap<>();
-                wordPairs.put(word1, word1Pair);
-            }
-
-            if (word1Pair.containsKey(word2))
-                word1Pair.put(word2, word1Pair.get(word2) + 1);
-            else
-                word1Pair.put(word2, 1);
+            HashMap<String, Integer> word1Pair = wordPairs.getOrDefault(word1, new HashMap<>());
+            wordPairs.put(word1, word1Pair);
+            word1Pair.put(word2, word1Pair.getOrDefault(word2, 0) + 1);
         }
 
         System.out.println(wordPairs);
