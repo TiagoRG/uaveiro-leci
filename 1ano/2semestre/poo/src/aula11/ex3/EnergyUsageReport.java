@@ -8,7 +8,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.LinkedList;
 
 public class EnergyUsageReport {
@@ -48,13 +47,9 @@ public class EnergyUsageReport {
         return MathTools.sum(getCustomer(id).getMeterReadings());
     }
 
-    public void generateReport(String path) {
+    public void generateReport(String path) throws IOException {
         for (Customer customer : customers) {
-            try {
-                Files.writeString(Path.of(path), String.format("Customer ID: %d%nTotal usage: %.1f%n%n", customer.getCustomerId(), calculateTotalUsage(customer.getCustomerId())), (new File(path)).exists() ? java.nio.file.StandardOpenOption.APPEND : java.nio.file.StandardOpenOption.CREATE);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            Files.writeString(Path.of(path), String.format("Customer ID: %d%nTotal usage: %.1f%n%n", customer.getCustomerId(), calculateTotalUsage(customer.getCustomerId())), (new File(path)).exists() ? java.nio.file.StandardOpenOption.APPEND : java.nio.file.StandardOpenOption.CREATE);
         }
     }
 }
