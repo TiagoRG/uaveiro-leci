@@ -1,27 +1,17 @@
 package aula11.ex1;
 
-import java.io.*;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.TreeMap;
 
 public class WordPairCounter {
     public static void main(String[] args) {
-        TreeMap<String, HashMap<String, Integer>> wordPairs = new TreeMap<>() {
-            @Override
-            public String toString() {
-                StringBuilder sb = new StringBuilder();
-                for (String word1 : this.keySet()) {
-                    sb.append(word1).append("={");
-                    for (String word2 : this.get(word1).keySet()) {
-                        sb.append(word2).append("=").append(this.get(word1).get(word2)).append(", ");
-                    }
-                    sb.delete(sb.length()-2, sb.length()).append("}\n");
-                }
-                return sb.toString();
-            }
-        };
+        TreeMap<String, HashMap<String, Integer>> wordPairs = new TreeMap<>();
 
         String text = "";
         Path path = Paths.get((new Scanner(System.in)).nextLine());
@@ -42,6 +32,6 @@ public class WordPairCounter {
             word1Pair.put(word2, word1Pair.getOrDefault(word2, 0) + 1);
         }
 
-        System.out.println(wordPairs);
+        wordPairs.entrySet().forEach(System.out::println);
     }
 }

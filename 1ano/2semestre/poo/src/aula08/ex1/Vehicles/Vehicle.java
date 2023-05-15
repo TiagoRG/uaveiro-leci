@@ -1,8 +1,8 @@
 package aula08.ex1.Vehicles;
 
 import aula08.ex1.Interfaces.IKmTravelled;
-import aula08.ex1.VehicleComp;
 import aula08.ex1.Main;
+import aula08.ex1.VehicleComp;
 import utils.Validations;
 
 import java.util.Objects;

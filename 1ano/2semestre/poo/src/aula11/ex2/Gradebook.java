@@ -1,15 +1,15 @@
 package aula11.ex2;
 
-import utils.MathTools;
-
-import java.io.*;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.Arrays;
+import java.util.LinkedList;
 
-public class Gradebook implements IGradeCalculator {
+public class Gradebook {
     private final LinkedList<Student> students = new LinkedList<>();
+    private final IGradeCalculator gradeCalculator = new SimpleGradeCalculator();
 
     public void load(String filename) {
         LinkedList<String> lines = new LinkedList<>();
@@ -42,16 +42,11 @@ public class Gradebook implements IGradeCalculator {
     }
 
     public double calculateAverageGrade(String name) {
-        return calculate(getStudent(name).getGrades());
-    }
-
-    @Override
-    public double calculate(LinkedList<Double> grades) {
-        return MathTools.media(grades);
+        return gradeCalculator.calculate(getStudent(name).getGrades());
     }
 
     public void printAllStudents() {
         for (Student student : students)
-            System.out.printf("Nome: %s%nNota Final: %.2f%n%n", student.getName(), calculate(student.getGrades()));
+            System.out.printf("Nome: %s%nNota Final: %.2f%n%n", student.getName(), gradeCalculator.calculate(student.getGrades()));
     }
 }

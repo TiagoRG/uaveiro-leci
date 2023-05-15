@@ -1,7 +1,8 @@
 package aula06.ex1;
 
-import java.util.Scanner;
 import utils.DateYMD;
+
+import java.util.Scanner;
 
 public class PersonTest {
     public static void main(String[] args) {
