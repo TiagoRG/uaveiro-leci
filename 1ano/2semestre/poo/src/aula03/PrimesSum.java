@@ -2,6 +2,7 @@ package aula03;
 
 import utils.MathTools;
 import utils.UserInput;
+
 import java.util.Scanner;
 
 // Solução do exercício 1

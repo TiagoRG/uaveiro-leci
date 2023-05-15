@@ -1,7 +1,8 @@
 package aula03;
 
-import java.util.Scanner;
 import utils.StringMethods;
+
+import java.util.Scanner;
 
 public class StringExtras {
     public static void main(String[] args) {

@@ -1,6 +1,7 @@
 package aula03;
 
 import utils.UserInput;
+
 import java.util.Scanner;
 
 // Solução do exercício 5

@@ -1,7 +1,8 @@
 package aula03;
 
-import java.util.Scanner;
 import utils.UserInput;
+
+import java.util.Scanner;
 
 // Solução do exercício 4 com o utilizador a introduzir as notas individualmente
 

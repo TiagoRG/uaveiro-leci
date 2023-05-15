@@ -1,8 +1,13 @@
 package aula08.ex2;
 
 import aula08.ex2.Aliments.*;
-import aula08.ex2.Dishes.*;
-import aula08.ex2.Enums.*;
+import aula08.ex2.Dishes.DietDish;
+import aula08.ex2.Dishes.Dish;
+import aula08.ex2.Dishes.VeganDish;
+import aula08.ex2.Enums.AlimentType;
+import aula08.ex2.Enums.DishType;
+import aula08.ex2.Enums.FishState;
+import aula08.ex2.Enums.MeatType;
 import utils.Enums.Weekday;
 
 import java.util.LinkedHashMap;
