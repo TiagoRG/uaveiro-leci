@@ -1,6 +1,6 @@
 package aula09.ex3;
 
-import java.util.*;
+import java.util.LinkedList;
 
 public class PlaneManager {
     private final LinkedList<Plane> planes = new LinkedList<>();

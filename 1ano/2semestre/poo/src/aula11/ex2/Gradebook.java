@@ -1,10 +1,11 @@
 package aula11.ex2;
 
-import java.io.*;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.Arrays;
+import java.util.LinkedList;
 
 public class Gradebook {
     private final LinkedList<Student> students = new LinkedList<>();
