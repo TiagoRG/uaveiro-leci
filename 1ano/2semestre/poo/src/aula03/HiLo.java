@@ -1,6 +1,7 @@
 package aula03;
 
 import utils.UserInput;
+
 import java.util.Random;
 import java.util.Scanner;
 
