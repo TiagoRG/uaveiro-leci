@@ -1,4 +1,5 @@
 import sys
+
 from ezgraphics import GraphicsWindow
 
 

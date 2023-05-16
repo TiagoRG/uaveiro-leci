@@ -1,11 +1,11 @@
 # Esta função implementa g(x) = 8 - x**3
 def g(x):
-    return 8 - x**3
+    return 8 - x ** 3
 
 
 # Defina uma função que implemente p(x) = x**2 + 2x + 3
 def p(x):
-    return x**2 + 2*x + 3
+    return x ** 2 + 2 * x + 3
 
 
 def main():

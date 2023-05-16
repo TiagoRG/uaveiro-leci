@@ -19,14 +19,14 @@ def evenThenOdd(string):
 def removeAdjacentDuplicates(s):
     new = ''
     for i in range(len(s)):
-        if i == 0 or s[i] != s[i-1]:
+        if i == 0 or s[i] != s[i - 1]:
             new += s[i]
     return new
 
 
 def reapeatNumTimes(n):
     lst = []
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         lst += [i] * i
     return lst
 

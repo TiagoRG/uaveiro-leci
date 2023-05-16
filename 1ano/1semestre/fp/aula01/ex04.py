@@ -4,5 +4,4 @@ mins = secs // 60
 m = mins % 60
 h = mins // 60
 
-
 print("{:02d}:{:02d}:{:02d}".format(h, m, s))

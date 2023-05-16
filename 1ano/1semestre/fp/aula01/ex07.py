@@ -1,7 +1,7 @@
 A = 3
 M = 2
 
-viagensDia = 2 * M * sum(i for i in range(1, A+1))
+viagensDia = 2 * M * sum(i for i in range(1, A + 1))
 viagensAno = viagensDia * 365
 
 mAno = viagensAno * 3
