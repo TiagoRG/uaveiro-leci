@@ -1,4 +1,5 @@
 import sys
+import math
 
 
 def integrate(f, a, b, n):

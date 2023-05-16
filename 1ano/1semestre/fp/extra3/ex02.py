@@ -6,7 +6,7 @@
 
 def firstEqualLast(lst):
     n = 0
-    for i in range(1, len(lst) // 2 + 1):
+    for i in range(1, len(lst)//2+1):
         if lst[:i] == lst[-i:]:
             n = i
     return n

@@ -4,10 +4,8 @@ def max2(x, y):
     else:
         return y
 
-
 def max3(x, y, z):
     return max2(x, max2(y, z))
-
 
 def main():
     n1 = float(input('Introduza dois valores.\nN1: '))

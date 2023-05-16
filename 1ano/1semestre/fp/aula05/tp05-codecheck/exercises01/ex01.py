@@ -15,6 +15,7 @@ print(len(train))
 # Qual o total de passageiros?
 print(sum(train))
 
+
 # Os dias da semana:
 week = ['sab', 'dom', 'seg', 'ter', 'qua', 'qui', 'sex']
 

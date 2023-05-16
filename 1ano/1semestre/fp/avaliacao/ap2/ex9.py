@@ -27,3 +27,4 @@ def score(guess, secret):
                 cows_index.append(i)
 
     return len(bulls_index), len(cows_index)
+

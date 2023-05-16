@@ -2,7 +2,7 @@ import math
 
 
 def main():
-    print(findZero(lambda x: x + math.sin(10 * x), 0.2, 0.4, 0.001))
+    print(findZero(lambda x: x + math.sin(10*x), 0.2, 0.4, 0.001))
 
 
 def findZero(func, a, b, tol):

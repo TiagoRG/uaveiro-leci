@@ -15,19 +15,17 @@ def passengers(train, n):
     num2 = sum(class2)
     return [num1, num2]
 
-
 def test():
     train1 = [12, 32, 10, 21]
     train2 = [9, 29, 19]
     train3 = [14, 34, 24]
     print(train1, train2, train3)
-
+    
     print('\nTesting passengers')
     print(passengers(train1, 2))
     print(passengers(train2, 1))
     print(passengers(train3, 0))
-
-
+    
 # Run tests:
 test()
 

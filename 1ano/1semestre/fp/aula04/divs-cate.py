@@ -4,7 +4,7 @@ def main():
     div_list_array = divList(n)
 
     div_list = ", ".join(div_list_array)
-
+    
     print(f"""
 
 --------------------
@@ -20,7 +20,6 @@ Este é um número {category(n, div_list_array)}.
     
 """)
 
-
 # Obtém uma lista com todos os dividores de um número
 def divList(n):
     divs = []
@@ -29,7 +28,6 @@ def divList(n):
             divs.append(str(x))
     return divs
 
-
 # Obtém a categoria de um número
 def category(n, divs):
     total = 0
@@ -37,8 +35,7 @@ def category(n, divs):
         total += int(div)
     if total < n: return 'deficiente'
     if total == n: return 'perfeito'
-    if total > n: return 'abundante'
-
+    if total > n: return 'abundante'    
 
 if __name__ == "__main__":
     main()
