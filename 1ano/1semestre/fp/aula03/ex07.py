@@ -5,6 +5,5 @@ def tax(r):
         return 0.2 * r - 100
     return 0.3 * r - 300
 
-
 x = float(input('R? '))
 print('O valor de tax(r) é: {:.3f}'.format(tax(x)))

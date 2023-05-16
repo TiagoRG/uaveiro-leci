@@ -11,15 +11,13 @@
 # JMR 2019   
 
 def main():
-    for i in range(1, 11):
-        table(i)
-        print()
-
+   for i in range (1, 11):
+      table(i)
+      print()
 
 def table(n):
-    for i in range(1, 11):
-        print(f'{n} x {i} = {n * i}')
-
+   for i in range(1, 11):
+      print(f'{n} x {i} = {n*i}')
 
 if __name__ == "__main__":
-    main()
+   main()

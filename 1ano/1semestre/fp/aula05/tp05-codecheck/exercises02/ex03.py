@@ -17,21 +17,19 @@ def match(t1, t2, g1, g2):
     else:
         t1[2] += 1
         t2[2] += 1
-
-
+        
 def test():
     team1 = ["Ajax", 0, 0, 0]
     team2 = ["Benfica", 0, 0, 0]
     team3 = ["Juventus", 0, 0, 0]
     print(team1, team2, team3)
-
+    
     match(team1, team2, 2, 1)
     print(team1, team2, team3)
     match(team2, team3, 1, 1)
     print(team1, team2, team3)
     match(team3, team1, 0, 3)
     print(team1, team2, team3)
-
 
 # Run tests:
 test()

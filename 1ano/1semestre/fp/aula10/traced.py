@@ -16,7 +16,7 @@ def traced(func):
             traced.indent += u"\u2502   "
             print(u"{}{}{!r}{!r}".format(indent, func.__name__, args, kwargs))
         try:
-            r = func(*args, **kwargs)  # CALL the func!
+            r = func(*args, **kwargs)   # CALL the func!
             return r
         except Exception as e:
             r = e
@@ -25,27 +25,26 @@ def traced(func):
             if traced.indent != None:
                 print(u"{}\u2514>{!r}".format(indent, r))
                 traced.indent = indent  # restore indentation
-
+    
     return tracedfunc
-
 
 # Initial tracing prefix:
 traced.indent = ""
 
 # Uncomment to turn off tracing by default:
-# traced.indent = None
+#traced.indent = None
 
-# traced.indent = traced.__dict__.get("indent")
+#traced.indent = traced.__dict__.get("indent")
 
 
 if __name__ == "__main__":
+
     # How to use this module:
     from traced import traced
-
-
+    
     @traced
     def func(x):
-        return x * x
-
+        return x*x
 
     func(3)
+

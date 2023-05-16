@@ -12,7 +12,6 @@ endX("xxhixx") → "hixxxx"
 endX("hixhix") → "hihixx"
 """
 
-
 def endX(s):
     if s == '':
         return ''

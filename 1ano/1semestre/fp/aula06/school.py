@@ -34,7 +34,7 @@ def main():
     loadFile("datafiles/school1.csv", lst)
     loadFile("datafiles/school2.csv", lst)
     loadFile("datafiles/school3.csv", lst)
-
+    
     # ordenar a lista
     lst.sort()
     # mostrar a pauta
@@ -44,3 +44,5 @@ def main():
 # Call main function
 if __name__ == "__main__":
     main()
+
+

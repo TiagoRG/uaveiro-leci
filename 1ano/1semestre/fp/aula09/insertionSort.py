@@ -1,3 +1,4 @@
+
 # This function sorts a list (like list.sort)
 # using the insertion sort algorithm.
 # Modify it to accept a key= keyword argument that works like in list.sort.
@@ -6,7 +7,7 @@ def insertionSort(lst, key=None):
     # Traverse elements starting at position 1
     for i in range(1, len(lst)):
         # We know that lst[:i] is sorted
-        x = lst[i]  # x is the element to insert next
+        x = lst[i]    # x is the element to insert next
         # Elements in lst[:i] that are > x must move one position ahead
         j = i - 1
         while j >= 0 and (key(lst[j]) > key(x) if key else lst[j] > x):
@@ -36,7 +37,7 @@ def main():
     assert lst == sorted(lst0, key=len)
 
     # sort by length, than lexicographic order:
-    myorder = lambda s: (len(s), s)
+    myorder = lambda s:(len(s), s)
     lst = lst0.copy()
     insertionSort(lst, key=myorder)
     print("lst3", lst)
@@ -47,3 +48,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

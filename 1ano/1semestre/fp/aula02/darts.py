@@ -2,8 +2,7 @@ import math
 
 POINTS = (6, 13, 4, 18, 1, 20, 5, 12, 9, 14, 11, 8, 16, 7, 19, 3, 17, 2, 15, 10)
 
-print(
-    "Introduza as coordenadas (x, y) do dardo.\nRepresenta as posicoes horizontal e vertical respetivamente.\nAmbas em milimetros.")
+print("Introduza as coordenadas (x, y) do dardo.\nRepresenta as posicoes horizontal e vertical respetivamente.\nAmbas em milimetros.")
 
 x = int(input('X: '))
 y = int(input('Y: '))
@@ -19,6 +18,7 @@ if mod < 12.7:
 elif mod < 32:
     print('Pontuacao: 25 pontos.')
     exit(1)
+
 
 angleRad = math.atan2(y, x)
 angleDeg = math.degrees(angleRad) - 9
