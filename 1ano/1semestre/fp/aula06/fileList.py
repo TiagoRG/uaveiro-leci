@@ -17,8 +17,8 @@ def printFilesSize(path):
         print(f"[Error] Path is not a directory: '{os.path.abspath(path)}'")
         exit(1)
     else:
-        print(f'|{"-"*78}|')
-        print(f'| {"File":<63} {"Size":>12} |\n|{"-"*78}|')
+        print(f'|{"-" * 78}|')
+        print(f'| {"File":<63} {"Size":>12} |\n|{"-" * 78}|')
         for file in directory:
             base_size = os.stat(f'{path}/{file}').st_size
             if os.path.isdir(f'{path}/{file}'):
@@ -28,11 +28,11 @@ def printFilesSize(path):
             elif base_size < 1024 ** 2:
                 size = f'{base_size // 1024}.{str(base_size % 1024)[0]} KB'
             elif base_size < 1024 ** 3:
-                size = f'{base_size // (1024**2)}.{str(base_size % (1024**2))[0]} MB'
+                size = f'{base_size // (1024 ** 2)}.{str(base_size % (1024 ** 2))[0]} MB'
             else:
-                size = f'{base_size // (1024**3)}.{str(base_size % (1024**3))[0]} GB'
+                size = f'{base_size // (1024 ** 3)}.{str(base_size % (1024 ** 3))[0]} GB'
             print(f'| {file:<63} {size:>12} |')
-        print(f'|{"-"*78}|')
+        print(f'|{"-" * 78}|')
 
 
 if __name__ == "__main__":

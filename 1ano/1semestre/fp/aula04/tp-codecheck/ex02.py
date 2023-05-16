@@ -3,17 +3,19 @@
 
 
 def inputTotal():
-   """Read numbers until empty string is entered and return the sum."""
-   tot = 0.0
-   while True:
-      n = input("valor? ") # input("valor? ")
-      if n == '': return tot
-      tot += float(n)
+    """Read numbers until empty string is entered and return the sum."""
+    tot = 0.0
+    while True:
+        n = input("valor? ")  # input("valor? ")
+        if n == '': return tot
+        tot += float(n)
+
 
 # MAIN PROGRAM
 def main():
-   tot = inputTotal()
-   print(tot)
+    tot = inputTotal()
+    print(tot)
+
 
 if __name__ == "__main__":
-   main()
+    main()

@@ -74,7 +74,7 @@ def fatura(calls: dict, phone_number: str) -> None:
     if phone_number not in calls:
         print("Cliente não existe\n")
         return
-    
+
     total = 0
 
     print("Fatura do cliente", phone_number)
@@ -98,7 +98,9 @@ def fatura(calls: dict, phone_number: str) -> None:
 
 
 def validate_phone_number(phone_number: str) -> bool:
-    return phone_number.isdigit() and len(phone_number) >= 3 if phone_number[0] != "+" else phone_number[1:].isdigit() and len(phone_number[1:]) >= 3
+    return phone_number.isdigit() and len(phone_number) >= 3 if phone_number[0] != "+" else phone_number[
+                                                                                            1:].isdigit() and len(
+        phone_number[1:]) >= 3
 
 
 if __name__ == '__main__':

@@ -24,4 +24,4 @@ def reverseDigits(value):
 def reverseAux(partValue, partReversed):
     if partValue == 0:
         return partReversed
-    return reverseAux(partValue//10, partReversed*10 + partValue%10)
+    return reverseAux(partValue // 10, partReversed * 10 + partValue % 10)
