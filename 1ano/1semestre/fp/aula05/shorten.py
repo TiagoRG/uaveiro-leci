@@ -9,6 +9,7 @@ def shorten(string):
         if char.isupper():
             abv += char
     return abv
-            
+
+
 if __name__ == "__main__":
     main()

@@ -3,7 +3,7 @@ import sys
 
 def main():
     letters = countLetters(sys.argv[1])
-    
+
     # Print the results
     for c in sorted(letters, key=letters.get, reverse=True):
         print(c, letters[c])
@@ -25,7 +25,7 @@ def countLetters(filename):
                 if c not in letters:
                     letters[c] = 0
                 letters[c] += 1
-    
+
     # Returns the dictionary with the letters
     return letters
 

@@ -4,13 +4,15 @@
 MESESPT = ("janeiro", "fevereiro", "março", "abril", "maio", "junho",
            "julho", "agosto", "setembro", "outubro", "novembro", "dezembro")
 
+
 # Complete a função para que, dado um tuplo (ano, mes, dia)
 # devolva um data por extenso.
 # Por exemplo, datePT((1938, 1, 22)) deve devolver "22 de janeiro de 1938".
 def datePT(date):
     ano, mes, dia = date
-    s = f"{str(dia)} de {MESESPT[mes-1]} de {ano}"
+    s = f"{str(dia)} de {MESESPT[mes - 1]} de {ano}"
     return s
+
 
 # Complete a definição para converter uma data no formato "DD/MM/AAAA"
 # num tuplo de inteiros com (ano, mês, dia).

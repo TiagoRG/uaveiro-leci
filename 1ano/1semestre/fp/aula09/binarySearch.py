@@ -1,6 +1,5 @@
 import bisect
 
-
 with open("wordlist.txt", "r") as f:
     word_list: list[str] = f.read().split()
 
