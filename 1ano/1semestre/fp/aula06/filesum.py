@@ -4,10 +4,10 @@ from tkinter import filedialog
 def main():
     # 1) Pedir nome do ficheiro (usando alternativa #B):
     name = filedialog.askopenfilename(title="Choose File")
-    
+
     # 2) Calcular soma dos números no ficheiro:
     total = fileSum(name)
-    
+
     # 3) Mostrar a soma:
     print("Sum:", total)
 

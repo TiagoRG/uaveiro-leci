@@ -1,4 +1,3 @@
-
 # A teenager is a person between 13 and 19 years old, inclusive.
 # A child is under 13.  A grown-up is 20 or more.
 # This program outputs the age category for a given input age.
@@ -11,11 +10,11 @@ age = int(input("Age? "))
 
 if age < 0:
     print("ERROR: invalid age!")
-    exit(1)     # this terminates the program
+    exit(1)  # this terminates the program
 
 print("Age:", age)
 
-if age < 13 :
+if age < 13:
     cat = "child"
 elif 13 < age < 20:
     cat = "teenager"

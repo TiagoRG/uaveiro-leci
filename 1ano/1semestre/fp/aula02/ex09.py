@@ -1,7 +1,6 @@
 CTP = float(input('Componente Teorica-pratica: '))
 CP = float(input('Componente Pratica: '))
 
-
 NF = round(0.3 * CTP + 0.7 * CP)
 
 if (CTP < 6.6) or (CP < 6.6):

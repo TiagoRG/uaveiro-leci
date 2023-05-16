@@ -1,4 +1,3 @@
-
 # On a chessboard, positions are marked with letters between a and h for the column and a
 # number between 1 and 8 for the row. The first place on the board, a1, is black. The next
 # is white, alternating across a row. Odd rows start with black, even rows start with white.

@@ -1,4 +1,3 @@
-
 def main():
     A = "reading"
     B = "eating"
@@ -16,7 +15,7 @@ def main():
         "Paolo": {B, D, F},
         "Frank": {D, B, E, F, A},
         "Teresa": {F, H, C, D}
-        }
+    }
 
     print("a) Table of common interests:")
     commoninterests = {(p1, p2): interests[p1].intersection(interests[p2])

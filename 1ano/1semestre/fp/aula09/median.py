@@ -7,7 +7,7 @@ def median(lst):
     lst = sorted(lst, reverse=True)
     if len(lst) % 2 == 0:
         middle = len(lst) // 2 - 1
-        return sum(lst[middle:middle+2]) / 2
+        return sum(lst[middle:middle + 2]) / 2
     else:
         return lst[len(lst) // 2]
 

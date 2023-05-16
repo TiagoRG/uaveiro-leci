@@ -4,27 +4,27 @@ def isLeapYear(year):
 
 def monthDays(year, month):
     assert month > 0
-    
+
     MONTHDAYS = (0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
     days = MONTHDAYS[month]
-    
+
     return days + 1 if (isLeapYear(year) and month == 2) else days
 
 
 def nextDay(year, month, day):
     if not dateIsValid(year, month, day): return
-    
+
     # Verifica se é o último dia do ano
     if (month, day) == (12, 31):
         year += 1
         month = 1
         day = 1
-    
+
     # Verifica se é o último dia do mês
     elif (monthDays(year, month) == day):
         month += 1
         day = 1
-    
+
     # Dia comum
     else:
         day += 1
@@ -38,20 +38,20 @@ def dateIsValid(year, month, day):
 
 def previousDay(year, month, day):
     if not dateIsValid(year, month, day): return
-    
+
     # Primeiro dia do ano
     if (month, day) == (1, 1):
         year -= 1
         month = 12
         day = 31
-        
+
     # Primeiro dia do mês (sem ser janeiro)
     elif day == 1:
         day = monthDays(year, month - 1)
         month -= 1
-        
+
     # Dia comum
     else:
         day -= 1
-        
+
     return year, month, day

@@ -14,6 +14,7 @@ Se não, deve devolver a quantidade que não conseguiu descarregar.
 
 """
 
+
 # Se w=['coal', 45], então w[0]='coal' e w[1]=45.
 
 def unload(t, m, q):
@@ -27,23 +28,23 @@ def unload(t, m, q):
             v[1] -= q
             q = 0
     return q
-    
+
 
 def main():
-	t = eval(input())
-	
-	print("t: ", t)
-	q = unload(t, "rice", 40)
-	print("unload(t, 'rice', 40) ->", q)
-	
-	print("t: ", t)
-	q = unload(t, "coal", 50)
-	print("unload(t, 'coal', 50) ->", q)
-	
-	print("t: ", t)
-	q = unload(t, "iron", 20)
-	print("unload(t, 'iron', 20) ->", q)
-	
+    t = eval(input())
+
+    print("t: ", t)
+    q = unload(t, "rice", 40)
+    print("unload(t, 'rice', 40) ->", q)
+
+    print("t: ", t)
+    q = unload(t, "coal", 50)
+    print("unload(t, 'coal', 50) ->", q)
+
+    print("t: ", t)
+    q = unload(t, "iron", 20)
+    print("unload(t, 'iron', 20) ->", q)
+
 
 if __name__ == "__main__":
-	main()
+    main()
