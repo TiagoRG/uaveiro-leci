@@ -37,7 +37,6 @@ def transfer(bag1, amount, bag2):
 
 
 def transferProcess(bag1, amount, bag2, coins):
-
     bagBackup = (bag1.copy(), bag2.copy())
     amountBackup = amount
 
@@ -57,11 +56,11 @@ def transferProcess(bag1, amount, bag2, coins):
 
     if len(coins) == 1:
         return False
-    return transferProcess(bag1, amountBackup, bag2, COINS[COINS.index(firstUsedCoin)+1:])
+    return transferProcess(bag1, amountBackup, bag2, COINS[COINS.index(firstUsedCoin) + 1:])
 
 
 def strbag(bag):
-    """Return a string representing the contents of a bag.""" 
+    """Return a string representing the contents of a bag."""
     # You may want to change this to produce a more user-friendly
     # representation such as "4x200+3x50+1x5+3x1=958".
     string = ""
@@ -82,29 +81,29 @@ def main():
     assert value({1: 7, 5: 2, 20: 4, 100: 1}) == 197
 
     # Test the strbag function.
-    print(strbag({1: 7, 5: 2, 20: 4, 100: 1}))         # 1x100+4x20+2x5+7x1=197
+    print(strbag({1: 7, 5: 2, 20: 4, 100: 1}))  # 1x100+4x20+2x5+7x1=197
     print(strbag({1: 7, 5: 2, 10: 0, 20: 4, 100: 1}))  # 1x100+4x20+2x5+7x1=197
 
-    print("bag1:", strbag(bag1))    # bag1: 1x200+2x100+4x50+5x20+1x5+4x1=709
-    print("bag2:", strbag(bag2))    # bag2: =0
-    
-    print(transfer1coin(bag1, 10, bag2))    # False!
-    print("bag1:", strbag(bag1))    # bag1: 1x200+2x100+4x50+5x20+1x5+4x1=709
-    print("bag2:", strbag(bag2))    # bag2: =0
+    print("bag1:", strbag(bag1))  # bag1: 1x200+2x100+4x50+5x20+1x5+4x1=709
+    print("bag2:", strbag(bag2))  # bag2: =0
 
-    print(transfer1coin(bag1, 20, bag2))    # True
-    print("bag1:", strbag(bag1))    # bag1: 1x200+2x100+4x50+4x20+1x5+4x1=689
-    print("bag2:", strbag(bag2))    # bag2: 1x20=20
+    print(transfer1coin(bag1, 10, bag2))  # False!
+    print("bag1:", strbag(bag1))  # bag1: 1x200+2x100+4x50+5x20+1x5+4x1=709
+    print("bag2:", strbag(bag2))  # bag2: =0
 
-    print(transfer1coin(bag1, 20, bag2))    # True
-    print("bag1:", strbag(bag1))    # bag1: 1x200+2x100+4x50+3x20+1x5+4x1=669
-    print("bag2:", strbag(bag2))    # bag2: 2x20=40
+    print(transfer1coin(bag1, 20, bag2))  # True
+    print("bag1:", strbag(bag1))  # bag1: 1x200+2x100+4x50+4x20+1x5+4x1=689
+    print("bag2:", strbag(bag2))  # bag2: 1x20=20
 
-    print(transfer(bag1, 157, bag2))        # True (should be easy)
-    print("bag1:", strbag(bag1))    # bag1: 1x200+1x100+3x50+3x20+2x1=512
-    print("bag2:", strbag(bag2))    # bag2: 1x100+1x50+2x20+1x5+2x1=197
+    print(transfer1coin(bag1, 20, bag2))  # True
+    print("bag1:", strbag(bag1))  # bag1: 1x200+2x100+4x50+3x20+1x5+4x1=669
+    print("bag2:", strbag(bag2))  # bag2: 2x20=40
 
-    print(transfer(bag1, 60, bag2)) # not easy, but possible...
+    print(transfer(bag1, 157, bag2))  # True (should be easy)
+    print("bag1:", strbag(bag1))  # bag1: 1x200+1x100+3x50+3x20+2x1=512
+    print("bag2:", strbag(bag2))  # bag2: 1x100+1x50+2x20+1x5+2x1=197
+
+    print(transfer(bag1, 60, bag2))  # not easy, but possible...
     print("bag1:", strbag(bag1))
     print("bag2:", strbag(bag2))
 
@@ -113,4 +112,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
