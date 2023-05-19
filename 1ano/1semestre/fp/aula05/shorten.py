@@ -4,11 +4,8 @@ def main():
 
 
 def shorten(string):
-    abv = ''
-    for char in string:
-        if char.isupper():
-            abv += char
-    return abv
-            
+    return ''.join([char for char in string if char.isupper()])
+
+
 if __name__ == "__main__":
     main()

@@ -1,4 +1,4 @@
-# Laboratórios de Sistemas Digitais
+# Laboratório de Sistemas Digitais
 ### Projetos, exercícios e material organizados por aulas
 
 ---
@@ -12,6 +12,8 @@
 | [05](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/lsd/pratica05) | Parametrização de componentes                                                                                           |
 | [06](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/lsd/pratica06) | Modelação em VHDL e implementação de registos e módulos combinatórios de deslocamento                                   |
 | [07](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/lsd/pratica07) | Construção e utilização de testbenches em VHDL<br>Simulação comportamental e temporal<br>Depuração de circuitos em FPGA |
+| [08](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/lsd/pratica08) | Modelação, simulação e síntese de Máquinas de Estados Finitos<br>Aspetos gerais e modelo de Moore |
+| [09](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/lsd/pratica09) | Modelação, simulação e síntese de Máquinas de Estados Finitos - Modelo de Mealy<br>MEFs comunicantes |
 | [10](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/lsd/pratica10) | Modelação em VHDL de Memórias ROM e RAM de um Porto e Multi-porto                                                       |
 ---
 *Pode conter erros, caso encontre algum, crie um* [*ticket*](https://github.com/TiagoRG/uaveiro-leci/issues/new)

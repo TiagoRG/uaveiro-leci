@@ -2,6 +2,7 @@
 
 import random
 
+
 def main():
     # Pick a random number between 1 and 100, inclusive
     secret = random.randrange(1, 101)
@@ -19,7 +20,9 @@ def main():
         c += 1
         trieslist.append(str(num))
     triesstr = ', '.join(trieslist)
-    print(f'Well done! The secret number was {secret}. It took you {c} tries to get it right.\nList of tries: {triesstr}')
+    print(
+        f'Well done! The secret number was {secret}. It took you {c} tries to get it right.\nList of tries: {triesstr}')
+
 
 if __name__ == "__main__":
     main()
