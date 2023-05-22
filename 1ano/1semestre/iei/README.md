@@ -1,7 +1,7 @@
 # Introdução à Engenharia Informática
 ### Projetos + material organizados por aulas
 
-## [Finished]
+## [Projects](https://github.com/TiagoRG/infor2022-g16)
 
 ---
 ## Índice
