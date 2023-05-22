@@ -1,6 +1,10 @@
 # Laboratório de Informática
 ### Projetos, exercícios e material organizados por aulas
 
+## Projects:
+- [Mid-semester](https://github.com/TiagoRG/labi2023-ap-g6)
+- [Final project](https://github.com/TiagoRG/labi2023-pf-g1)
+
 ---
 ## Índice
 | Tema nº                                                                  | Tópicos                                |

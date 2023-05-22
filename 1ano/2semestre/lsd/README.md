@@ -1,6 +1,8 @@
 # Laboratório de Sistemas Digitais
 ### Projetos, exercícios e material organizados por aulas
 
+## [Final Project](https://github.com/TiagoRG/BreadMachine)
+
 ---
 ## Índice
 | Aula nº                                                                                | Tópicos                                                                                                                 |
