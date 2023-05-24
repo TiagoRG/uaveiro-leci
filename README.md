@@ -21,7 +21,7 @@ Pode usar todo o material/código/etc. disponibilizado mas é expressamente proi
     - [labi2023-ap-g6](https://github.com/TiagoRG/labi2023-ap-g6)
     - [labi2023-pf-g1](https://github.com/TiagoRG/labi2023-pf-g1)
   - [Laboratório de Sistemas Digitais](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/lsd)
-    - [BreadMachine](https://github.com/TiagoRG/BreadMachine)
+    - [BreadMachine](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/lsd/projects/BreadMachine)
   - [Matem&aacute;tica Discreta](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/md)
   - [C&aacute;lculo - 2](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/c2)
 
