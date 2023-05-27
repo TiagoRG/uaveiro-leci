@@ -10,13 +10,13 @@
 /**/__pycache__/
 
 # Quartus Output/Cache files
-/1ano/2semestre/lsd/**/db/
-/1ano/2semestre/lsd/**/incremental_db/
-/1ano/2semestre/lsd/**/output_files/*
-!/1ano/2semestre/lsd/**/output_files/*.sof
-/1ano/2semestre/lsd/**/simulation/
-/1ano/2semestre/lsd/**/*.bak
-/1ano/2semestre/lsd/**/*.qws
-/1ano/2semestre/lsd/**/*.qpf
-/1ano/2semestre/lsd/**/*.qsf
+/**/db/
+/**/incremental_db/
+/**/output_files/*
+!/**/output_files/*.sof
+/**/simulation/
+/**/*.bak
+/**/*.qws
+/**/*.qpf
+/**/*.qsf
 !/1ano/2semestre/lsd/master.qsf
