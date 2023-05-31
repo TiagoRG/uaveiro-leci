@@ -18,10 +18,10 @@ public class EnergyUsageReport {
         Path path = Paths.get(file);
         try {
             lines = new LinkedList<>(Files.readAllLines(path));
-		} catch (IOException e) {
-			System.out.printf("Certifique-se que o ficheiro \"%s\" está na raiz da pasta do projeto", path);
+        } catch (IOException e) {
+            System.out.printf("Certifique-se que o ficheiro \"%s\" está na raiz da pasta do projeto", path);
             System.exit(1);
-		}
+        }
 
         for (String line : lines) {
             String[] data = line.split("\\|");

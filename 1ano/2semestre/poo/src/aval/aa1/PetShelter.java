@@ -3,7 +3,7 @@ package aval.aa1;
 import java.util.Scanner;
 
 public class PetShelter implements IPetShelter {
-    private String shelterName;
+    private final String shelterName;
     private Animal[] animals;
 
     public PetShelter(String shelterName) {
@@ -17,9 +17,7 @@ public class PetShelter implements IPetShelter {
             animals[0] = animal;
         } else {
             Animal[] newAnimals = new Animal[animals.length + 1];
-            for (int i = 0; i < animals.length; i++) {
-                newAnimals[i] = animals[i];
-            }
+            System.arraycopy(animals, 0, newAnimals, 0, animals.length);
             newAnimals[newAnimals.length - 1] = animal;
             animals = newAnimals;
         }
@@ -62,6 +60,6 @@ public class PetShelter implements IPetShelter {
     @Override
     public void listAllAnimals() {
         for (Animal a : animals)
-            System.out.println(a.toString()+"\n");
+            System.out.println(a.toString() + "\n");
     }
 }

@@ -14,7 +14,7 @@ public class FileReaderTest {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-        while(input.hasNext()){
+        while (input.hasNext()) {
             String word = input.next();
             if (word.length() > 2) {
                 words.add(word);

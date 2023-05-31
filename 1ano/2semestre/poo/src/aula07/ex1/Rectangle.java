@@ -12,7 +12,7 @@ public class Rectangle extends Shape {
     }
 
     public double[] getSides() {
-        return new double[] {this.side1, this.side2};
+        return new double[]{this.side1, this.side2};
     }
 
     public void setSides(double side1, double side2) {
@@ -33,7 +33,7 @@ public class Rectangle extends Shape {
     @Override
     public boolean equals(Shape s2) {
         if (s2 instanceof Rectangle s2Rect)
-            return Objects.equals(this.color, s2Rect.color) &&  this.side1 == s2Rect.side1 && this.side2 == s2Rect.side2;
+            return Objects.equals(this.color, s2Rect.color) && this.side1 == s2Rect.side1 && this.side2 == s2Rect.side2;
         return false;
     }
 

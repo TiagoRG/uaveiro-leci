@@ -1,16 +1,6 @@
 package aula07.ex2;
 
 public abstract class Date {
-    public abstract int getAbsDay();
-    public abstract int getDay();
-    public abstract int getMonth();
-    public abstract int getYear();
-    public abstract void increment();
-    public abstract void decrement();
-    public abstract void addDays(int days);
-    public abstract void removeDays(int days);
-
-
     public static int monthDays(int month, int year) {
         if (!validMonth(month))
             return -1;
@@ -31,4 +21,20 @@ public abstract class Date {
     public static boolean isLeapYear(int year) {
         return year % 100 == 0 ? year % 400 == 0 : year % 4 == 0;
     }
+
+    public abstract int getAbsDay();
+
+    public abstract int getDay();
+
+    public abstract int getMonth();
+
+    public abstract int getYear();
+
+    public abstract void increment();
+
+    public abstract void decrement();
+
+    public abstract void addDays(int days);
+
+    public abstract void removeDays(int days);
 }

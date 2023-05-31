@@ -11,7 +11,7 @@ public class StringExtras {
         String str = sin.nextLine();
 
         System.out.println("Frase convertida para minúsculas: " + str.toLowerCase());
-        System.out.println("Último caracter da frase: " + str.substring(str.length()-1));
+        System.out.println("Último caracter da frase: " + str.substring(str.length() - 1));
         System.out.println("Os 3 primeiros caracteres: " + str.substring(0, 3));
         System.out.printf("Número de digitos na frase: %d\n", StringMethods.countDigits(str));
         System.out.printf("Número de espaços na frase: %d\n", StringMethods.countSpaces(str));

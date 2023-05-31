@@ -5,10 +5,10 @@ import aula08.ex2.Enums.AlimentOrigin;
 import java.util.Objects;
 
 public abstract class Aliment {
+    final AlimentOrigin alimentOrigin;
     double proteins;
     double calories;
     double weight;
-    final AlimentOrigin alimentOrigin;
 
     public Aliment(double proteins, double calories, double weight, AlimentOrigin alimentOrigin) {
         setProteins(proteins);
@@ -19,7 +19,7 @@ public abstract class Aliment {
 
     public double getProteins() {
         return this.proteins;
-    };
+    }
 
     public void setProteins(double proteins) {
         if (proteins <= 0)

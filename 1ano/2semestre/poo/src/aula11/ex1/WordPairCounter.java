@@ -16,15 +16,15 @@ public class WordPairCounter {
         String text = "";
         Path path = Paths.get((new Scanner(System.in)).nextLine());
         try {
-			text = Files.readString(path);
-		} catch (IOException e) {
-			System.out.printf("Certifique-se que o ficheiro \"%s\" está na raiz da pasta do projeto", path);
+            text = Files.readString(path);
+        } catch (IOException e) {
+            System.out.printf("Certifique-se que o ficheiro \"%s\" está na raiz da pasta do projeto", path);
             System.exit(1);
-		}
+        }
         Object[] words = Arrays.stream(text.split("[\\s.,:'‘’;?!\\-*{}=+&/()\\[\\]”“\"]+")).filter(word -> word.length() > 2).map(String::toLowerCase).toArray();
 
-        for (int i = 1; i < words.length-1; i++) {
-            String word1 = (String) words[i-1];
+        for (int i = 1; i < words.length - 1; i++) {
+            String word1 = (String) words[i - 1];
             String word2 = (String) words[i];
 
             HashMap<String, Integer> word1Pair = wordPairs.getOrDefault(word1, new HashMap<>());

@@ -39,6 +39,7 @@ public class RainfallTest {
         }
         return data;
     }
+
     public static String printLocationData(List<RainfallInfo> data, String loc) {
         System.out.printf("Rainfall for location %s:\n", loc);
         // 2) Print rainfall values for the given location
@@ -60,7 +61,7 @@ public class RainfallTest {
         return map;
     }
 
-    public static String printMapSorted (Map<Month, Double> map) {
+    public static String printMapSorted(Map<Month, Double> map) {
         // 4) Print map sorted by key
         map.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(e -> System.out.printf("%s: %.1f\n", e.getKey(), e.getValue()));
         return "";
@@ -68,7 +69,8 @@ public class RainfallTest {
 
     // YOU MAY ADD METHODS HERE
     public static String main() {
-        Test.lst = null; Test.map = null;
+        Test.lst = null;
+        Test.map = null;
         // Load the file data to the list
         List<RainfallInfo> rainfallData = loadData("rainfall_data.csv");
         System.out.printf("Data size: %d\n", rainfallData.size());
@@ -80,7 +82,7 @@ public class RainfallTest {
         System.out.println();
 
         // Find total rainfall per month
-        Map<Month, Double> rainfallPerMonth = totalPerMonth (rainfallData);
+        Map<Month, Double> rainfallPerMonth = totalPerMonth(rainfallData);
 
         // Print sorted results
         printMapSorted(rainfallPerMonth);
@@ -93,14 +95,14 @@ public class RainfallTest {
 }
 
 class Test {
-    // Variables used in unit tests (DON'T USE IN YOUR IMPLEMENTATION!):
-    private static LocalDate[] dates = {
-        LocalDate.parse("2023-03-02"),
-        LocalDate.parse("2023-04-17"),
-        LocalDate.parse("2023-05-27"),
-    };
     static List<RainfallInfo> lst = new ArrayList<>();
     static Map<Month, Double> map = new HashMap<>();
+    // Variables used in unit tests (DON'T USE IN YOUR IMPLEMENTATION!):
+    private static final LocalDate[] dates = {
+            LocalDate.parse("2023-03-02"),
+            LocalDate.parse("2023-04-17"),
+            LocalDate.parse("2023-05-27"),
+    };
 
     static {
         lst.add(new RainfallInfo(dates[2], "Aveiro", 2.2));
@@ -108,9 +110,9 @@ class Test {
         lst.add(new RainfallInfo(dates[0], "Aveiro", 0.0));
         lst.add(new RainfallInfo(dates[2], "Braga", 4.0));
         lst.add(new RainfallInfo(dates[1], "Aveiro", 1.1));
-        map.put(Month.JULY,7.7);
-        map.put(Month.MAY,5.5);
-        map.put(Month.JUNE,6.6);
-        map.put(Month.MARCH,3.3);
+        map.put(Month.JULY, 7.7);
+        map.put(Month.MAY, 5.5);
+        map.put(Month.JUNE, 6.6);
+        map.put(Month.MARCH, 3.3);
     }
 }

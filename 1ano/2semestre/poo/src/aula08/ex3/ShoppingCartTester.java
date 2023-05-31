@@ -6,7 +6,7 @@ public class ShoppingCartTester {
         Product p2 = new Product("Calças", 30, 1);
         Product p3 = new ProductWithDiscount("Sapatilhas", 50, 2, 50);
         Product p4 = new ProductWithDiscount("Casacos", 100, 1, 10);
-        
+
         Purchase compra = new Purchase();
         compra.addProduct(p2, 5);
         compra.addProduct(p3, 2);

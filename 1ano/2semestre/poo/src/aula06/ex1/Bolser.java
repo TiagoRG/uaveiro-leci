@@ -2,7 +2,7 @@ package aula06.ex1;
 
 import utils.DateYMD;
 
-public class Bolser extends Student{
+public class Bolser extends Student {
     private Professor supervisor;
     private double monthlyAmount;
 
@@ -19,6 +19,7 @@ public class Bolser extends Student{
     public Professor getSupervisor() {
         return this.supervisor;
     }
+
     public void setSupervisor(Professor supervisor) {
         if (supervisor == null) {
             throw new IllegalArgumentException("Supervisor cannot be null");
@@ -29,6 +30,7 @@ public class Bolser extends Student{
     public double getMonthlyAmount() {
         return this.monthlyAmount;
     }
+
     public void setMonthlyAmount(double monthlyAmount) {
         if (monthlyAmount < 0) {
             throw new IllegalArgumentException("Monthly amount cannot be negative");

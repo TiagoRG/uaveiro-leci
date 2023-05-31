@@ -5,7 +5,7 @@ public enum FishState {
 
     public static FishState fromString(String string) {
         return switch (string.toUpperCase()) {
-            case "FRESH"-> FRESH;
+            case "FRESH" -> FRESH;
             case "FROZEN" -> FROZEN;
             default -> null;
         };

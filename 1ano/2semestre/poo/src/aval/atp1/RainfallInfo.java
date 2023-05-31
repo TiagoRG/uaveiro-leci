@@ -4,14 +4,16 @@ import java.time.LocalDate;
 // YOU MAY ADD IMPORTS HERE
 
 public class RainfallInfo {
-    private LocalDate date;
-    private String location;
-    private double rainfall;
+    private final LocalDate date;
+    private final String location;
+    private final double rainfall;
+
     public RainfallInfo(LocalDate date, String location, double rainfall) {
         this.date = date;
         this.location = location;
-        this.rainfall=rainfall;
+        this.rainfall = rainfall;
     }
+
     public LocalDate date() {
         return date;
     }
@@ -34,5 +36,6 @@ public class RainfallInfo {
     @Override
     public int hashCode() {
         return date.hashCode() | location.hashCode() | Double.hashCode(rainfall);
-    };
+    }
+
 }

@@ -9,7 +9,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,20 +20,20 @@ public class OrderTester {
         OrderManager orderManager = new OrderManager();
 
         orderManager.addOrder(new Order(new ArrayList<>(List.of(new Item[]{
-                        new Item("Chocolate", 2.43)
-                })),
+                new Item("Chocolate", 2.43)
+        })),
                 "104", "23", LocalDateTime.of(2023, 5, 2, 14, 5), false));
 
         orderManager.addOrder(new Order(new ArrayList<>(List.of(new Item[]{
-                        new Item("Pastel de nata", 7.73),
-                        new Item("Sumo de laranja", 1.20)
-                })),
+                new Item("Pastel de nata", 7.73),
+                new Item("Sumo de laranja", 1.20)
+        })),
                 "114", "27", LocalDateTime.of(2023, 5, 6, 12, 4), true));
 
         orderManager.addOrder(new Order(new ArrayList<>(List.of(new Item[]{
-                        new Item("Galão", 1.20),
-                        new Item("Torrada", 1.00)
-                })),
+                new Item("Galão", 1.20),
+                new Item("Torrada", 1.00)
+        })),
                 "124", "1", LocalDateTime.of(2023, 5, 12, 7, 4), false));
 
         orderManager.printAllOrders();

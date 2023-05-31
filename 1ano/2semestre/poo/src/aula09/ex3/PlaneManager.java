@@ -67,8 +67,7 @@ public class PlaneManager {
         for (Plane plane : planes) {
             if (plane instanceof CommercialPlane && type.equals("commercial")) {
                 System.out.println(plane);
-            }
-            else if (plane instanceof MilitaryPlane && type.equals("military")) {
+            } else if (plane instanceof MilitaryPlane && type.equals("military")) {
                 System.out.println(plane);
             }
         }

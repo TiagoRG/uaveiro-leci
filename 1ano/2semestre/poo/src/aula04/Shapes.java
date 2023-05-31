@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 class Circle {
     public double radius;
-    
+
     public Circle(double radius) {
         if (!(radius > 0))
             throw new IllegalArgumentException("Sizes must be positive.");
@@ -48,7 +48,7 @@ class Triangle {
     public Triangle(double side1, double side2, double side3) {
         if (!(side1 > 0 && side2 > 0 && side3 > 0))
             throw new IllegalArgumentException("Sizes must be positive.");
-        if(!(side1 < side2 + side3 && side2 < side1 + side3 && side3 < side1 + side2))
+        if (!(side1 < side2 + side3 && side2 < side1 + side3 && side3 < side1 + side2))
             throw new IllegalArgumentException("Triangle cannot be created with those sides.");
         this.side1 = side1;
         this.side2 = side2;
@@ -56,13 +56,13 @@ class Triangle {
     }
 
     public double[] getSides() {
-        return new double[] {this.side1, this.side2, this.side3};
+        return new double[]{this.side1, this.side2, this.side3};
     }
 
     public void setSides(double side1, double side2, double side3) {
         if (!(side1 > 0 && side2 > 0 && side3 > 0))
             throw new IllegalArgumentException("Sizes must be positive.");
-        if(!(side1 < side2 + side3 && side2 < side1 + side3 && side3 < side1 + side2))
+        if (!(side1 < side2 + side3 && side2 < side1 + side3 && side3 < side1 + side2))
             throw new IllegalArgumentException("Triangle cannot be created with those sides.");
         this.side1 = side1;
         this.side2 = side2;
@@ -99,7 +99,7 @@ class Rectangle {
     }
 
     public double[] getSides() {
-        return new double[] {this.side1, this.side2};
+        return new double[]{this.side1, this.side2};
     }
 
     public void setSides(double side1, double side2) {
