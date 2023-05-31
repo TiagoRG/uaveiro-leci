@@ -21,23 +21,23 @@ public class AuctionDemo {
 }
 
 class RealEstate {
-     private final Property[] properties;
-     private int currentId;
+    private final Property[] properties;
+    private int currentId;
 
-     public RealEstate() {
-         this.properties = new Property[10];
-         this.currentId = 1000;
-     }
+    public RealEstate() {
+        this.properties = new Property[10];
+        this.currentId = 1000;
+    }
 
-     public void newProperty(String address, int rooms, int price) {
-         Property newProperty = new Property(currentId++, address, rooms, price);
-         for (int i = 0; i < this.properties.length; i++) {
-             if (this.properties[i] == null) {
-                 this.properties[i] = newProperty;
-                 break;
-             }
-         }
-     }
+    public void newProperty(String address, int rooms, int price) {
+        Property newProperty = new Property(currentId++, address, rooms, price);
+        for (int i = 0; i < this.properties.length; i++) {
+            if (this.properties[i] == null) {
+                this.properties[i] = newProperty;
+                break;
+            }
+        }
+    }
 
     public void sell(int id) {
         for (Property property : this.properties) {
@@ -53,7 +53,7 @@ class RealEstate {
             }
         }
         System.out.printf("Imóvel %d não existe.\n", id);
-     }
+    }
 
     public void setAuction(int id, DateYMD date, int duration) {
         for (Property property : this.properties) {
@@ -103,9 +103,11 @@ class Property {
     public int getId() {
         return this.id;
     }
+
     public boolean isAvailable() {
         return this.availability;
     }
+
     public void setAvailability(boolean availability) {
         this.availability = availability;
     }
@@ -116,7 +118,7 @@ class Property {
     }
 
     public DateYMD[] getAuction() {
-        return new DateYMD[] {this.auctionBegin, this.auctionEnd};
+        return new DateYMD[]{this.auctionBegin, this.auctionEnd};
     }
 
     public boolean isAuction() {

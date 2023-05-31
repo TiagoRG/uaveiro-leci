@@ -23,7 +23,7 @@ class Product {
         return price;
     }
 
-    public int  getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 }
@@ -77,7 +77,7 @@ public class CashRegisterDemo {
         cr.addProduct(new Product("Headphones", 29.99, 2));
         cr.addProduct(new Product("Notebook", 19.99, 5));
         cr.addProduct(new Product("Phone case", 5.99, 1));
-        
+
         // TODO: Listar o conteúdo e valor total
         System.out.println(cr);
 

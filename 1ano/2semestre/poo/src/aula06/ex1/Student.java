@@ -5,9 +5,9 @@ import utils.DateYMD;
 import java.time.LocalDate;
 
 public class Student extends Person {
+    public static int currentNMec = 100;
     private DateYMD registrationDate;
     private int nMec;
-    public static int currentNMec = 100;
 
     public Student(String name, int cc, DateYMD birthDate, DateYMD registrationDate) {
         super(name, cc, birthDate);
@@ -22,6 +22,7 @@ public class Student extends Person {
     public int getNMec() {
         return this.nMec;
     }
+
     public void setNMec(int nMec) {
         this.nMec = nMec;
     }
@@ -29,6 +30,7 @@ public class Student extends Person {
     public DateYMD getRegistrationDate() {
         return this.registrationDate;
     }
+
     public void setRegistrationDate(DateYMD registrationDate) {
         LocalDate now = LocalDate.now();
         this.registrationDate = registrationDate == null ? new DateYMD(now.getDayOfMonth(), now.getMonthValue(), now.getYear()) : registrationDate;

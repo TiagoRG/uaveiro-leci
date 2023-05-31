@@ -5,7 +5,7 @@ import java.util.Scanner;
 // Solução do exercício 10
 
 public class RealNumbers {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sin = new Scanner(System.in);
 
         int readNumbers = 1;
@@ -27,7 +27,7 @@ public class RealNumbers {
             ++readNumbers;
         } while (n != first);
 
-        System.out.printf("Valor máximo: %f\nValor mínimo: %f\nMédia: %f\nTotal: %f\n", max, min, (float) sum/readNumbers, sum);
+        System.out.printf("Valor máximo: %f\nValor mínimo: %f\nMédia: %f\nTotal: %f\n", max, min, (float) sum / readNumbers, sum);
 
         sin.close();
     }

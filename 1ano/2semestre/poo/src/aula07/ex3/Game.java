@@ -3,10 +3,10 @@ package aula07.ex3;
 public class Game {
     private final Team team1;
     private final Team team2;
-    private int team1Goals;
-    private int team2Goals;
     private final Ball ball;
     private final double gameDuration;
+    private int team1Goals;
+    private int team2Goals;
     private double timeElapsed;
 
     public Game(Team team1, Team team2, Ball ball, double gameDuration) {

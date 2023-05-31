@@ -18,6 +18,7 @@ public class Person {
     public String getName() {
         return this.name;
     }
+
     public void setName(String name) {
         if (name == null || name.isEmpty())
             throw new IllegalArgumentException("Name cannot be null or empty");
@@ -27,6 +28,7 @@ public class Person {
     public int getCc() {
         return this.cc;
     }
+
     public void setCc(int cc) {
         if (String.valueOf(cc).length() != 8)
             throw new IllegalArgumentException("CC must have 8 digits");
@@ -36,6 +38,7 @@ public class Person {
     public DateYMD getBirthDate() {
         return this.birthDate;
     }
+
     public void setBirthDate(DateYMD birthDate) {
         if (birthDate == null)
             throw new IllegalArgumentException("Birth date cannot be null");

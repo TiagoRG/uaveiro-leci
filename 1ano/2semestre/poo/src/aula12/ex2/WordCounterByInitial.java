@@ -24,7 +24,7 @@ public class WordCounterByInitial {
         };
 
         Arrays.stream(Files.readString(Path.of((new Scanner(System.in)).nextLine()))
-                .split("[\\s.,:'‘’;?!\\-*{}=+&/()\\[\\]”“\"]+"))
+                        .split("[\\s.,:'‘’;?!\\-*{}=+&/()\\[\\]”“\"]+"))
                 .filter(word -> word.length() > 2)
                 .map(String::toLowerCase)
                 .forEach(word -> {

@@ -15,6 +15,7 @@ public class Professor extends Person {
     public String getCategory() {
         return this.category;
     }
+
     public void setCategory(String category) {
         if (category == null || category.isEmpty())
             throw new IllegalArgumentException("Category cannot be null or empty");
@@ -26,6 +27,7 @@ public class Professor extends Person {
     public String getDepartment() {
         return this.department;
     }
+
     public void setDepartment(String department) {
         if (department == null || department.isEmpty())
             throw new IllegalArgumentException("Department cannot be null or empty");

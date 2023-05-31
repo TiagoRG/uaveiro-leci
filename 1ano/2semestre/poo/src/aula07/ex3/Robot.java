@@ -23,6 +23,7 @@ public class Robot extends MovableObject {
     public PlayerPosition getPlayerPosition() {
         return this.playerPosition;
     }
+
     public void setPlayerPosition(PlayerPosition playerPosition) {
         this.playerPosition = playerPosition;
     }
@@ -30,6 +31,7 @@ public class Robot extends MovableObject {
     public int getGoalsScored() {
         return this.goalsScored;
     }
+
     public void increaseGoalsScored() {
         this.goalsScored++;
     }
@@ -37,6 +39,6 @@ public class Robot extends MovableObject {
     @Override
     public String toString() {
         return String.format("Robot %d (%s) at (%.2f, %.2f) with %.2f travelled distance and %d goals scored",
-            this.id, this.playerPosition, this.x, this.y, this.distanceTravelled, this.goalsScored);
+                this.id, this.playerPosition, this.x, this.y, this.distanceTravelled, this.goalsScored);
     }
 }

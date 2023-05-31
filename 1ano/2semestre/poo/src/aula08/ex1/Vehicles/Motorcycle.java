@@ -26,15 +26,15 @@ public class Motorcycle extends Vehicle implements IFuelVehicle {
     @Override
     public String toString() {
         return "Motorcycle {" +
-        "\n\tplate='" + this.getPlate() + '\'' +
-        ",\n\tbrand='" + this.getBrand() + '\'' +
-        ",\n\tmodel='" + this.getModel() + '\'' +
-        ",\n\tpotency=" + this.getPotency() +
-        ",\n\ttype=" + this.getType().toString() +
-        ",\n\tlastTripKm=" + this.lastTrip() +
-        ",\n\tkm=" + this.totalDistance() +
-        ",\n\tfuelLevel=" + this.fuelLevel() +
-        "\n}";
+                "\n\tplate='" + this.getPlate() + '\'' +
+                ",\n\tbrand='" + this.getBrand() + '\'' +
+                ",\n\tmodel='" + this.getModel() + '\'' +
+                ",\n\tpotency=" + this.getPotency() +
+                ",\n\ttype=" + this.getType().toString() +
+                ",\n\tlastTripKm=" + this.lastTrip() +
+                ",\n\tkm=" + this.totalDistance() +
+                ",\n\tfuelLevel=" + this.fuelLevel() +
+                "\n}";
     }
 
     @Override
@@ -64,18 +64,18 @@ public class Motorcycle extends Vehicle implements IFuelVehicle {
     public enum MotorcycleType {
         SPORT, TOURING;
 
-        public String toString() {
-            return switch (this) {
-                case SPORT -> "Sport";
-                case TOURING -> "Touring";
-            };
-        }
-
         public static MotorcycleType fromString(String s) {
             return switch (s) {
                 case "SPORT", "Sport", "sport" -> SPORT;
                 case "TOURING", "Touring", "touring" -> TOURING;
                 default -> throw new IllegalArgumentException("Invalid MotorcycleType: " + s);
+            };
+        }
+
+        public String toString() {
+            return switch (this) {
+                case SPORT -> "Sport";
+                case TOURING -> "Touring";
             };
         }
     }

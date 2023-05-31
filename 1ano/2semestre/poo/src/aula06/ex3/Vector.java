@@ -7,12 +7,15 @@ public class Vector {
     public Vector() {
         this.vector = new int[0];
     }
+
     public Vector(int size) {
         this.vector = new int[size];
     }
+
     public Vector(int[] vector) {
         this.vector = vector;
     }
+
     public int[] getVector() {
         return vector;
     }
@@ -21,12 +24,14 @@ public class Vector {
     public int size() {
         return this.vector.length;
     }
+
     public boolean contains(int value) {
         for (int n : this.vector)
             if (n == value)
                 return true;
         return false;
     }
+
     public int count(int value) {
         int count = 0;
         for (int n : this.vector)
@@ -38,13 +43,14 @@ public class Vector {
     // Method to change values
     public void insert(int value) {
         if (this.contains(value)) return;
-        int[] aux = new int[this.size()+1];
+        int[] aux = new int[this.size() + 1];
         System.arraycopy(this.vector, 0, aux, 0, this.size());
         aux[this.size()] = value;
         this.vector = aux;
     }
+
     public void remove(int value) {
-        int[] aux = new int[this.size()-this.count(value)];
+        int[] aux = new int[this.size() - this.count(value)];
         int i = 0;
         for (int n : this.vector) {
             if (n == value)
@@ -54,6 +60,7 @@ public class Vector {
         }
         this.vector = aux;
     }
+
     public void empty() {
         this.vector = new int[0];
     }
@@ -69,6 +76,7 @@ public class Vector {
                 result.insert(n);
         return result;
     }
+
     public Vector subtract(Vector secondVector) {
         Vector result = new Vector();
         for (int n : this.vector)
@@ -76,6 +84,7 @@ public class Vector {
                 result.insert(n);
         return result;
     }
+
     public Vector intersect(Vector secondVector) {
         Vector result = new Vector();
         for (int n : this.vector)
@@ -90,6 +99,6 @@ public class Vector {
         StringBuilder result = new StringBuilder();
         for (int n : this.vector)
             result.append(String.format("%d ", n));
-        return this.size() > 0 ? result.substring(0, result.length()-1) : result.toString();
+        return this.size() > 0 ? result.substring(0, result.length() - 1) : result.toString();
     }
 }

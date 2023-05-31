@@ -57,8 +57,7 @@ public class PlaneTester {
             System.out.print("Enter the plane's crew members count: ");
             int crewMembersCount = Integer.parseInt(scanner.nextLine());
             planeManager.addPlane(new CommercialPlane(id, manufacturer, model, year, passengerCount, maxSpeed, crewMembersCount));
-        }
-        else if (type.equals("military")) {
+        } else if (type.equals("military")) {
             System.out.print("Enter the plane's missile count: ");
             int missileCount = Integer.parseInt(scanner.nextLine());
             planeManager.addPlane(new MilitaryPlane(id, manufacturer, model, year, passengerCount, maxSpeed, missileCount));
