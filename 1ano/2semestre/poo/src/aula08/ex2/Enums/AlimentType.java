@@ -5,7 +5,7 @@ public enum AlimentType {
 
     public static AlimentType fromString(String string) {
         return switch (string.toUpperCase()) {
-            case "MEAT"-> MEAT;
+            case "MEAT" -> MEAT;
             case "FISH" -> FISH;
             case "CEREAL" -> CEREAL;
             case "VEGETABLE" -> VEGETABLE;

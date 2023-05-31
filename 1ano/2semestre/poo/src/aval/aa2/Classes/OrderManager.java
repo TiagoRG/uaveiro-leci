@@ -20,7 +20,7 @@ public class OrderManager {
 
     public double calculateOrderCost(int id) {
         StandardOrderCostCalculator calculator = new StandardOrderCostCalculator();
-        double cost = searchOrder(id) != null ? calculator.calculateOrderCost(searchOrder(id)): -1;
+        double cost = searchOrder(id) != null ? calculator.calculateOrderCost(searchOrder(id)) : -1;
         searchOrder(id).setPrice(cost);
         return cost;
     }

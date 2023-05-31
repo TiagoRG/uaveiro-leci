@@ -40,6 +40,7 @@ public class ContactList {
         System.out.print("> ");
         return sin.nextLine();
     }
+
     private static void addContact() {
         System.out.print("Insira o nome: ");
         String name = sin.nextLine();
@@ -69,6 +70,7 @@ public class ContactList {
             contacts = newContacts;
         }
     }
+
     private static void changeContact() {
         System.out.print("Insira o nome, email ou telefone do contacto que pretende alterar: ");
         String query = sin.nextLine();

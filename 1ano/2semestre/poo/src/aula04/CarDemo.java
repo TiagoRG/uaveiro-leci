@@ -23,7 +23,7 @@ public class CarDemo {
                     System.out.println("Dados mal formatados. Tente novamente.");
                 } else {
                     String model = String.join(" ", Arrays.stream(parts, 1, parts.length - 2).toArray(String[]::new));
-                    cars[i] = new Car(parts[0], model, Integer.parseInt(parts[parts.length-2]), Integer.parseInt(parts[parts.length-1]));
+                    cars[i] = new Car(parts[0], model, Integer.parseInt(parts[parts.length - 2]), Integer.parseInt(parts[parts.length - 1]));
                 }
             }
         }
@@ -33,8 +33,8 @@ public class CarDemo {
     static boolean validateData(String[] parts) {
         if (parts.length < 4) return false;
         try {
-            Integer.parseInt(parts[parts.length-1]);
-            if (String.format("%d", Integer.parseInt(parts[parts.length-2])).length() != 4) return false;
+            Integer.parseInt(parts[parts.length - 1]);
+            if (String.format("%d", Integer.parseInt(parts[parts.length - 2])).length() != 4) return false;
         } catch (NumberFormatException e) {
             return false;
         }
@@ -80,7 +80,7 @@ public class CarDemo {
                 System.out.println(car);
             }
         }
-        
+
         System.out.println("\n");
     }
 
@@ -90,7 +90,7 @@ public class CarDemo {
 
         int numCars = registerCars(cars);
 
-        if (numCars>0) {
+        if (numCars > 0) {
             listCars(cars);
             registerTrips(cars, numCars);
             listCars(cars);

@@ -20,8 +20,8 @@ public class Investment {
         double tax = UserInput.getNumberBetween(sin, 0, 5);
 
         for (int i = 1; i <= 12; i++) {
-            investment *= 1+tax/100;
-            System.out.printf("Investimento em %d %s: %.2f\n", i, i==1?"mês":"meses", investment);
+            investment *= 1 + tax / 100;
+            System.out.printf("Investimento em %d %s: %.2f\n", i, i == 1 ? "mês" : "meses", investment);
         }
 
         sin.close();

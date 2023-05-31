@@ -47,13 +47,13 @@ public class Calendar {
 
     private static void printCalendar(int[] data, int monthDays) {
         String[] monthNames = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
-        System.out.printf("\n%15s %d\n", monthNames[data[0]-1], data[1]);
+        System.out.printf("\n%15s %d\n", monthNames[data[0] - 1], data[1]);
         System.out.println("Dom Seg Ter Qua Qui Sex Sab");
 
         if (data[2] != 7)
             for (int i = 0; i < data[2]; i++)
                 System.out.print("    ");
-        
+
         for (int monthDay = 1; monthDay <= monthDays; monthDay++) {
             System.out.printf("%3d ", monthDay);
             if ((monthDay + data[2]) % 7 == 0)

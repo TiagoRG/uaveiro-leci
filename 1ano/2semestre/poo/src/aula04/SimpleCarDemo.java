@@ -32,11 +32,11 @@ public class SimpleCarDemo {
         listCars(cars);
 
         // Adicionar 10 viagens geradas aleatoriamente
-        for (int i=0; i<10; i++) {
-            int j = (int)Math.round(Math.random()*2); // escolhe um dos 3 carros
-            int kms = (int)Math.round(Math.random()*1000); // viagem até 1000 kms
+        for (int i = 0; i < 10; i++) {
+            int j = (int) Math.round(Math.random() * 2); // escolhe um dos 3 carros
+            int kms = (int) Math.round(Math.random() * 1000); // viagem até 1000 kms
             System.out.printf("Carro %d viajou %d quilómetros.\n", j, kms);
-            
+
             // TODO: adicionar viagem ao carro j
             cars[j].drive(kms);
         }

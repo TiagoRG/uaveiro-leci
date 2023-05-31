@@ -13,12 +13,29 @@ public class Book {
         this.setYear(year);
     }
 
-    public String getTitle() { return this.title; }
-    public void setTitle(String title) { this.title = title; }
-    public String getAuthor() { return this.author; }
-    public void setAuthor(String author) { this.author = author; }
-    public int getYear() { return this.year; }
-    public void setYear(int year) { this.year = year; }
+    public String getTitle() {
+        return this.title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return this.author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public int getYear() {
+        return this.year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
 
     @Override
     public String toString() {

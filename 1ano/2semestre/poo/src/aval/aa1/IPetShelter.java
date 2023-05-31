@@ -1,9 +1,13 @@
 package aval.aa1;
 
 public interface IPetShelter {
-    public void addAnimal(Animal animal);
-    public void removeAnimal(Animal animal);
-    public Animal searchForAnimal(String name);
-    public boolean sponsorAnimal(int animalId);
-    public void listAllAnimals();
+    void addAnimal(Animal animal);
+
+    void removeAnimal(Animal animal);
+
+    Animal searchForAnimal(String name);
+
+    boolean sponsorAnimal(int animalId);
+
+    void listAllAnimals();
 }

@@ -54,17 +54,17 @@ public class Team {
 
     public void addRobot(Robot robot) {
         if (this.robots == null)
-            this.setRobots(new Robot[] {robot});
+            this.setRobots(new Robot[]{robot});
         else {
-            Robot[] newRobots = new Robot[this.robots.length+1];
+            Robot[] newRobots = new Robot[this.robots.length + 1];
             System.arraycopy(this.robots, 0, newRobots, 0, this.robots.length);
-            newRobots[newRobots.length-1] = robot;
+            newRobots[newRobots.length - 1] = robot;
             this.setRobots(newRobots);
         }
     }
 
     public void removeRobot(Robot robot) {
-        Robot[] newRobots = new Robot[this.robots.length-1];
+        Robot[] newRobots = new Robot[this.robots.length - 1];
         int index = 0;
         for (Robot r : this.robots)
             if (r.getId() != robot.getId()) {
@@ -80,6 +80,6 @@ public class Team {
         for (Robot r : this.robots)
             robotsString.append("\n\t\t").append(r.toString());
         return String.format("Team %s\n\tCoach: %s\n\tGoals Scored: %d\n\tGoals Taken: %d\n\tRobots:%s",
-            this.name, this.coach, this.goalsScored, this.goalsTaken, robotsString);
+                this.name, this.coach, this.goalsScored, this.goalsTaken, robotsString);
     }
 }

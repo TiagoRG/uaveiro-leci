@@ -15,6 +15,16 @@ public class FlightManager {
     private String delaysTable;
     private String flightsNTable;
 
+    private static Map<String, Integer> sortByValue(Map<String, Integer> unsortMap) {
+        List<Map.Entry<String, Integer>> list = new LinkedList<>(unsortMap.entrySet());
+
+        // Sorting the list based on values
+        list.sort((o1, o2) -> o2.getValue().compareTo(o1.getValue()) == 0
+                ? o2.getKey().compareTo(o1.getKey())
+                : o2.getValue().compareTo(o1.getValue()));
+        return list.stream().collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a, b) -> b, LinkedHashMap::new));
+    }
+
     public void loadCompanies(String filename) {
         Scanner input;
         try {
@@ -23,10 +33,10 @@ public class FlightManager {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-        while(input.hasNext()){
+        while (input.hasNext()) {
             String line = input.nextLine();
             String[] fields = line.split("\t");
-            if(fields.length != 2)
+            if (fields.length != 2)
                 throw new RuntimeException("Invalid file format");
             this.companies.add(new Company(fields[0], fields[1], new LinkedList<>()));
         }
@@ -126,15 +136,5 @@ public class FlightManager {
                 throw new RuntimeException(ex);
             }
         }
-    }
-
-    private static Map<String, Integer> sortByValue(Map<String, Integer> unsortMap) {
-        List<Map.Entry<String, Integer>> list = new LinkedList<>(unsortMap.entrySet());
-
-        // Sorting the list based on values
-        list.sort((o1, o2) -> o2.getValue().compareTo(o1.getValue()) == 0
-                ? o2.getKey().compareTo(o1.getKey())
-                : o2.getValue().compareTo(o1.getValue()));
-        return list.stream().collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a, b) -> b, LinkedHashMap::new));
     }
 }

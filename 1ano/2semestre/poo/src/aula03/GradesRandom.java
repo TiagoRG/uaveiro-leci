@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class GradesRandom {
     private static final Scanner sin = new Scanner(System.in);
     private static final Random rand = new Random();
-    
+
     public static void main(String[] args) {
         System.out.print("Quantos alunos tem a turma? ");
         int studentCount = sin.nextInt();

@@ -11,6 +11,14 @@ public class Time {
         this.minute = minute;
     }
 
+    public static int timeToMinsInt(Time time) {
+        return time.hour() * 60 + time.minute();
+    }
+
+    public static Time minsIntToTime(int mins) {
+        return new Time(mins / 60, mins % 60);
+    }
+
     public Time addTime(Time time) {
         int newHour = hour + time.hour();
         int newMinute = minute + time.minute();
@@ -32,14 +40,6 @@ public class Time {
     @Override
     public String toString() {
         return String.format("%02d:%02d", hour, minute);
-    }
-
-    public static int timeToMinsInt(Time time) {
-        return time.hour() * 60 + time.minute();
-    }
-
-    public static Time minsIntToTime(int mins) {
-        return new Time(mins/60, mins%60);
     }
 
     public int hour() {

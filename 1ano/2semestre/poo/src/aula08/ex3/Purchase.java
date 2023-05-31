@@ -14,7 +14,7 @@ public class Purchase implements IPurchase {
         product.removeStock(amount);
         if (products.containsKey(product)) {
             int currentAmount = products.get(product);
-            products.replace(product, currentAmount+amount);
+            products.replace(product, currentAmount + amount);
         } else
             products.put(product, amount);
     }

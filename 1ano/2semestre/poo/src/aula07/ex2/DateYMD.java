@@ -69,7 +69,7 @@ public class DateYMD extends Date {
         if (this.day > 1)
             this.day--;
         else {
-            this.day = monthDays(this.month == 1 ? 12 : this.month-1, this.year);
+            this.day = monthDays(this.month == 1 ? 12 : this.month - 1, this.year);
             if (this.month > 1)
                 this.month--;
             else {

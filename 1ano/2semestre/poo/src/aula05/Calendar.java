@@ -33,18 +33,18 @@ public class Calendar {
                 day -= 7;
             day++;
         }
-        return day == 7 ? 7 : day%7;
+        return day == 7 ? 7 : day % 7;
     }
 
     public void printMonth(int month) {
         String[] monthNames = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
-        System.out.printf("\n%15s %d\n", monthNames[month-1], year);
+        System.out.printf("\n%15s %d\n", monthNames[month - 1], year);
         System.out.println("Dom Seg Ter Qua Qui Sex Sab");
 
         int firstWeekday = this.firstWeekdayOfMonth(month);
         for (int i = 1; i < firstWeekday; i++)
             System.out.print("    ");
-        
+
         for (int monthDay = 1; monthDay <= monthDays(month, year); monthDay++) {
             System.out.print(this.isEvent(monthDay, month, this.year) ? String.format("*%2d ", monthDay) : String.format("%3d ", monthDay));
             if ((monthDay + firstWeekday - 1) % 7 == 0)

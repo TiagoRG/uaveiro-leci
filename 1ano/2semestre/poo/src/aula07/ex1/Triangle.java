@@ -13,7 +13,7 @@ public class Triangle extends Shape {
     }
 
     public double[] getSides() {
-        return new double[] {this.side1, this.side2, this.side3};
+        return new double[]{this.side1, this.side2, this.side3};
     }
 
     public void setSides(double side1, double side2, double side3) {

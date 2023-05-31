@@ -1,6 +1,5 @@
 package aval.aa2.Classes;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
@@ -75,6 +74,6 @@ public class Order {
         items.forEach(item -> itemsStringBuilder.append(item).append(", "));
         return String.format("Order #%d: Client ID: %s, Store ID: %s, Order Datetime: %s, Express order: %b, Total cost: %.2f, Items: {%s};",
                 getId(), getClientId(), getStoreId(), getOrderDateTime().toString().replace('T', ' '), isExpressOrder(),
-                getPrice(), itemsStringBuilder.substring(0, itemsStringBuilder.length()-2));
+                getPrice(), itemsStringBuilder.substring(0, itemsStringBuilder.length() - 2));
     }
 }

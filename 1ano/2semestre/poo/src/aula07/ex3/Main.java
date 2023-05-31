@@ -38,13 +38,13 @@ public class Main {
         }
         System.out.println("Equipas:");
         for (int i = 0; i < teams.length; i++)
-            System.out.println((i+1) + " - " + teams[i].getName());
+            System.out.println((i + 1) + " - " + teams[i].getName());
         System.out.print("Escolha a equipa 1: ");
         int team1Id = Integer.parseInt(sin.nextLine());
         System.out.print("Escolha a equipa 2: ");
         int team2Id = Integer.parseInt(sin.nextLine());
-        Team team1 = teams[team1Id-1];
-        Team team2 = teams[team2Id-1];
+        Team team1 = teams[team1Id - 1];
+        Team team2 = teams[team2Id - 1];
         System.out.println("Bola para o jogo:");
         System.out.print("Cor da bola: ");
         String color = sin.nextLine();
@@ -60,9 +60,9 @@ public class Main {
         double duration = Double.parseDouble(durationString.equals("") ? "90" : durationString);
         Game game = new Game(team1, team2, ball, duration);
         if (games == null)
-            games = new Game[] { game };
+            games = new Game[]{game};
         else {
-            Game[] newGames = new Game[games.length+1];
+            Game[] newGames = new Game[games.length + 1];
             System.arraycopy(games, 0, newGames, 0, games.length);
             newGames[games.length] = game;
             games = newGames;
@@ -75,7 +75,8 @@ public class Main {
                 System.out.println("3 - Adicionar golo");
                 System.out.print("Opção: ");
                 int option = Integer.parseInt(sin.nextLine());
-                swit : switch (option) {
+                swit:
+                switch (option) {
                     case 1 -> {
                         System.out.print("Novo X: ");
                         double x = Double.parseDouble(sin.nextLine());
@@ -86,7 +87,7 @@ public class Main {
                     case 2 -> {
                         System.out.println("Robots:");
                         for (Robot r : game.getTeam1().getRobots())
-                                System.out.println(r);
+                            System.out.println(r);
                         for (Robot r : game.getTeam2().getRobots())
                             System.out.println(r);
                         System.out.print("Escolha o ID do robot: ");
@@ -151,7 +152,7 @@ public class Main {
         int nRobots = Integer.parseInt(sin.nextLine());
         Robot[] robots = new Robot[nRobots];
         for (int i = 0; i < nRobots; i++) {
-            System.out.println("Robot " + (i+1));
+            System.out.println("Robot " + (i + 1));
             System.out.print("\n1 - GoalKeeper\n2 - Defender\n3 - Midfielder\n4 - Striker\nPosição: ");
             PlayerPosition position = PlayerPosition.getPositionById(Integer.parseInt(sin.nextLine()));
             System.out.print("X inicial: ");
@@ -164,9 +165,9 @@ public class Main {
         }
         Team team = new Team(name, coach, robots);
         if (teams == null)
-            teams = new Team[] {team};
+            teams = new Team[]{team};
         else {
-            Team[] newTeams = new Team[teams.length+1];
+            Team[] newTeams = new Team[teams.length + 1];
             System.arraycopy(teams, 0, newTeams, 0, teams.length);
             newTeams[teams.length] = team;
             teams = newTeams;
