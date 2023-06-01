@@ -37,5 +37,4 @@ public class RainfallInfo {
     public int hashCode() {
         return date.hashCode() | location.hashCode() | Double.hashCode(rainfall);
     }
-
 }
