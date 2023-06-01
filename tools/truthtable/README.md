@@ -6,7 +6,7 @@
 #### 1. Head over to [Release](https://github.com/TiagoRG/uaveiro-leci/releases/tag/ttb) and download the zip folder.
 #### 2. Extract it into any location and then open that location.
 #### 3. Inside the directory, right click and choose "Open in terminal"
-![- Unable to load image -](https://github.com/TiagoRG/uaveiro-leci/blob/master/tools/truthtable/openInTerminal.png)
+![- Unable to load image -](https://github.com/TiagoRG/uaveiro-leci/blob/main/tools/truthtable/openInTerminal.png)
 #### 4. Run the following commands:
 1. Make sure the setup.sh is executable: `sudo chmod +x setup.sh`<br>
 2. Install the script: `./setup.sh install`

@@ -1,0 +1,99 @@
+# Handles the arguments
+# git-safe-push <remote (default="origin")> <branch (default=\"temp\")> <-n|-e>
+if [ $# -eq 0 ]; then
+    remote="origin"
+    branch="temp"
+    branch_option="-n"
+elif [ $# -eq 1 ]; then
+    remote=$1
+    branch="temp"
+    branch_option="-n"
+elif [ $# -eq 2 ]; then
+    remote=$1
+    branch=$2
+    branch_option="-n"
+elif [ $# -eq 3 ]; then
+    remote=$1
+    branch=$2
+    branch_option=$3
+else
+    echo "Usage: git-safe-push <remote (default=\"origin\")> <branch (default=\"temp\")> <-n/-e>"
+    exit
+fi
+
+if git rev-parse --is-inside-work-tree > /dev/null; then
+    if git ls-remote --exit-code "$remote" >/dev/null 2>/dev/null; then
+        # Rebases the repository
+        git config pull.rebase true
+        git pull
+
+        remote_link=$(git remote get-url "$remote")
+        link=${remote_link%.git}
+
+        if [ "$branch_option" = "-n" ]; then
+            # Checks if branch exists in the remote
+            printf "\nChecking for %s...\n\n" "$branch"
+            exists_in_remote=$(git ls-remote --heads "$remote" "$branch")
+
+            # If the branch does not exist
+            if [ -z "$exists_in_remote" ]; then
+                # Creates the branch, pushes it and deletes the branch locally
+                git branch "$branch"
+                git push "$remote" "$branch"
+                git branch -d "$branch" >/dev/null 2>/dev/null
+
+                # Prints output message
+                printf "\n----------------------------------------------------------------\n\n Branch does not yet exist, pushed to %s/%s...\n\n You can now create a pull request at:\n      > %s/compare/%s\n\n----------------------------------------------------------------\n\n" "$remote" "$branch" "$link" "$branch"
+            else
+                # Makes sure to get a free indexed temporary branch
+                for i in $(seq 1 100) ; do
+                    # Checks if branch exists in the remote
+                    printf "Checking for %s...\n" "$branch$i"
+                    exists_in_remote=$(git ls-remote --heads "$remote" "$branch$i")
+
+                    # If the branch does not exist
+                    if [ -z "$exists_in_remote" ]; then
+                        # Creates the branch, pushes it and deletes the branch locally
+                        git branch "$branch$i"
+                        git push "$remote" "$branch$i"
+                        git branch -d "$branch$i" >/dev/null 2>/dev/null
+                        break
+                    else
+                        printf "Branch already exists, trying again...\n\n"
+                    fi
+                done
+                # Prints output message
+                printf "\n----------------------------------------------------------------\n\n Branch does not yet exist, pushed to %s/%s...\n\n You can now create a pull request at:\n      > %s/compare/%s\n\n----------------------------------------------------------------\n\n" "$remote" "$branch$i" "$link" "$branch$i"
+            fi
+        else
+            # Checks if branch exists in the remote
+            printf "\nChecking for %s...\n" "$branch"
+            exists_in_remote=$(git ls-remote --heads "$remote" "$branch")
+
+            # If the branch does not exist
+            if [ -z "$exists_in_remote" ]; then
+                printf "\n----------------------------------------------------------------\n\n Branch does not exist, aborting...\n\n----------------------------------------------------------------\n\n"
+                exit
+            fi
+            # Creates the branch, pushes it and deletes the branch locally
+            git branch "$branch"
+            result=$(git push "$remote" "$branch")
+            if ! echo "$result" | grep -q "Everything up-to-date"; then
+                git branch -d "$branch" >/dev/null 2>/dev/null
+                printf "\n----------------------------------------------------------------\n\n Branch is up-to-date, aborting...\n\n----------------------------------------------------------------\n\n"
+                exit
+            elif ! echo "$result" | grep -q "To $remote.git"; then
+                git branch -d "$branch" >/dev/null 2>/dev/null
+                printf "\n----------------------------------------------------------------\n\n Pushed to %s/%s...\n\n You can now create a pull request at:\n      > %s/compare/%s\n\n----------------------------------------------------------------\n\n" "$remote" "$branch" "$link" "$branch"
+            else
+                git branch -d "$branch" >/dev/null 2>/dev/null
+                printf "\n----------------------------------------------------------------\n\n Failed to push to %s/%s, aborting...\n\n----------------------------------------------------------------\n\n" "$remote" "$branch"
+                exit
+            fi
+        fi
+    else
+        printf "\nRemote %s is unreachable for this repository.\nIf you pretend to use a different remote name specify it using: git-safe-push <remote>\nIf this is the correct name, check if the current remote url is correct.\n" "$remote"
+    fi
+else
+    printf "You are currently not in a git repository."
+fi
