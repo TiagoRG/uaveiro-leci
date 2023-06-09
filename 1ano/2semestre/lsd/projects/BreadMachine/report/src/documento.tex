@@ -1,0 +1,141 @@
+\documentclass{report}
+\usepackage[T1]{fontenc} % Fontes T1
+\usepackage[utf8]{inputenc} % Input UTF8
+\usepackage[backend=biber, style=ieee]{biblatex} % para usar bibliografia
+\usepackage{csquotes}
+\usepackage[portuguese]{babel} %Usar língua portuguesa
+\usepackage{blindtext} % Gerar texto automaticamente
+\usepackage[printonlyused]{acronym}
+\usepackage{hyperref} % para autoref
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{geometry}
+
+\geometry{
+    paper=a4paper,
+    margin=45pt,
+    includefoot
+}
+
+\bibliography{bibliografia}
+
+
+\begin{document}
+%%
+% Definições
+%
+\def\titulo{Máquina de Pão}
+\def\data{DATA}
+\def\autores{Tiago Garcia, José Fernandes}
+\def\autorescontactos{(114184) tiago.rgarcia@ua.pt, (114472) jbfernandes@ua.pt}
+\def\versao{VERSAO 1}
+\def\departamento{Dept. de Eletrónica, Telecomunicações e Informática}
+\def\empresa{Universidade de Aveiro}
+%
+%%%%%% CAPA %%%%%%
+%
+\begin{titlepage}
+
+\begin{center}
+%
+\vspace*{50mm}
+%
+{\Huge \titulo}\\ 
+%
+\vspace{10mm}
+%
+{\Large \empresa}\\
+%
+\vspace{10mm}
+%
+{\LARGE \autores}\\ 
+%
+\vspace{30mm}
+%
+\begin{figure}[h]
+\center
+\includegraphics{../images/ua}\label{fig:ua-logo}
+\end{figure}
+%
+\vspace{30mm}
+\end{center}
+%
+\begin{flushright}
+\versao
+\end{flushright}
+\end{titlepage}
+
+%%  Página de Título %%
+\title{%
+{\Huge\textbf{\titulo}}\\
+{\Large \departamento\\ \empresa}
+}
+%
+\author{%
+    \autores \\
+    \autorescontactos
+}
+%
+\date{\today}
+%
+\maketitle
+
+\pagenumbering{roman}
+
+\tableofcontents
+\listoftables     % descomentar se necessário
+\listoffigures    % descomentar se necessário
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introdução}
+\label{ch:introducao}
+
+Como projeto final da cadeira de \ac{lsd} foi-nos proposto o projeto da máquina de pão automática.
+
+Para tal, usamos \ac{vhdl} para simular o seu comportamento na placa FPGA Terasic DE2-115.\ Haverão 3 secções de displays, uma para o tempo do programa, outra para o tempo extra e outra para o atraso até ao ínicio da execução do programa.\ Haverá também um interruptor para selecionar o programa a ser executado, 7 interruptores para escolher o atraso inicial (introduzido em binário) e ainda 3 butões, o `Start/Stop', outro para reiniciar a máquina e o último para adicionar o possível tempo extra.\\
+
+\chapter{Manual de Utilização}
+\label{ch:manual-de-utilizacao}
+\input{manual-de-utilizacao}
+
+\chapter{Arquitetura e Implementação}
+\label{ch:arquitetura-e-implementacao}
+\input{arquitetura-e-implementacao}
+
+\chapter{Validações}
+\label{ch:validacoes}
+No decorrer do nosso projeto fomos confrontados com diversas adversidades no que toca a simulação e validação.\ Como tal, a principal maneira de verificação foi prática e feita com a placa, já que o trabalho funciona maioritariamente em segundos, um tempo dificil de se trabalhar tanto no simulador, como na testbench.
+
+\chapter{Conclusões e Contribuições}
+\label{ch:conclusoes-e-contribuicoes}
+
+\section{Conclusões}
+\label{sec:conclusoes}
+Após uma breve reflexão observámos que com este trabalho foram desenvolvidas novas capacidades em VHDL, lógica de estruturação (aplicada durante o planeamento das funções), otimização (de forma a simplificar o trabalho da melhor forma possivel) e ainda capacidades a nível de trabalho em grupo.\ Vimos também algumas das capacidades da placa e o potencial da disciplina, o que nos despertou interesse em saber mais e talvez desenvolver algo por conta própria.\ No geral, foram cumpridos todos os objetivos requeridos e ainda foram implementadas novas funcionalidades.
+
+Autoavaliamos o nosso trabalho com 18 valores.
+
+\section{Contribuições dos autores}
+\label{sec:contribuicoes-dos-autores}
+Neste projeto, ambos os elementos do grupo trabalharam de igual forma e com semelhante nível de empenho e por isso cada elemento do grupo tem uma percentagem de participação de 50\%.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Acrónimos}
+\begin{acronym}
+    \acro{ua}[UA]{Universidade de Aveiro}
+    \acro{leci}[LECI]{Licenciatura em Engenharia de Computadores e Informática}
+    \acro{lsd}[LSD]{Laboratório de Sistemas Digitais}
+    \acro{vhdl}[VHDL]{VHSIC Hardware Description Language}
+\end{acronym}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
+
+\end{document}
