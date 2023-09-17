@@ -1,4 +1,4 @@
-# Algorítmos e Estruturas de Dados
+# Algoritmos e Estruturas de Dados
 ### Projetos + resoluções de exercícios organizados por aulas
 ### Linguagem usada: C
 
