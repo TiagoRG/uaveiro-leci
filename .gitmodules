@@ -1,0 +1,13 @@
+[submodule "2ano/1semestre/mce/pratica-laboratorial/mce-tp1"]
+	path = 2ano/1semestre/mce/pratica-laboratorial/mce-tp1
+	url = https://github.com/TiagoRG/mce-tp1.git
+[submodule "1ano/1semestre/iei/infor2022-g16"]
+	path = 1ano/1semestre/iei/infor2022-g16
+	url = https://github.com/TiagoRG/infor2022-g16.git
+[submodule "1ano/2semestre/labi/labi2023-ap-g6"]
+	path = 1ano/2semestre/labi/labi2023-ap-g6
+    url = https://github.com/TiagoRG/labi2023-ap-g6.git
+    branch = main
+[submodule "1ano/2semestre/labi/labi2023-pf-g1"]
+	path = 1ano/2semestre/labi/labi2023-pf-g1
+	url = https://github.com/TiagoRG/labi2023-pf-g1.git
