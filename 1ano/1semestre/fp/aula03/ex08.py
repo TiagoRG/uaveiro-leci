@@ -1,6 +1,6 @@
 def intersects(a1, b1, a2, b2):
     assert a1 <= b1 and a2 <= b2, "Os intervalos não são válidos."
-    return a1 <= b2 and a2 <= b1
+    return a1 < b2 and a2 < b1
 
 
 def main():
