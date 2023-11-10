@@ -1,0 +1,6 @@
+Start QEMU with /usr/bin/qemu-system-x86_64 -name Debian10-1 -m 1024M -smp cpus=1,sockets=1 -enable-kvm -machine smm=off -boot order=c -drive file=/home/tiagorg/repos/uaveiro-leci/2ano/1semestre/rc1/pratica04/pratica04-ipv6/project-files/qemu/94e87dbb-89d9-4938-a0c6-ced3802d1b58/hda_disk.qcow2,if=ide,index=0,media=disk,id=drive0 -uuid 94e87dbb-89d9-4938-a0c6-ced3802d1b58 -spice addr=localhost,port=5000,disable-ticketing -vga qxl -monitor tcp:127.0.0.1:45655,server,nowait -net none -device e1000,mac=0c:e8:7d:bb:00:00,netdev=gns3-0 -netdev socket,id=gns3-0,udp=127.0.0.1:10007,localaddr=127.0.0.1:10006
+
+Execution log:
+qemu-system-x86_64: -spice addr=localhost,port=5000,disable-ticketing: warning: short-form boolean option 'disable-ticketing' deprecated
+Please use disable-ticketing=on instead
+qemu-system-x86_64: warning: Spice: ../spice-0.15.2/server/display-channel.cpp:2356:display_channel_validate_surface: surface 0 is NULL

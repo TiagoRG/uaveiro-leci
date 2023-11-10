@@ -20,3 +20,6 @@
 /**/*.qpf
 /**/*.qsf
 !/1ano/2semestre/lsd/master.qsf
+
+# QEMU Virtual Hard Disks
+/**/*.qcow2

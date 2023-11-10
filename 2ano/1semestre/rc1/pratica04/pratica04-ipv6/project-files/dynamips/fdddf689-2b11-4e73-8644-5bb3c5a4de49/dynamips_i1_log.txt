@@ -1,0 +1,31 @@
+Nov 05 16:56:23.289 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Nov 05 16:56:23.289 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 53197.
+Nov 05 16:56:23.293 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 05 16:56:23.293 HYPERVISOR: exec_cmd: hypervisor working_dir /home/tiagorg/repos/uaveiro-leci/2ano/1semestre/rc1/pratica04/pratica04-ipv6/project-files/dynamips 
+Nov 05 16:56:23.293 GENERAL: working_dir=/home/tiagorg/repos/uaveiro-leci/2ano/1semestre/rc1/pratica04/pratica04-ipv6/project-files/dynamips
+Nov 05 16:56:23.293 HYPERVISOR: exec_cmd: ethsw create Switch1 
+Nov 05 16:56:23.383 HYPERVISOR: exec_cmd: nio create_udp udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 10001 127.0.0.1 10000 
+Nov 05 16:56:23.383 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 
+Nov 05 16:56:23.397 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 1 
+Nov 05 16:56:23.415 HYPERVISOR: exec_cmd: nio create_udp udp-828f6597-2a0d-4064-9212-01e3d84cc17a 10002 127.0.0.1 10003 
+Nov 05 16:56:23.415 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-828f6597-2a0d-4064-9212-01e3d84cc17a 
+Nov 05 16:56:23.417 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-828f6597-2a0d-4064-9212-01e3d84cc17a 1 
+Nov 05 17:16:37.827 HYPERVISOR: exec_cmd: nio bind_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 capture 
+Nov 05 17:16:37.827 HYPERVISOR: exec_cmd: nio setup_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 en10mb /home/tiagorg/repos/uaveiro-leci/2ano/1semestre/rc1/pratica04/pratica04-ipv6/project-files/captures/Debian10-1_Ethernet0_to_Switch1_Ethernet0.pcap 
+Nov 05 17:36:02.498 HYPERVISOR: exec_cmd: nio unbind_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 
+Nov 05 17:36:54.416 HYPERVISOR: exec_cmd: nio bind_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 capture 
+Nov 05 17:36:54.416 HYPERVISOR: exec_cmd: nio setup_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 en10mb /home/tiagorg/repos/uaveiro-leci/2ano/1semestre/rc1/pratica04/pratica04-ipv6/project-files/captures/Debian10-1_Ethernet0_to_Switch1_Ethernet0.pcap 
+Nov 05 19:29:24.577 HYPERVISOR: exec_cmd: nio unbind_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 
+Nov 05 19:29:28.547 HYPERVISOR: exec_cmd: nio bind_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 capture 
+Nov 05 19:29:28.547 HYPERVISOR: exec_cmd: nio setup_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 en10mb /home/tiagorg/repos/uaveiro-leci/2ano/1semestre/rc1/pratica04/pratica04-ipv6/project-files/captures/Debian10-1_Ethernet0_to_Switch1_Ethernet0.pcap 
+Nov 05 19:33:41.465 HYPERVISOR: exec_cmd: nio unbind_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 
+Nov 05 19:33:43.951 HYPERVISOR: exec_cmd: nio bind_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 capture 
+Nov 05 19:33:43.951 HYPERVISOR: exec_cmd: nio setup_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 en10mb /home/tiagorg/repos/uaveiro-leci/2ano/1semestre/rc1/pratica04/pratica04-ipv6/project-files/captures/Debian10-1_Ethernet0_to_Switch1_Ethernet0.pcap 
+Nov 05 19:44:07.461 HYPERVISOR: exec_cmd: nio unbind_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 
+Nov 05 19:44:11.195 HYPERVISOR: exec_cmd: nio bind_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 capture 
+Nov 05 19:44:11.196 HYPERVISOR: exec_cmd: nio setup_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 en10mb /home/tiagorg/repos/uaveiro-leci/2ano/1semestre/rc1/pratica04/pratica04-ipv6/project-files/captures/Debian10-1_Ethernet0_to_Switch1_Ethernet0.pcap 
+Nov 05 20:01:21.037 HYPERVISOR: exec_cmd: nio unbind_filter udp-7bb00811-df56-4ecf-8168-6e8c7b294b90 2 
+Nov 05 20:01:33.700 HYPERVISOR: exec_cmd: ethsw delete Switch1 
+Nov 05 20:01:33.722 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 05 20:01:34.155 HYPERVISOR: Stopped.
+Nov 05 20:01:34.155 GENERAL: reset done.
