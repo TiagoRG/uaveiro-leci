@@ -1,0 +1,21 @@
+Cisco Router Simulation Platform (version 0.2.23-amd64/Linux stable)
+Copyright (c) 2005-2011 Christophe Fillot.
+Build date: Sep  5 2023 18:29:26
+
+Log file: writing to dynamips_i1_log.txt
+Console binding address set to localhost
+Hypervisor TCP control server started (IP 127.0.0.1 port 53197).
+NIO udp-7bb00811-df56-4ecf-8168-6e8c7b294b90: capturing to file '/home/tiagorg/repos/uaveiro-leci/2ano/1semestre/rc1/pratica04/pratica04-ipv6/project-files/captures/Debian10-1_Ethernet0_to_Switch1_Ethernet0.pcap'
+NIO udp-7bb00811-df56-4ecf-8168-6e8c7b294b90: ending packet capture.
+NIO udp-7bb00811-df56-4ecf-8168-6e8c7b294b90: capturing to file '/home/tiagorg/repos/uaveiro-leci/2ano/1semestre/rc1/pratica04/pratica04-ipv6/project-files/captures/Debian10-1_Ethernet0_to_Switch1_Ethernet0.pcap'
+NIO udp-7bb00811-df56-4ecf-8168-6e8c7b294b90: ending packet capture.
+NIO udp-7bb00811-df56-4ecf-8168-6e8c7b294b90: capturing to file '/home/tiagorg/repos/uaveiro-leci/2ano/1semestre/rc1/pratica04/pratica04-ipv6/project-files/captures/Debian10-1_Ethernet0_to_Switch1_Ethernet0.pcap'
+NIO udp-7bb00811-df56-4ecf-8168-6e8c7b294b90: ending packet capture.
+NIO udp-7bb00811-df56-4ecf-8168-6e8c7b294b90: capturing to file '/home/tiagorg/repos/uaveiro-leci/2ano/1semestre/rc1/pratica04/pratica04-ipv6/project-files/captures/Debian10-1_Ethernet0_to_Switch1_Ethernet0.pcap'
+NIO udp-7bb00811-df56-4ecf-8168-6e8c7b294b90: ending packet capture.
+NIO udp-7bb00811-df56-4ecf-8168-6e8c7b294b90: capturing to file '/home/tiagorg/repos/uaveiro-leci/2ano/1semestre/rc1/pratica04/pratica04-ipv6/project-files/captures/Debian10-1_Ethernet0_to_Switch1_Ethernet0.pcap'
+NIO udp-7bb00811-df56-4ecf-8168-6e8c7b294b90: ending packet capture.
+Hypervisor: closing control sockets.
+Hypervisor: closing remote client connections.
+Shutdown in progress...
+Shutdown completed.
