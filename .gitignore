@@ -5,6 +5,9 @@
 # Config files
 /**/*.iml
 
+# Data files
+/**/*.dat
+
 # Output/Cache files
 /**/out/
 /**/__pycache__/
