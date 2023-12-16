@@ -1,0 +1,116 @@
+%! Author = TiagoRG
+%! GitHub = https://github.com/TiagoRG
+
+\documentclass{report}
+\usepackage[T1]{fontenc} % Fontes T1
+\usepackage[utf8]{inputenc} % Input UTF8
+\usepackage[backend=biber, style=ieee]{biblatex} % para usar bibliografia
+\usepackage{csquotes}
+\usepackage[portuguese]{babel} %Usar língua portuguesa
+\usepackage{blindtext} % Gerar texto automaticamente
+\usepackage[printonlyused]{acronym}
+\usepackage{hyperref} % para autoref
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{geometry}
+
+\geometry{
+    paper=a4paper,
+    margin=45pt,
+    includefoot
+}
+
+\bibliography{bibliography}
+
+
+\begin{document}
+%%
+% Definições
+\input{defs/definitions}
+%
+%%%%%% CAPA %%%%%%
+%
+\begin{titlepage}
+
+\begin{center}
+%
+\vspace*{50mm}
+%
+{\Huge \titulo}\\
+%
+\vspace{10mm}
+%
+{\Large \empresa}\\
+%
+\vspace{10mm}
+%
+{\LARGE \autores}\\
+%
+\vspace{30mm}
+%
+\begin{figure}[h]
+\center
+\includegraphics{images/ua}\label{fig:ua-title-logo}
+\end{figure}
+\end{center}
+\end{titlepage}
+
+%%  Página de Título %%
+\title{%
+{\Huge\textbf{\titulo}}\\
+{\vspace{20mm}}
+{\Large \departamento\\ \empresa}
+}
+%
+\author{%
+    \autores \\
+    \autorescontactos
+}
+%
+\date{\today}
+%
+\maketitle
+
+%\pagenumbering{roman}
+
+%%%%%% RESUMO %%%%%%
+\begin{abstract}
+    O principal objetivo deste trabalho é estudar o comportamento de uma esfera em diferentes tipos de movimentos. Para alcançar os objetivos pretendidos, foi necessário realizar 3 experiências, sendo estas o lançamento horizontal, lançamento com ângulo variável e por último lançamento contra um pêndulo balístico. As medições de comprimentos apresentam um erro de 1mm, medições de massas apresentam um erro de 0.1g e medições de ângulos apresentam um erro de 0.1º. A exatidão na primeira parte foi de 97.9\%.
+\end{abstract}
+
+
+\tableofcontents
+%\listoftables     % descomentar se necessário
+%\listoffigures    % descomentar se necessário
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}
+
+
+%%%%%% INTRODUÇÃO %%%%%%
+\input{ch/introducao}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Capítulos
+\input{ch/detalhes-experimentais-relevantes}
+\input{ch/analise-discussao}
+
+%%%%%% CONCLUSÕES %%%%%%
+\input{ch/conclusao}
+
+
+%%%%%% ACRÓNIMOS %%%%%%
+%\input{defs/acronyms}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
+
+\input{ch/anexos}
+
+\end{document}

@@ -1,0 +1,148 @@
+%! Author = TiagoRG
+%! GitHub = https://github.com/TiagoRG
+
+\documentclass{report}
+\usepackage[T1]{fontenc} % Fontes T1
+\usepackage[utf8]{inputenc} % Input UTF8
+\usepackage[backend=biber, style=ieee]{biblatex} % para usar bibliografia
+\usepackage{csquotes}
+\usepackage[portuguese]{babel} %Usar língua portuguesa
+\usepackage{blindtext} % Gerar texto automaticamente
+\usepackage[printonlyused]{acronym}
+\usepackage{hyperref} % para autoref
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{geometry}
+
+\geometry{
+    paper=a4paper,
+    margin=45pt,
+    includefoot
+}
+
+\bibliography{bibliography}
+
+
+\begin{document}
+%%
+% Definições
+\input{defs/definitions}
+%
+%%%%%% CAPA %%%%%%
+%
+\begin{titlepage}
+
+\begin{center}
+%
+\vspace*{50mm}
+%
+{\Huge \titulo}\\
+%
+\vspace{10mm}
+%
+{\Large \empresa}\\
+%
+\vspace{10mm}
+%
+{\LARGE \autores}\\
+%
+\vspace{30mm}
+%
+\begin{figure}[h]
+\center
+\includegraphics{images/ua}\label{fig:ua-title-logo}
+\end{figure}
+\end{center}
+\end{titlepage}
+
+%%  Página de Título %%
+\title{%
+{\Huge\textbf{\titulo}}\\
+{\vspace{20mm}}
+{\Large \departamento\\ \empresa}
+}
+%
+\author{%
+    \autores \\
+    \autorescontactos
+}
+%
+\date{\today}
+%
+\maketitle
+
+%\pagenumbering{roman}
+
+
+
+\tableofcontents
+%\listoftables     % descomentar se necessário
+%\listoffigures    % descomentar se necessário
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}
+
+
+%%%%%% INTRODUÇÃO %%%%%%
+\input{ch/introducao}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Capítulos
+\input{ch/detalhes-experimentais-relevantes}
+\input{ch/analise-discussao}
+
+%%%%%% CONCLUSÕES %%%%%%
+\input{ch/conclusao}
+
+\pagebreak
+
+\section*{$B_{sol} = \mu_0 \frac{N}{l} I_S$}
+\begin{itemize}
+    \item $B_{sol}$ - Campo magnético do solenóide (apenas paralelo ao eixo do solenóide)
+    \item $\mu_0$ - Permeabilidade magnética do vácuo (constante, $4\pi \times 10^{-7}~~Tm/A$)
+    \item $I_S$ - Corrente elétrica no solenóide
+\end{itemize}
+
+\section*{$\frac{\Delta C}{C} = \frac{\frac{\Delta N}{\Delta l}}{\frac{N}{l}} + \frac{\Delta m}{m}$}
+Equação usada para calcular o erro relativo da constante de calibração do sensor de Hall.
+
+\section*{$B = C_CV_V$}
+Usada para calcular o campo magnético a partir da tensão de saída do sensor de Hall para as bobinas de Helmholtz.
+\begin{itemize}
+    \item $B$ - Campo magnético
+    \item $C_C$ - Constante de calibração do sensor de Hall
+    \item $V_V$ - Tensão de saída do sensor de Hall
+\end{itemize}
+
+\section*{$\vec{B}(x) = \frac{\mu_0 I R^2}{2(R^2 + (x - x_0)^2)^{3/2}}$}
+As variáveis $x$ e $x_0$ anulam-se.
+\begin{itemize}
+    \item $\vec{B}(x)$ - Campo magnético no ponto $x$ do eixo do solenóide
+    \item $\mu_0$ - Permeabilidade magnética do vácuo (constante, $4\pi \times 10^{-7}~~Tm/A$)
+    \item $I$ - Corrente elétrica no solenóide
+    \item $R$ - Raio do solenóide
+\end{itemize}
+
+\section*{$C_C = \frac{\mu_0 \frac{N}{l}}{m}$}
+Resolve parte 1
+\begin{itemize}
+    \item $C_C$ - Constante de calibração do sensor de Hall
+    \item $\mu_0$ - Permeabilidade magnética do vácuo (constante, $4\pi \times 10^{-7}~~Tm/A$)
+    \item $m$ - Declive do gráfico $V_V = f(I_S)$
+\end{itemize}
+
+\section*{$\frac{N}{l} = \frac{B_{max}}{B_x}$}
+Usada para calcular o número de espiras (parte 2)
+
+%%%%%% ACRÓNIMOS %%%%%%
+%\input{defs/acronyms}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

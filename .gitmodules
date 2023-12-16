@@ -1,6 +1,3 @@
-[submodule "2ano/1semestre/mce/pratica-laboratorial/mce-tp1"]
-	path = 2ano/1semestre/mce/pratica-laboratorial/mce-tp1
-	url = https://github.com/TiagoRG/mce-tp1.git
 [submodule "1ano/1semestre/iei/infor2022-g16"]
 	path = 1ano/1semestre/iei/infor2022-g16
 	url = https://github.com/TiagoRG/infor2022-g16.git
