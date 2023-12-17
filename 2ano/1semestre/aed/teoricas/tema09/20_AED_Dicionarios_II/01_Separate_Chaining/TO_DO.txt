@@ -1,0 +1,6 @@
+
+Implement RESIZING + REHASHING
+
+When the Load Factor N/M reaches 8, double the table size.
+
+When the Load Factor N/M reaches 2, halve the table siize.

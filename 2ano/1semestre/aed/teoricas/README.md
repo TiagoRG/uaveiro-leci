@@ -14,6 +14,9 @@
 | [06](https://github.com/TiagoRG/uaveiro-leci/tree/master/2ano/1semestre/aed/teoricas/tema06) | Tipos Abstratos                   |
 | [07](https://github.com/TiagoRG/uaveiro-leci/tree/master/2ano/1semestre/aed/teoricas/tema07) | Listas Ligadas                    |
 | [08](https://github.com/TiagoRG/uaveiro-leci/tree/master/2ano/1semestre/aed/teoricas/tema08) | Árvores Binárias                  |
+| [09](https://github.com/TiagoRG/uaveiro-leci/tree/master/2ano/1semestre/aed/teoricas/tema09) | Dicionários                       |
+| [10](https://github.com/TiagoRG/uaveiro-leci/tree/master/2ano/1semestre/aed/teoricas/tema10) | Grafos                            |
+| [11](https://github.com/TiagoRG/uaveiro-leci/tree/master/2ano/1semestre/aed/teoricas/tema11) | C++                               |
 
 ---
 *Pode conter erros, caso encontre algum, crie um* [*ticket*](https://github.com/TiagoRG/uaveiro-leci/issues/new)
