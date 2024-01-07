@@ -8,9 +8,6 @@
 [submodule "1ano/2semestre/labi/labi2023-pf-g1"]
 	path = 1ano/2semestre/labi/labi2023-pf-g1
 	url = https://github.com/TiagoRG/labi2023-pf-g1.git
-[submodule "2ano/1semestre/aed/trabalho1-113221-114184"]
-	path = 2ano/1semestre/aed/trabalho1-113221-114184
-	url = https://github.com/detiuaveiro/trabalho1-113221-114184.git
 [submodule "2ano/1semestre/rc1/rc1-project"]
 	path = 2ano/1semestre/rc1/rc1-project
 	url = https://github.com/TiagoRG/rc1-project.git
