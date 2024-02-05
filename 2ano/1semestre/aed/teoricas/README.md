@@ -17,6 +17,8 @@
 | [09](https://github.com/TiagoRG/uaveiro-leci/tree/master/2ano/1semestre/aed/teoricas/tema09) | Dicionários                       |
 | [10](https://github.com/TiagoRG/uaveiro-leci/tree/master/2ano/1semestre/aed/teoricas/tema10) | Grafos                            |
 | [11](https://github.com/TiagoRG/uaveiro-leci/tree/master/2ano/1semestre/aed/teoricas/tema11) | C++                               |
+| [12](https://github.com/TiagoRG/uaveiro-leci/tree/master/2ano/1semestre/aed/teoricas/tema12) | Procura Exaustiva                 |
+| [13](https://github.com/TiagoRG/uaveiro-leci/tree/master/2ano/1semestre/aed/teoricas/tema13) | Tópicos Avançados                 |
 
 ---
 *Pode conter erros, caso encontre algum, crie um* [*ticket*](https://github.com/TiagoRG/uaveiro-leci/issues/new)
