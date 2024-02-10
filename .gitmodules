@@ -11,3 +11,9 @@
 [submodule "2ano/1semestre/rc1/rc1-project"]
 	path = 2ano/1semestre/rc1/rc1-project
 	url = https://github.com/TiagoRG/rc1-project.git
+[submodule "2ano/1semestre/aed/aed-trabalho1"]
+	path = 2ano/1semestre/aed/aed-trabalho1
+	url = https://github.com/TiagoRG/aed-trabalho1
+[submodule "2ano/1semestre/aed/aed-trabalho2"]
+	path = 2ano/1semestre/aed/aed-trabalho2
+	url = https://github.com/TiagoRG/aed-trabalho2
