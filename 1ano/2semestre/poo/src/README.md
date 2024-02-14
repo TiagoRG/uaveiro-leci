@@ -15,6 +15,8 @@
 | [08](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/src/aula08) | Interfaces, Collections |
 | [09](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/src/aula09) | Collections             |
 | [10](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/src/aula10) | Collections, Files      |
+| [11](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/src/aula11) | Files                   |
+| [12](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/src/aula12) | General Exercises       |
 
 ---
 *Pode conter erros, caso encontre algum, crie um* [*ticket*](https://github.com/TiagoRG/uaveiro-leci/issues/new)
