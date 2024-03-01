@@ -30,14 +30,18 @@ main:
 	andi	$t0, $t0, 0xFFE1		# 1111 1111 1110 0001 (isola bits 4-1)
 	sw	$t0, TRISE($t7)			# Configura RE4-RE1 como output
 
+	lw	$t1, TRISB($t7)
+	ori	$t1, $t1, 0x0008		# 0000 0000 0000 0010 (isola bit 1)
+	sw	$t1, TRISB($t7)			# Configura RB3 como input
+
 	li	$t0, 0				# Iniciar contagem
 
 loop:
-	lw	$t1, LATE($t7)
-	andi	$t1, $t1, 0xFFE1		# 1111 1111 1110 0001 (reset bits 4-1)
-	sll	$t2, $t0, 1			# shift do contador para os bits 4-1
-	or	$t1, $t1, $t2			# merge contador com valor do LATE
-	sw	$t1, LATE($t7)			# atualiza valor do LATE
+	lw	$t2, LATE($t7)
+	andi	$t2, $t2, 0xFFE1		# 1111 1111 1110 0001 (reset bits 4-1)
+	sll	$t3, $t0, 1			# shift do contador para os bits 4-1
+	or	$t2, $t2, $t3			# merge contador com valor do LATE
+	sw	$t2, LATE($t7)			# atualiza valor do LATE
 
 	li	$v0, RESET_CORE_TIMER
 	syscall
@@ -47,12 +51,19 @@ delay:
 	syscall
 	move	$t6, $v0
 
-	# 20,000,000 cycles = 1 second = 1 Hz
-	# 4,000,000 cycles = 0.2 second = 5 Hz
-	# 2,000,000 cycles = 0.1 second = 10 Hz
-	blt	$t6, 20000000, delay
+	blt	$t6, 10000000, delay
 
-	addi	$t0, $t0, 1			# incrementa o contador
+if:	
+	lw	$t2, PORTB($t7)
+	andi	$t2, $t2, 0x0008		# obtem posição do switch 3
+	beqz	$t2, else			# incrementa se bit = 1, decrementa de bit = 0
+
+	addiu	$t0, $t0, 1			# incrementa o contador
+	j	endif
+else:
+	addiu	$t0, $t0, -1			# decrementa o contador
+
+endif:
 	andi	$t0, $t0, 0x000F		# limita o contador com modulo 16
 	j	loop
 
