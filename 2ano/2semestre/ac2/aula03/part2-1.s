@@ -12,8 +12,8 @@
 	.equ	PORTE, 0x6110
 	.equ	LATE,  0x6120
 
-	.equ READ_CORE_TIMER, 11
-	.equ RESET_CORE_TIMER, 12
+	.equ	READ_CORE_TIMER, 11
+	.equ	RESET_CORE_TIMER, 12
 
 	.data
 	.text
