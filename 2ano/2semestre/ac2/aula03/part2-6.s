@@ -20,7 +20,7 @@ main:
 	andi	$t0, $t0, 0xFFE1		# 1111 1111 1110 0001 (isola bits 4-1)
 	sw	$t0, TRISE($t7)			# Configura RE4-RE1 como output
 
-	li	$t0, 0x0010			# Iniciar contagem
+	li	$t0, 0x0000			# Iniciar contagem
 
 loop:
 	lw	$t1, LATE($t7)
