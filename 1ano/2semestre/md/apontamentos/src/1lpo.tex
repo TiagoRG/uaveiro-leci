@@ -1,0 +1,292 @@
+\part{Lógica de Primeira Ordem e Demonstração Automática}
+\label{part:1lpo}
+
+\chapter{Interpretação}
+\label{chap:1-interpretacao}
+
+\section{Proposição}
+\label{sec:1-interpretacao-proposicao}
+
+\subsection{Definição}
+São proposições as afirmações que podem ser classificadas como verdadeiras ou falsas mas não ambas.
+
+\subsection{Exemplos}
+\begin{enumerate}
+    \item O sol é uma estrela.
+    \item Deus existe.
+    \item D. Pedro I foi o primeiro imperador do Brasil.
+\end{enumerate}
+
+Afirmações com o seu valor lógico:
+\begin{enumerate}
+    \item Para todo o $n \in N$, $2n$ é múltiplo de $2$. $\rightarrow$ Proposição \textbf{Verdadeira}.
+    \item Para todo o $n \in Z$, $2n \geq n$. $\rightarrow$ Afirmação \textbf{Ambígua}: \textbf{Verdadeira} para $n > 0$ e \textbf{Falsa} para $n \leq 0$.
+    \item Para todo o $n \in N$, $3n \geq 4n$. $\rightarrow$ Proposição \textbf{False}.
+\end{enumerate}
+
+\subsection{Tipos de Proposições}
+
+\begin{itemize}
+    \item \textbf{Atómica}: Não pode ser decomposta em proposições mais simples.
+    \item \textbf{Composta}: É formada a partir da combinação de proposições atómicas usando conectivos lógicos.
+\end{itemize}
+
+\section{Conectivos Lógicos}
+\label{sec:1-interpretacao-conectivos}
+
+\subsection{Negação}
+
+\subsubsection{Símbolo}
+O símbolo da negação é $\neg$.
+
+\subsubsection{Tabela de Verdade}
+\begin{table}[H]
+    \begin{tabular}{|c|c|}
+        \hline
+        $p$ & $\neg p$ \\
+        \hline
+        1 & 0 \\
+        0 & 1 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Conjunção}
+
+\subsubsection{Símbolo}
+O símbolo da conjunção é $\land$.
+
+\subsubsection{Tabela de Verdade}
+\begin{table}[H]
+    \begin{tabular}{|c|c|c|}
+        \hline
+        $p$ & $q$ & $p \land q$ \\
+        \hline
+        1 & 1 & 1 \\
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 0 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Disjunção}
+
+\subsubsection{Símbolo}
+O símbolo da conjunção é $\lor$.
+
+\subsubsection{Tabela de Verdade}
+\begin{table}[H]
+    \begin{tabular}{|c|c|c|}
+        \hline
+        $p$ & $q$ & $p \lor q$ \\
+        \hline
+        1 & 1 & 1 \\
+        1 & 0 & 1 \\
+        0 & 1 & 1 \\
+        0 & 0 & 0 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Implicação}
+
+\subsubsection{Símbolo}
+O símbolo da conjunção é $\rightarrow$.
+
+\subsubsection{Tabela de Verdade}
+\begin{table}[H]
+    \begin{tabular}{|c|c|c|}
+        \hline
+        $p$ & $q$ & $p \rightarrow q$ \\
+        \hline
+        1 & 1 & 1 \\
+        1 & 0 & 1 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Equivalência}
+
+\subsubsection{Símbolo}
+O símbolo da conjunção é $\leftrightarrow$.
+
+\subsubsection{Tabela de Verdade}
+\begin{table}[H]
+    \begin{tabular}{|c|c|c|}
+        \hline
+        $p$ & $q$ & $p \leftrightarrow q$ \\
+        \hline
+        1 & 1 & 1 \\
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Exemplos}
+
+\subsubsection{Exemplo 1}
+Ou o José foi ao supermercado ou está sem ovos em casa.
+
+\begin{itemize}
+    \item $\phi$ = "O José foi ao supermercado"
+    \item $\psi$ = "O José está sem ovos em casa"
+\end{itemize}
+
+\textbf{Resultado}: $\phi \lor \psi$
+
+\subsubsection{Exemplo 2}
+A Beatriz decidiu emigrar e não tenciona regressar.
+
+\begin{itemize}
+    \item $\phi$ = "A Beatriz decidiu emigrar"
+    \item $\psi$ = "A Beatriz não tenciona regressar"
+\end{itemize}
+
+\textbf{Resultado}: $\phi \land \psi$
+
+\subsubsection{Exemplo 3}
+
+Ou o meu pai está em casa e a minha mãe não ou o meu pai não está em casa mas a minha mão está.
+
+\begin{itemize}
+    \item $\phi$ = "O meu pai está em casa"
+    \item $\psi$ = "A minha mão não está em casa"
+\end{itemize}
+
+\textbf{Resultado}: $(\psi \land \neg \phi) \lor (\neg \psi \land \phi)$
+
+\subsubsection{Exemplo 4}
+
+Ficarei milionário se ganhar o euromilhões
+
+\begin{itemize}
+    \item $\phi$ = "Ficar milionário"
+    \item $\psi$ = "Ganhar o euromilhões"
+\end{itemize}
+
+\textbf{Resultado}: $\psi \rightarrow \phi$
+
+\section{Validade de Fórmulas}
+
+\subsection{Tautologia}
+\subsubsection{Definição}
+Uma fórmula diz-se \textbf{Tautologia} quando tem valor lógico \textbf{1} para todas as suas interpretações.
+
+Representa-se com $\top$.
+
+\subsubsection{Exemplos}
+\begin{enumerate}
+    \item $\neg \psi \lor \psi$
+    \item $(\psi \land \phi) \rightarrow \psi$
+\end{enumerate}
+
+\begin{table}[H]
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        $p$ & $q$ & $p \land q$ & $(p \land q) \rightarrow q$ \\
+        \hline
+        0 & 0 & 0 & 1 \\
+        0 & 1 & 0 & 1 \\
+        1 & 0 & 0 & 1 \\
+        1 & 1 & 1 & 1 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Consistente}
+\subsubsection{Definição}
+Uma fórmula diz-se \textbf{Consistente} quando tem valor lógico \textbf{1} para alguma das suas interpretações.
+
+\subsection{Inconsistente ou Contradição}
+\subsubsection{Definição}
+Uma fórmula diz-se \textbf{Inconsistente} ou \textbf{Contradição} quando tem valor lógico \textbf{0} para todas as suas interpretações.
+
+Representa-se com $\bot$.
+
+\subsubsection{Exemplo}
+\begin{enumerate}
+    \item $\neg \psi \land \psi$
+\end{enumerate}
+
+\section{Fórmulas Equivalentes}
+\subsection{Definição}
+As fórmulas $\phi$ e $\psi$ dizem-se equivalentes quando a fórmula $\phi \leftrightarrow \psi$ é uma tautologia.
+
+\subsubsection{Demonstação}
+\begin{table}[H]
+    \begin{tabular}{|c|c|c||c|c|c|}
+        \hline
+        $p$ & $q$ & $p \rightarrow q$ & $\neg p$ & $\neg p \lor q$ & $(p \rightarrow q) \leftrightarrow (\neg p \lor q)$ \\
+        \hline
+        0 & 0 & 1 & 1 & 1 & 1 \\
+        0 & 1 & 1 & 1 & 1 & 1 \\
+        1 & 0 & 0 & 0 & 0 & 1 \\
+        1 & 1 & 1 & 0 & 1 & 1 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Exemplos}
+\noindent Equivalências:
+\begin{enumerate}
+    \item $p \land q \equiv q \land p$
+    \item $p \lor q \equiv q \lor p$
+    \item $p \land (q \land r) \equiv (p \land q) \land r$
+    \item $p \lor (q \lor r) \equiv (p \lor q) \lor r$
+    \item $p \land p \equiv p$
+    \item $p \lor p \equiv p$
+    \item $p \land \top \equiv p$
+    \item $p \lor \top \equiv \top$
+    \item $p \land \bot \equiv \bot$
+    \item $p \lor \bot \equiv p$
+\end{enumerate}
+Distributividade:
+\begin{enumerate}
+    \item $p \land (q \lor r) \equiv (p \land q) \lor (p \land r)$
+    \item $p \lor (q \land r) \equiv (p \lor q) \land (p \lor r)$
+\end{enumerate}
+Leis de Morgan:
+\begin{enumerate}
+    \item $\neg (p \land q) \equiv \neg p \lor \neg q$
+    \item $\neg (p \lor q) \equiv \neg p \land \neg q$
+\end{enumerate}
+Contraposição e dupla negação:
+\begin{enumerate}
+    \item $p \rightarrow q \equiv \neg q \rightarrow \neg p$
+    \item $p \rightarrow q \equiv \neg p \lor q$
+    \item $\neg \neg p \equiv p$
+\end{enumerate}
+
+\section{Formas Normais}
+\label{sec:1-interpretacao-formas-normais}
+
+\subsection{Literais}
+\subsubsection{Definição}
+Um literal é uma proposição atómica ou a negação de uma proposição atómica.
+
+\subsubsection{Exemplos}
+\begin{enumerate}
+    \item $p$, $q$, $\neg r$ são literais.
+    \item $\neg \neg p$, $p \rightarrow q$ não são literais.
+\end{enumerate}
+
+\subsection{Forma Normal Conjuntiva (FNC)}
+Uma fórmula está na \textbf{Forma Normal Conjuntiva} se é uma conjunção de disjunção de literais.
+
+\subsection{Forma Normal Disjuntiva (FND)}
+Uma fórmula está na \textbf{Forma Normal Disjuntiva} se é uma disjunção de conjunções de literais.
+
+\subsection{Exemplos}
+\begin{enumerate}
+    \item $p \land q \land \neg r$ está na FNC e na FND.
+    \item $(p \lor \neg q) \land (q \lor r)$ está na FNC.
+    \item $(p \land \neg q) \lor (q \land r)$ está na FND.
+    \item $(p \land q) \lor (p \land \neg q) \lor (q \land r)$ não está na FNC nem na FND.
+\end{enumerate}
+
+

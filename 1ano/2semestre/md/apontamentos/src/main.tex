@@ -1,0 +1,98 @@
+%! Author = TiagoRG
+%! GitHub = https://github.com/TiagoRG
+
+\documentclass[15pt]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[portuguese]{babel}
+\usepackage[printonlyused]{acronym}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{tocloft}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{setspace}
+\renewcommand{\familydefault}{\sfdefault}
+
+\geometry{
+    paper=a4paper,
+    margin=45pt,
+    includefoot
+}
+\setcounter{tocdepth}{1}
+
+\begin{document}
+%%%%%% CAPA %%%%%%
+\begin{titlepage}
+\begin{center}
+    \vspace*{60pt}
+    {\fontsize{10\textwidth}{0}\selectfont{\textbf{MATEMÁTICA\\\vspace*{10pt}DISCRETA\\}}}
+    \vspace*{40pt}
+    \Huge
+    \textbf{Tiago Rocha Garcia}\\
+    \vspace*{20pt}
+    \Large
+    \textbf{\href{mailto:tiago.rgarcia@ua.pt}{tiago.rgarcia@ua.pt}}\\
+    \vspace*{5pt}
+    \textbf{\href{https://tiagorg.pt}{https://tiagorg.pt}}\\
+    \vspace*{30pt}
+    \huge
+    \textbf{2023/2024}\\
+    \vspace*{200pt}
+    \includegraphics[width=0.2\textwidth]{images/ua}\\
+    \vspace*{10pt}
+    \huge
+    \textbf{Universidade de Aveiro}\\
+\end{center}
+\end{titlepage}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\fancypagestyle{plain}{
+    \fancyhf{}% Clear header/footer
+    \fancyfoot[L]{Matemática Discreta\\Universidade de Aveiro\\2023/2024}
+    \fancyfoot[C]{\\{\huge\thepage}}
+    \fancyfoot[R]{Tiago Garcia\\\href{https://tiagorg.pt}{https://tiagorg.pt}\\\href{mailto:tiago.rgarcia@ua.pt}{tiago.rgarcia@ua.pt}}
+}
+\pagestyle{plain}
+
+\renewcommand{\thepart}{Capítulo \arabic{part}}
+\titleformat{\part}[display]{\bfseries\centering}{\Huge\thepart}{2em}{\Huge}
+
+\renewcommand{\thechapter}{Tópico \arabic{chapter}}
+\titleformat{\chapter}[display]{\bfseries}{\LARGE\thechapter}{1em}{\huge}
+\dottedcontents{chapter}[7.2em]{\bfseries\vspace{0.6em}}{5em}{0.65pc}
+
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\titleformat{\section}[block]{\bfseries}{\Large\thesection}{1em}{\Large}
+\dottedcontents{section}[9.2em]{\vspace{0.6em}}{2em}{0.65pc}
+
+\renewcommand{\contentsname}{Índice}
+\tableofcontents
+%\listoftables     % descomentar se necessário
+%\listoffigures    % descomentar se necessário
+
+\input{1lpo}
+\input{2pec}
+\input{3aic}
+\input{4rfg}
+\input{5etg}
+
+\chapter*{Acrónimos}
+\begin{acronym}
+\end{acronym}
+
+\end{document}
