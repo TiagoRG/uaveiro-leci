@@ -26,3 +26,9 @@
 
 # QEMU Virtual Hard Disks
 /**/*.qcow2
+
+# MIPS compiled
+/**/*.hex
+/**/*.elf
+/**/*.map
+/**/*.o
