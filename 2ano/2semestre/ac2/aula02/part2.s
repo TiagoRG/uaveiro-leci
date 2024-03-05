@@ -1,3 +1,4 @@
+	.equ INKEY, 1
 	.equ READ_CORE_TIMER, 11
 	.equ RESET_CORE_TIMER, 12
 	.equ PUT_CHAR, 3
@@ -11,10 +12,12 @@
 # cnt1:		$s0
 # cnt5:		$s1
 # cnt10:	$s2
+# factor:	$s3
 
 main:	li	$s0, 0
 	li	$s1, 0
 	li	$s2, 0
+	li	$s3, 100
 
 while:	li	$a0, '\r'
 	li	$v0, PUT_CHAR
@@ -49,21 +52,39 @@ while:	li	$a0, '\r'
 	li	$v0, PRINT_INT
 	syscall
 
+	li	$v0, INKEY
+	syscall
+	move	$t0, $v0
+	beq	$t0, 'A', increase_speed
+	beq	$t0, 'N', decrease_speed
+	beq	$t0, 'S', suspend
+	j	continue
+
+increase_speed:
+	div	$s3, $s3, 2
+	j	continue
+decrease_speed:
+	li	$s3, 100
+	j	continue
+suspend:
+	li	$v0, INKEY
+	syscall
+	beq	$v0, 'R', continue
+	j	suspend
+continue:
 	addu	$sp, $sp, -4
 	sw	$ra, 0($sp)
-	li	$a0, 100
+	move	$a0, $s3
 	jal	delay
 
-	remi	$t0, $s0, 10
+	rem	$t0, $s2, 10
 	bnez	$t0, ignore1
 	addi	$s0, $s0, 1
-	li	$s3, 0
 
 ignore1:
-	remi	$t0, $s1, 2
+	rem	$t0, $s2, 2
 	bnez	$t0, ignore5
 	addi	$s1, $s1, 1
-	li	$s4, 0
 
 ignore5:
 	addi	$s2, $s2, 1
