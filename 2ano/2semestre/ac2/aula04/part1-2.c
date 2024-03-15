@@ -7,16 +7,14 @@ void delay(int ms) {
 
 int main() {
     // Configure RE6-RE3 as output
-    TRISE = TRISE & 0xFF87;
+    TRISE &= 0xFF87;
     // Initialize the counter
     unsigned int counter = 0;
     
     while (1) {
-        // Update value
-        LATE = (LATE & 0xFF87) // Reset bits 6-3
-               | counter << 3; // Merge with counter
+        LATE = (LATE & 0xFF87) | counter++ << 3;
+        counter %= 10;
         
         delay(460);
-        counter = (counter + 1) % 10;
     }
 }
