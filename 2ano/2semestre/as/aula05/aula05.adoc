@@ -1,0 +1,24 @@
+= Aula 05
+
+== Ex 5.1
+
+=== a)
+
+
+
+=== b)
+
+O componente Log4j é uma framework de logging, para Java, que permite ao programador controlar e efetuar o registo das logs da aplicação. Pode ser configurado para registar logs em ficheiros, consola, e outros meios, e permite a definição de níveis de log, para que apenas os logs de interesse sejam registados. Tem ainda a vantagem de ser uma framework open-source, e de ser bastante eficiente, o que a torna uma das frameworks de logging mais utilizadas em Java.
+
+Para incluir esta framework um projeto Gradle, é necessário adicionar a dependência correspondente ao ficheiro build.gradle. As coordenadas da dependência incluem o grupo (group), o nome do artefato (artifact), a versão e opcionalmente o tipo de embalagem (packaging). No caso do Log4j, a dependência a adicionar é a seguinte:
+
+[,java]
+----
+dependencies {
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.0'
+}
+----
+
+- org.apache.logging.log4j é o grupo da biblioteca.
+- log4j-core é o nome do artefato que contém a funcionalidade principal do Log4j.
+- 2.17.0 é a versão específica do Log4j que você deseja incluir em seu projeto.

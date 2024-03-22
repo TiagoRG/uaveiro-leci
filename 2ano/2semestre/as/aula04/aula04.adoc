@@ -1,0 +1,10 @@
+= Aula 04
+
+== Ex 4.1
+
+A intereção começa com o utilizador clica em efetuar o pagamento com o ApplePay. Depois disto, a aplicação IOS faz um pedido de pagamento ao _PassKit View Controller_. Esta entidade pede a aprovação de pagamento bem como os endereços de faturação e entrega ao utilizador e aguarda a confirmação de autorização.
+
+O _PassKit View Controller_ procede então ao processamento da informação do pagamento e ao envio do _Apple Token_ para o Servidor da Apple. Ao receber o token, o servidor encripta-o com o ID de comerciante e envia-o para a aplicação IOS, passando pelo _PassKit View Controller_.
+
+Ao receber o token encriptado, a aplicação IOS envia-o para o serviço de pagamento do comerciante. Este serviço processa o pedido e desencripta o token. De seguida, efetua o pedido de pagamento à _Gateway de Pagamento_ e aguarda a resposta. Ao receber a resposta, o serviço processa a resposta e envia-a para a aplicação IOS, terminando a interação.
+
