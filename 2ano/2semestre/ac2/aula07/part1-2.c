@@ -1,6 +1,8 @@
 #include <detpic32.h>
 
-#define SAMPLES 4
+#define SAMPLES 8
+
+volatile unsigned char voltage = 0;
 
 const unsigned int dis7Scodes[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D,
                                    0xFD, 0x07, 0x7F, 0x6F, 0x77, 0xFC,
@@ -48,30 +50,37 @@ int main() {
     AD1CHSbits.CH0SA = 4;                   // Selects AN4 as input for the A/D converter
     AD1CON1bits.ON = 1;                     // Enable A/D converter
 
+    IPC6bits.AD1IP = 2;                     // configure priority of A/D interrupts
+    IEC1bits.AD1IE = 1;                     // enable A/D interrupts
+    IFS1bits.AD1IF = 0;                     // clear A/D interrupt flag
+
     TRISB &= 0x80FF;                 // Configure RB8-RB14 as outputs
     TRISD &= 0xFF9F;                 // Configure RD5-RD6 as outputs
 
+    EnableInterrupts();
+    AD1CON1bits.ASAM = 1;
+
     int i = 0;
-    int v = 0;
 
     while (1) {
-        if (i == 0) { 
+        if (i == 0) {
             AD1CON1bits.ASAM = 1;               // Start conversion
-            while (IFS1bits.AD1IF == 0);        // Wait while conversion not done
-            int total = 0;
-            int *p = (int *)(&ADC1BUF0);
-            for (; p <= (int *)(&ADC1BUFF); p+=4)
-                total += *p;
-            int val_ad = total / SAMPLES;
-            v = (val_ad * 33 + 511) / 1023;
         }
-        send2displays(v);
+        send2displays(voltage);
         delay(10);
-
         i = (i + 1) % 20;
-
-        IFS1bits.AD1IF = 0;                 // Reset AD1IF
     }
 
     return 0;
+}
+
+void _int_(27) isr_adc(void) {
+    AD1CON1bits.ASAM = 0;               // Stop conversion
+    int total = 0;
+    int *p = (int *)(&ADC1BUF0);
+    for (; p <= (int *)(&ADC1BUFF); p+=4)
+        total += *p;
+    int val_ad = total / SAMPLES;
+    voltage = (val_ad * 33 + 511) / 1023;
+    IFS1bits.AD1IF = 0;                 // Reset AD1IF
 }
