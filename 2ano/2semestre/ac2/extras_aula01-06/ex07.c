@@ -32,7 +32,6 @@ int main() {
         }
         AD1CON1bits.ASAM = 1;
         while (IFS1bits.AD1IF == 0);
-        int value = ADC1BUF0;
         int total = 0;
         int *p = (int *)(&ADC1BUF0);
         for (; p <= (int *)(&ADC1BUFF); p+=4)
