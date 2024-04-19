@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <source_file>"
+    exit
+fi
+file=${1##*/}
+dir=${1%/*}
+filename="${file%.*}"
+cd "$dir" || exit
+pcompile "$file" || exit
+for f in *; do
+    if [[ "$f" =~ ^.+\.(o|elf|map|sym)$ ]]; then
+        rm "$f"
+    fi
+done
+ldpic32 "$filename.hex" || exit
+pterm || exit
+cd "$OLDPWD" || exit
