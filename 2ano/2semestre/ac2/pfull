@@ -1,19 +1,34 @@
 #!/bin/bash
 
+# Validate arguments
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <source_file>"
     exit
 fi
+
+# Parse arguments
 file=${1##*/}
 dir=${1%/*}
 filename="${file%.*}"
-cd "$dir" || exit
+
+# Go to source directory
+if [ -d "$dir" ]; then
+    cd "$dir" || exit
+fi
+
+# Compile and clean up
 pcompile "$file" || exit
 for f in *; do
     if [[ "$f" =~ ^.+\.(o|elf|map|sym)$ ]]; then
         rm "$f"
     fi
 done
+
+# Program and open terminal
 ldpic32 "$filename.hex" || exit
 pterm || exit
-cd "$OLDPWD" || exit
+
+# Go back to original directory
+if [ -d "$dir" ]; then
+    cd - || exit
+fi
