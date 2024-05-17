@@ -4,7 +4,7 @@ int main() {
     // Configure UART2:
     // 1 - Configure BaudRate Generator
     U2BRG = ((PBCLK + 8 * 115200) / (16 * 115200)) - 1;
-    U2MODEbits.BRGH = 0    // 16x baud clock enabled (1 -> 4x baud clock);
+    U2MODEbits.BRGH = 0;    // 16x baud clock enabled (1 -> 4x baud clock);
 
     // 2 - Configure number of data bits, parity and number of stop bits
     // (see U2MODE register)

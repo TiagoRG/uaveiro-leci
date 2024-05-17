@@ -12,12 +12,9 @@ void putc(char byte) {
     U2TXREG = byte;
 }
 
-void sendCounter(int counter) {
-    while (counter != 0) {
-        char bit = counter & 0x1;
-        putc(bit);
-        counter >>= 1;
-    }
+void putstr(char *str) {
+    // use putc() function to send each charater ('\0' should not be sent)
+    while (*str != '\0') putc(*str++);
 }
 
 int main() {
@@ -38,14 +35,25 @@ int main() {
     // 4 - Enable UART2 (see register U2MODE)
     U2MODEbits.ON = 1;
 
-    int counter = 0;
+    int i, count = 0;
 
-    while (1) {
-        sendCounter(counter);
-        delay(5000);
-        counter = (counter + 1) % 10;
+    while(1) {
+        // Incrementa o contador módulo 10
+        count = (count + 1) % 10;
+
+        // Converte o valor do contador para binário
+        char binary[5];
+        for (i = 0; i < 4; i++) {
+            binary[3 - i] = (count & (1 << i)) ? '1' : '0';
+        }
+        binary[4] = '\0';
+
+        // Count modulo 10 em binário:
+        putstr(binary);
+        putc('\n');
+
+        delay(200);  // 5hz = 200ms
     }
-
     return 0;
 }
 
