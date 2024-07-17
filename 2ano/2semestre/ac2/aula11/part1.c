@@ -36,8 +36,8 @@ void _int_(32) isr_uart2rx() {
     // If OERR == 1 then reset OERR
     if (U2STAbits.OERR == 1)
         U2STAbits.OERR = 0;
-    // Wait while URXDA == 0
-    while (U2STAbits.URXDA == 0);
+    if (!IFS1bits.U2RXIF)
+        return;
     // Save U2RXREG value
     char c = U2RXREG;
 
