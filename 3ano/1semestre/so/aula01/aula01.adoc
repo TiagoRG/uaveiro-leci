@@ -1,0 +1,16 @@
+= Aula01
+
+== Exercise 1
+
+=== a)
+
+Once the header is included, it checks if a unique value (usually something like HEADERFILE_H) is defined. Then if it's not defined, it defines it and continues to the rest of the page.
+
+When the code is included again, the first ifndef fails, resulting in a blank file.
+
+That prevents double declaration of any identifiers such as types, enums and static variables.
+
+=== b)
+
+All those function with `SllNode*` as their first argument, take a pointer to a `SllNode` as their first argument. This is a common pattern in C, where you pass a pointer to a struct to a function that will modify it.
+
