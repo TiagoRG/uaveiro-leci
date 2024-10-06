@@ -2,7 +2,7 @@
 ## Aula 03
 ### Tópico principal da aula: Classes
 
-* [Guião](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/guides/POO-2021-aula03.pdf)
+* [Guião](https://git.tiagorg.pt/TiagoRG/uaveiro-leci/src/branch/main/1ano/2semestre/poo/guides/POO-2021-aula03.pdf)
 
 ### Exercise List
 | Exercise Number | File Name                                                                                                            |

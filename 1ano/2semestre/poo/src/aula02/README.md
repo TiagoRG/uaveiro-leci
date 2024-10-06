@@ -2,7 +2,7 @@
 ## Aula 02
 ### Tópico principal da aula: Flux Control
 
-* [Guião](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/guides/POO-2021-aula02.pdf)
+* [Guião](https://git.tiagorg.pt/TiagoRG/uaveiro-leci/src/branch/main/1ano/2semestre/poo/guides/POO-2021-aula02.pdf)
 
 ### Exercise List
 | Exercise Number | File Name                                                                                                                              | Exercise Number | File Name                                                                                                                                  |

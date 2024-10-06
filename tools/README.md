@@ -2,4 +2,4 @@
 ## Material que pode ser util ao longo do curso
 ---
 #### Lista de ferramentas:
-1. &ensp;[Truthtable Builder](https://github.com/TiagoRG/uaveiro-leci/tree/master/tools/truthtable)
+1. &ensp;[Truthtable Builder](https://git.tiagorg.pt/TiagoRG/uaveiro-leci/src/branch/main/tools/truthtable)

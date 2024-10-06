@@ -2,7 +2,7 @@
 ## Aula 06
 ### Tópico principal da aula: Inheritance
 
-* [Guião](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/guides/POO-2022-aula06.pdf)
+* [Guião](https://git.tiagorg.pt/TiagoRG/uaveiro-leci/src/branch/main/1ano/2semestre/poo/guides/POO-2022-aula06.pdf)
 
 ### Exercise List
 | Exercise Number | Files Name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |

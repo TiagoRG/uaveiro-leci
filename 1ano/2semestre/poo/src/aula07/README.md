@@ -2,7 +2,7 @@
 ## Aula 07
 ### Tópico principal da aula: Polymorphism
 
-* [Guião](https://github.com/TiagoRG/uaveiro-leci/tree/master/1ano/2semestre/poo/guides/POO-2022-aula07.pdf)
+* [Guião](https://git.tiagorg.pt/TiagoRG/uaveiro-leci/src/branch/main/1ano/2semestre/poo/guides/POO-2022-aula07.pdf)
 
 ### Exercise List
 | Exercise Number | Files Name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
