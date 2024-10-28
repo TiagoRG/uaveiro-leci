@@ -6,9 +6,9 @@
 Uma vez que os guiões práticos são disponibilizados no GitHub em repositorios privados, eles estão disponíveis como mirrors nestes repositórios.
 *Nota: Podem não ser imediatamente atualizados, sendo que a atualização acontece a cada 4 horas.*
 
-- [Guião 1 - Programação Funcional](https://git.tiagorg.pt/TiagoRG/guiao-de-programacao-funcional-TiagoRG)
-- [Guião 2 - Pesquisa](https://git.tiagorg.pt/TiagoRG/guiao-sobre-pesquisa-TiagoRG)
-- [Guião 3 - Representação de Conhecimento](https://git.tiagorg.pt/TiagoRG/guiao-rc-TiagoRG)
+- [Guião 1 - Programação Funcional](https://git.tiagorg.pt/TiagoRG/ia-guiao-de-programacao-funcional)
+- [Guião 2 - Pesquisa](https://git.tiagorg.pt/TiagoRG/ia-guiao-sobre-pesquisa)
+- [Guião 3 - Representação de Conhecimento](https://git.tiagorg.pt/TiagoRG/ia-guiao-rc)
 
 
 ---
